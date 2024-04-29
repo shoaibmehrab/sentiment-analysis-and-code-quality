@@ -1,0 +1,1120 @@
+id,original_comment,processed_comment,source,sentiment_VADER,sentiment_textblob,sentiment_pattern,sentiment_bert,sentiment_spacy,max_voted_sentiment
+1819084537,"Could someone take a look at the pull request, maybe?",could someone take look pull request maybe,issue,negative,neutral,neutral,neutral,neutral,neutral
+1666327542,"> @ddbourgin any chance this will be fixed to support python 3.10? Thanks
+
+I created a pull request https://github.com/ddbourgin/numpy-ml/pull/85 to address this.",chance fixed support python thanks pull request address,issue,positive,positive,positive,positive,positive,positive
+1411445180,@ddbourgin any chance this will be fixed to support python 3.10? Thanks,chance fixed support python thanks,issue,positive,positive,positive,positive,positive,positive
+1073292489,"Hi Mitch! Sorry for the slow response. Yours is a big question, and there's no single right answer unfortunately (I hate this kind of ""response,"" but it's true). A few pointers:
+
+- **Text identification**: The simplest version of this problem uses models from supervised classification. This could run the gamut from simple [linear classifiers](https://numpy-ml.readthedocs.io/en/latest/numpy_ml.linear_models.html) (e.g., logistic regression, naive Bayes) to deep neural networks (e.g., recent transformer models). For spam classification in particular, the canonical (but certainly not the most performant) example is a [naive Bayes classifier](https://en.wikipedia.org/wiki/Naive_Bayes_spam_filtering).
+
+- **Image analysis**: Again, huge swath of models, although most meaningful models these days are variations on convolutional neural networks (of which the [Conv2d](https://numpy-ml.readthedocs.io/en/latest/numpy_ml.neural_nets.layers.html#conv2d) layer forms the backbone). For classification, you would generally be relying on some form of [cross-entropy loss](https://numpy-ml.readthedocs.io/en/latest/numpy_ml.neural_nets.losses.html#crossentropy). Unfortunately documentation on all of this is not as developed as I'd like it to be, but I think there's a pretty good correspondence between the operations here and those implemented in other popular deep learning frameworks (e.g, Keras/Tensorflow, PyTorch), so you might check there as well as you get familiar :)",hi sorry slow response big question single right answer unfortunately hate kind response true text identification version problem classification could run gamut simple linear logistic regression naive deep neural recent transformer classification particular canonical certainly performant example naive classifier image analysis huge swath although meaningful day convolutional neural layer backbone classification would generally form loss unfortunately documentation like think pretty good correspondence popular deep learning might check well get familiar,issue,positive,positive,neutral,neutral,positive,positive
+1073288354,"Thanks for raising this + the comprehensive Colab notebook - I appreciate it! Yup, you're right, it looks like the ""updated"" version in the repo is returning the `beta` transpose rather than `beta`, so there's a dimension mismatch during prediction. 
+
+I'll try to push a fix for this shortly. Thanks for the heads up :) ",thanks raising comprehensive notebook appreciate right like version beta transpose rather beta dimension mismatch prediction try push fix shortly thanks,issue,positive,positive,positive,positive,positive,positive
+925978183,"Hey David, thanks for the response.
+
+The PR focuses on the implementation and comparison of the Gaussian Naive
+Bayes Classifier using the NumPy-ml repo as well as the scikit-learn
+library.
+
+I had realized that the repo already contains a code for the Gaussian naive
+Bayes model but as per the issue mentioned #67, it required a brief coded
+file that focused on the comparison of the performance of the model in
+comparison to the already specified scikit-learn model. So, we can say that
+the comparison part is the significant added functionality here.
+
+Feel free to include the PR into the repo if you'd like. I enjoyed
+assessing the entire repository and look forward to contributing as much as
+I can. :-)
+
+*Rishabh Jain*
+
+On Thu, Sep 23, 2021 at 9:04 PM David Bourgin ***@***.***>
+wrote:
+
+> Hi Rishabh, thanks for the PR, and sorry for my delayed response. Also
+> apologies for not closing issue #67
+> <https://github.com/ddbourgin/numpy-ml/issues/67> after @sfsf9797
+> <https://github.com/sfsf9797> 's PR. I suspect this may have created some
+> confusion :-/
+>
+> Can you explain what your code adds over the existing implementation? I
+> haven't gone through it in detail, but given that there already exists a
+> validated Gaussian naive Bayes model in the repo, I'm inclined to leave
+> things as they are unless there is significant added functionality.
+>
+> —
+> You are receiving this because you authored the thread.
+> Reply to this email directly, view it on GitHub
+> <https://github.com/ddbourgin/numpy-ml/pull/75#issuecomment-925926417>,
+> or unsubscribe
+> <https://github.com/notifications/unsubscribe-auth/ANHP7HB3YYKK6WHSMC76T6TUDNCJ3ANCNFSM5DD2B7IQ>
+> .
+>
+",hey thanks response implementation comparison naive classifier well library already code naive model per issue brief file comparison performance model comparison already model say comparison part significant added functionality feel free include like entire repository look forward much wrote hi thanks sorry response also issue suspect may confusion explain code implementation gone detail given already naive model leave unless significant added functionality thread reply directly view,issue,positive,positive,neutral,neutral,positive,positive
+925926417,"Hi Rishabh, thanks for the PR, and sorry for my delayed response. Also apologies for not closing issue #67 after @sfsf9797 's PR. I suspect this may have created some confusion :-/
+
+Can you explain what your code adds over the existing implementation? I haven't gone through it in detail, but given that there already exists a validated Gaussian naive Bayes model in the repo, I'm inclined to leave things as they are unless there is significant added functionality.",hi thanks sorry response also issue suspect may confusion explain code implementation gone detail given already naive model leave unless significant added functionality,issue,negative,negative,neutral,neutral,negative,negative
+909119212,"Also, please let me know the places for improvement in the pull request. I am happy to work on the repository and learn in the best feasible way",also please let know improvement pull request happy work repository learn best feasible way,issue,positive,positive,positive,positive,positive,positive
+909117373,Issue solved. please refer to the pull request. #75 ,issue please refer pull request,issue,negative,neutral,neutral,neutral,neutral,neutral
+864511003,"Hi @ddbourgin  thanks for correcting my implementation. I have learnt a lot from you. I am pretty satisfied with the model after a few round of checking. Lastly, Thank you a lot for the all the comments!",hi thanks correcting implementation learnt lot pretty satisfied model round lastly thank lot,issue,positive,positive,positive,positive,positive,positive
+858287024,"sorry, I am kind of busy these few weeks, but I will get you back latest by another 2 weeks times.",sorry kind busy get back latest another time,issue,negative,positive,positive,positive,positive,positive
+852209898,"This is closed via #72, but I think it would be great to generalize this to multiple examples. New issue here: #73",closed via think would great generalize multiple new issue,issue,positive,positive,positive,positive,positive,positive
+851714929,"Awesome, thanks for the PR! Merged :) I'll try to take a look at the KMeans PR soon.",awesome thanks try take look soon,issue,positive,positive,positive,positive,positive,positive
+851624165,"Thanks @ddbourgin, it looks very nice to me. Feel free to merge the PR. I am very grateful for the great support.",thanks nice feel free merge grateful great support,issue,positive,positive,positive,positive,positive,positive
+851399651,"Awesome, thanks. I took the liberty of refactoring the `fit` and `update` methods a bit to make things a bit cleaner (e.g., we now store the inverse of the data covariance matrix in `fit` so we can efficiently update it later on in the `update` method).
+
+I also expanded the unit-test a little bit to verify correctness - instead of just checking the model R2, we new verify that the model coefficients and predictions match the gold standard implementation.
+
+Have a look and let me know what you think. If everything looks good to you, I think this is ready to merge.",awesome thanks took liberty fit update bit make bit cleaner store inverse data covariance matrix fit efficiently update later update method also expanded little bit verify correctness instead model new verify model match gold standard implementation look let know think everything good think ready merge,issue,positive,positive,positive,positive,positive,positive
+851136970,"Hi, thank you so much for all the feedbacks, I will go through all these and get back to you this weekend. ",hi thank much go get back weekend,issue,negative,positive,neutral,neutral,positive,positive
+851038151,"Awesome, @kenluck2001 - this is a welcome addition. I think the general strategy you followed here makes sense, but I'm going to go through it more closely soon. Thanks for the PR!",awesome welcome addition think general strategy sense going go closely soon thanks,issue,positive,positive,positive,positive,positive,positive
+851037622,"Thanks for this, @kenluck2001 ! At first glance this looks great - I'm going to reserve some time to go through this more thoroughly shortly.",thanks first glance great going reserve time go thoroughly shortly,issue,positive,positive,positive,positive,positive,positive
+851037241,"Hey @sfsf9797 - Thanks for the PR! I just had a more thorough look and committed a few changes. Brief summary:
+
+1. I moved this under the linear_models module rather than keeping it as a single hanging model.
+2. I think there might have been a few bugs in the original log likelihood calc. I've committed what I believe is the correct version, but please go through it and make sure you agree.
+3. I expanded the unit test you included -- comparing model accuracies is a good start (thanks!), but I think it actually masked some problems with the implementation. In particular, testing on multiple random cases revealed that there were mismatches in accuracy between sklearn and the current implementation, and comparing the actual class probabilities (rather than just the predictions) revealed a bug in the log posterior calculation.
+4. I expanded the documentation to provide a better overview of the model.
+
+Please feel free to make adjustments or ask questions. Once we both agree on the implementation and are happy with the model performance, I'm happy to merge.",hey thanks thorough look brief summary module rather keeping single hanging model think might original log likelihood believe correct version please go make sure agree expanded unit test included model good start thanks think actually masked implementation particular testing multiple random revealed accuracy current implementation actual class rather revealed bug log posterior calculation expanded documentation provide better overview model please feel free make ask agree implementation happy model performance happy merge,issue,positive,positive,positive,positive,positive,positive
+850213290,"My plan for testing will look this
+```
+import numpy as np
+from sklearn import datasets
+from sklearn.datasets.samples_generator import make_blobs
+from sklearn.linear_model import LinearRegression as OriginalLinearRegression
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import r2_score
+
+
+seed = 12345
+np.random.seed(seed)
+n_clusters=4
+# loading the dataset
+orig_num_of_samples, orig_num_of_features = 3000, 300
+X, y = make_blobs(n_samples=orig_num_of_samples, centers=n_clusters, n_features = orig_num_of_features, cluster_std=0.50, random_state=seed)
+
+X_train, X_update, y_train, y_update = train_test_split(X, y, test_size=0.2, random_state=seed)
+
+# Ground truth
+orig_lreg_model = OriginalLinearRegression()
+orig_lreg_model.fit(X, y)
+
+# Our model
+olr = LinearRegression()
+#olr.fit(X_train, y_train)
+
+## update the model
+for x_new, y_new in zip(X_update, y_update):
+    x_new = x_new.reshape((1, orig_num_of_features))
+    y_new = y_new
+    olr.update(x_new, y_new)
+
+# Evaluating
+X_test, y_test = make_blobs(n_samples=orig_num_of_samples, centers=n_clusters, n_features = orig_num_of_features, cluster_std=0.50, random_state=seed+2)
+
+y_pred_orig = orig_lreg_model.predict (X_test)
+y_pred_online = olr.predict (X_test)
+
+r2score_orig = r2_score(y_test, y_pred_orig) 
+r2score_online = r2_score(y_test, y_pred_online) 
+
+print (""Both score must be similar between scikit: {} and our own online implementation: {}"".format(r2score_orig, r2score_online))
+
+```",plan testing look import import import import import import seed seed loading ground truth model update model zip print score must similar implementation,issue,negative,neutral,neutral,neutral,neutral,neutral
+850126923,"The final version will look this:
+```
+import numpy as np
+from sklearn import datasets
+from sklearn.datasets.samples_generator import make_blobs
+
+class LinearRegression:
+    def __init__(self, fit_intercept=True):
+        self.beta = None
+        self.inverse_cov = None
+        self.fit_intercept = fit_intercept
+
+    def update(self, x, y):
+        xm = np.mat (x)
+        ym = np.mat (y)
+
+        if self.fit_intercept:
+            xm = np.c_[np.ones(xm.shape[0]), xm]
+
+        all_zeros_or_empty_inverse_cov = not np.any(self.inverse_cov)
+        all_zeros_or_empty_beta = not np.any(self.beta)
+
+        #if not self.beta or not self.inverse_cov: # first run of the algorithm
+        if all_zeros_or_empty_inverse_cov or all_zeros_or_empty_beta:
+            # Allow a batch of data in a matrix form as input
+            self.inverse_cov = np.linalg.pinv(np.dot(xm.T, xm)) 
+            pseudo_inverse =  np.dot(self.inverse_cov, xm.T)
+            self.beta = np.dot(pseudo_inverse, ym.T) 
+            print (""self.beta: {}"".format(self.beta.shape))
+        else:
+            # Allow only single row vectors or column vectors as input
+            theta_xm = np.mat ( xm * self.beta )
+            error = ym - ( theta_xm )
+            Im = np.mat ( np.eye (xm.shape[1]) )
+            print (""Im: {}, self.inverse_cov: {}, xm: {}, self.beta: {}"".format(Im.shape, self.inverse_cov.shape, xm.shape, self.beta.shape))
+            #Im: (301, 301), self.inverse_cov: (301, 301), xm: (3000, 301)
+            self.inverse_cov = self.inverse_cov * np.mat(Im - (( xm.T * xm * self.inverse_cov ) / (1 + ( xm * self.inverse_cov * xm.T ))))
+            self.beta = self.beta + ( self.inverse_cov * xm.T * error )   
+
+# Testing
+seed = 12345
+np.random.seed(seed)
+n_clusters=4
+# loading the dataset
+orig_num_of_samples, orig_num_of_features = 3000, 300
+X, y_true = make_blobs(n_samples=orig_num_of_samples, centers=n_clusters, n_features = orig_num_of_features, cluster_std=0.50, random_state=seed)
+
+olr = LinearRegression()
+olr.update(X, y_true)
+y_new = 10
+x_new = np.random.rand(1, orig_num_of_features)
+olr.update(x_new, y_new)
+
+y_new = 10
+x_new = np.random.rand(1, orig_num_of_features)
+olr.update(x_new, y_new)
+
+
+```",final version look import import import class self none none update self ym first run algorithm allow batch data matrix form input print else allow single row column input error ym print error testing seed seed loading,issue,negative,positive,neutral,neutral,positive,positive
+850065955,"I have seen a better way that does not touch or impart any exist logic in LinearRegression class in lm.py file.
+
+The API that I have in mind woud not distinguish between online and batch mode. It would just update beta field if a new method named update is call with new data of x, y.
+
+At the beginning, we call 
+```
+olr = LinearRegression()
+olr.fit(X, y)
+olr.predict(rest-x)
+# on new data just call update to modify beta field and update the model in an online manner
+olr.update(x_new, y_new)
+```
+Here is the pseudocode
+```
+    def __init__(self):
+        self.beta = None
+        self.cov = None
+
+    def update(self, x, y):
+        xm = np.mat (x)
+        ym = np.mat (y)
+
+        if self.fit_intercept:
+            xm = np.c_[np.ones(xm.shape[0]), xm]
+
+        if not self.beta or not self.cov: # first run of the algorithm
+            pseudo_inverse = np.linalg.inv(xm.T @ xm) @ xm.T
+            self.beta = np.dot(pseudo_inverse, ym)
+            self.cov = np.dot ( xm.T, xm)
+        else:
+            theta_xm = np.mat ( xm * self.beta )
+            error = ym - ( theta_xm )
+            Im = np.mat ( np.eye (x.shape[1]) )
+            self.cov = self.cov * np.mat(Im - (( xm.T * xm * self.cov ) / (1 + ( xm * self.cov * xm.T ))))
+            self.beta = self.beta + ( self.cov * xm.T *  error )   
+```",seen better way touch impart exist logic class file mind distinguish batch mode would update beta field new method update call new data beginning call new data call update modify beta field update model manner self none none update self ym first run algorithm ym else error ym error,issue,negative,positive,positive,positive,positive,positive
+850056233,"I think mode={'online', 'batch'} would be more descriptive in relation to existing source code. Currently working on it",think would descriptive relation source code currently working,issue,negative,neutral,neutral,neutral,neutral,neutral
+849336132,"I have cleaned the code as well as required tests. The build of the project is hard as it enforces only Python 3.7. My system has lots of dependencies which I don't want to mess up. I will raise PR soon.  Here is a snapshot of what to expect in my PR @ddbourgin 
+[WORK.zip](https://github.com/ddbourgin/numpy-ml/files/6551338/WORK.zip)
+",code well build project hard python system lot want mess raise soon snapshot expect,issue,negative,negative,negative,negative,negative,negative
+847917414,"Thanks for this @kenluck2001! Yes, a K-means clustering model would be a great addition. If you decide to implement both hard and soft variants, I propose you do so within the same `KMeans` model object (you can choose which version to use via an arg at initialization: `cluster_method={'hard', 'soft'}`). 
+
+Also, as a reminder for each PR, please include tests against a standard implementation of the algorithm to help verify correctness :) ",thanks yes clustering model would great addition decide implement hard soft propose within model object choose version use via also reminder please include standard implementation algorithm help verify correctness,issue,positive,positive,positive,positive,positive,positive
+847900401,"That would be great @kenluck2001  - a welcome addition! How difficult would it be to add this to the existing `LinearRegression` object rather than create a new one? We could choose the fit algorithm using an arg at initialization: `method={'online', 'batch'}` and introduce a new method: `update_fit(self, X, y)` that can be used if `method == 'online'`.",would great welcome addition difficult would add object rather create new one could choose fit algorithm introduce new method self used method,issue,positive,positive,positive,positive,positive,positive
+847448869,"Amazing! At first glance this looks great, @sfsf9797 ! I'm pretty slammed with work right now, but am going to have a look at this this weekend. ",amazing first glance great pretty work right going look weekend,issue,positive,positive,positive,positive,positive,positive
+791595673,Looks good to me! Thanks so much for catching + fixing this @RaulMurillo ,good thanks much catching fixing,issue,positive,positive,positive,positive,positive,positive
+790697485,Also added a commit to close #63 ,also added commit close,issue,negative,neutral,neutral,neutral,neutral,neutral
+677748369,"Oh, interesting! Thanks for the tip - I'll need to look into this, but it looks like it could be much cleaner :) I'm pretty busy these days, so if you're impatient and would like to submit a PR, I'd be happy to consider it!",oh interesting thanks tip need look like could much cleaner pretty busy day impatient would like submit happy consider,issue,positive,positive,positive,positive,positive,positive
+667610882,"Because I haven't implemented any yet :) If you would like to contribute a CRF model, I would be happy to consider it!",yet would like contribute model would happy consider,issue,positive,positive,positive,positive,positive,positive
+664471019,"Oh! I see what you're saying. You're right, the square of the L1 norm is not what we want. The proper L1 penalty is
+
+`gamma * np.abs(beta).sum()`
+
+which gives a gradient of
+
+`gamma * np.sign(beta)`
+
+I'll make a PR to fix this. Thank you very much for pointing this out :) ",oh see saying right square norm want proper penalty gamma beta gradient gamma beta make fix thank much pointing,issue,negative,positive,positive,positive,positive,positive
+664170713,"@ddbourgin Sorry but I don't quite understand why penalty in L1 case need square as L2 does 
+```
+penalty = 0.5 * self.gamma * np.linalg.norm(self.beta, ord=order) ** 2   #  remaid square under l1 case
+```
+All ariticles I saw was using a L1 term (penalty) like
+![image](https://user-images.githubusercontent.com/3938751/88514973-8871a680-d01d-11ea-81c8-bd3128468f9d.png)
+And the derivative is +-\lambda  .
+Now I am very confusing .
+
+
+
+",sorry quite understand penalty case need square penalty square case saw term penalty like image derivative,issue,negative,negative,negative,negative,negative,negative
+663803477,"As a general rule, I'd like to reserve Github issues for identifying errors in the codebase / making feature requests. I'm not able to provide a detailed explanation of the logic here, but you may find the following page helpful: https://www.statlect.com/fundamentals-of-statistics/Bayesian-regression ",general rule like reserve making feature able provide detailed explanation logic may find following page helpful,issue,positive,positive,positive,positive,positive,positive
+663802799,"Whoops, yup, that's what I get for being hasty! The regularization penalty is [`(gamma / 2) * np.sqrt(beta @ beta) ** 2`](https://github.com/ddbourgin/numpy-ml/blob/4f37707c6c7c390645dec5a503c12a48e624b249/numpy_ml/linear_models/lm.py#L244), which gives a gradient of `gamma * beta`.
+
+In the L1 case, I'd recommend explicitly writing down the L1 _penalty_ (not just the l1 norm) and then trying to derive the gradient wrt beta. It should quickly become clear why there is an `l1norm` term in the calc :) ",whoop get hasty regularization penalty gamma beta beta gradient gamma beta case recommend explicitly writing norm trying derive gradient beta quickly become clear term,issue,negative,positive,positive,positive,positive,positive
+661256103,"Read this article by this you can understand all the details of  implement detail of **BayesianLinearRegression**:
+https://towardsdatascience.com/bayesian-linear-regression-in-python-using-machine-learning-to-predict-student-grades-part-2-b72059a8ac7e",read article understand implement detail,issue,negative,neutral,neutral,neutral,neutral,neutral
+660410357,"@ddbourgin Thank you for  reply .
+
+From https://towardsdatascience.com/intuitions-on-l1-and-l2-regularisation-235f2db4c261
+
+
+![image](https://user-images.githubusercontent.com/3938751/87842748-68393d80-c8e1-11ea-94fb-af4ebfde9faa.png)
+
+
+ l1-regularization term is `gamma * np.absolute(beta)` 
+ l2-regularization term is `gamma * np.power(np.sqrt(beta @ beta), 2)`  (I think you miswrote in previous comment )  
+
+The gradient of l1 penalty wrt beta is then `gamma  * np.sign(beta)`
+The gradient of l2 penalty wrt beta is then `gamma * 2beta`  proportional to `gamma * beta` .  
+
+
+Actually  I thought ` l2-regularization term` was `gamma * np.sqrt(beta @ beta)`  , so the gradient of l2 term is +- 1 too .Because sometimes I thought L2 norm was `beta^2` , sometimes it was `np.sqrt(beta^2)` in my brain  ,  l2 norm and  l2-regularization term` are so likely and mess up ,  now I have figure  it clear .
+
+But there is a left problem : why you multiply `l1norm(beta)` in L1 case ?  since the gradient of l1 penalty is `gamma * np.sign(beta)` , this confused me .
+
+
+
+
+
+",thank reply image term gamma beta term gamma beta beta think previous comment gradient penalty beta gamma beta gradient penalty beta gamma beta proportional gamma beta actually thought term gamma beta beta gradient term sometimes thought norm sometimes brain norm term likely mess figure clear left problem multiply beta case since gradient penalty gamma beta confused,issue,negative,negative,neutral,neutral,negative,negative
+660357882,"For linear regression, the l2-regularization term is `gamma * np.sqrt(beta @ beta)`
+The gradient of l2 penalty wrt beta is then simply `gamma * beta`
+
+Keep in mind that `d_penality` is the gradient of the penalty term wrt the coefficients, not the penalty itself :)
+
+I don't use a special IDE, unfortunately. the equations are formatted for display as Sphinx [reStructuredText](https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html). You can see the rendered equations in the online [documentation](https://numpy-ml.readthedocs.io/en/latest/), or build it yourself from the source in the `docs` directory. There may also be IDE plugins that will try to render them, but I am not aware of any :)",linear regression term gamma beta beta gradient penalty beta simply gamma beta keep mind gradient penalty term penalty use special ide unfortunately display sphinx see documentation build source directory may also ide try render aware,issue,negative,positive,neutral,neutral,positive,positive
+650061825,Sorry bro i was totally  forgot to implement but now from today i am starting to implement the lasso regerssion. @ddbourgin ,sorry totally forgot implement today starting implement lasso,issue,negative,negative,negative,negative,negative,negative
+646942067,The package is (finally) [available on pypi](https://pypi.org/project/numpy-ml/0.1.0/)! Minimal installation documentation is available in the current [README](https://github.com/ddbourgin/numpy-ml/blob/master/README.md) and will be expanded in the coming days :) ,package finally available minimal installation documentation available current expanded coming day,issue,negative,positive,positive,positive,positive,positive
+640280303,"@WuZhuoran began work on this, but it looks like it hasn't been touched in a while. At this stage the above PR would need to be rebased against master and the outstanding comments addressed. After that, it should be all set!",work like touched stage would need master outstanding set,issue,positive,positive,positive,positive,positive,positive
+640279983,"@dmyersturnbull and @syncrostone  - I think this is a great suggestion! I'm going to try to get this in shape for a pip package shortly, and will bump this once it's complete. Will then update docs for details on install etc.",think great suggestion going try get shape pip package shortly bump complete update install,issue,positive,positive,positive,positive,positive,positive
+637046126,I'm seconding this -- it would be great if numpy-ml were on PyPi or conda -- then I would feel comfortable including it in my package which I plan to put on PyPi.,would great would feel comfortable package plan put,issue,positive,positive,positive,positive,positive,positive
+615145174,"`numpy-ml/numpy_ml/neural_nets/layers/layers.py` line 2341:
+
+**your code**
+
+```
+dX = dZ @ W.T
+```
+
+I don't think it should be `W` it should be `W_sparse`. So I think right code should be:
+
+```
+dX = dZ @ W_sparse.T
+```
+
+Please reconsider，thanks.",line code think think right code please,issue,negative,positive,positive,positive,positive,positive
+611582172,"@Z-zhe - Wow, thanks so much for all these! I haven't had a chance to take a look yet, but should have some time this weekend. In the meantime if you feel like submitting a PR with fixes I'd be happy to review it, otherwise I can try to address these shortly. ",wow thanks much chance take look yet time weekend feel like happy review otherwise try address shortly,issue,positive,positive,positive,positive,positive,positive
+611503599,"And `numpy-ml/numpy_ml/neural_nets/tests/tests.py` line 771:
+**your code**
+
+```
+from ..activations import SoftSign
+```
+
+but SoftSign is **not implemented** in `..activations`.
+
+maybe you should delete function `test_softsign_grad` and `test_softsign_activation`.
+
+",line code import maybe delete function,issue,negative,neutral,neutral,neutral,neutral,neutral
+611496909,"And `numpy-ml/numpy_ml/neural_nets/tests/tests.py` line 510:
+
+**your code**
+```
+from ..activations import Softmax
+```
+
+**but**
+
+`Softmax` is not implemented in `..activations`, but in `..layers`.
+
+**right code** 
+- line 510:
+
+```
+from ..layers import Softmax
+```
+<br>
+
+- line 527:
+```
+y_pred = sm.forward(z)
+```",line code import right code line import line,issue,negative,positive,positive,positive,positive,positive
+611424293,Maybe I should fork and create pull request :smiley: ,maybe fork create pull request,issue,negative,neutral,neutral,neutral,neutral,neutral
+611419624,"And `numpy-ml/numpy_ml/neural_nets/layers/layers.py` Line 2116:
+
+**your code**
+
+```
+def backward(self, dLdy):
+""""""
+retain_grads: Default is True
+""""""
+```
+The function in your code is missing an argument `retain_grads`, resulting in an error at `numpy-ml/numpy_ml/neural_nets/wrappers/wrappers.py` Line 227.",line code backward self default true function code missing argument resulting error line,issue,negative,positive,neutral,neutral,positive,positive
+611374460,"And `numpy-ml/numpy_ml/neural_nets/wrappers/wrappers.py` Line 207:
+
+**your code**
+
+```
+def backward(self, dLdy, retain_grads):
+""""""
+retain_grads: Default is True
+""""""
+```
+
+Your code is missing the default value, resulting in an error at  `numpy-ml/numpy_ml/neural_nets/layers/layers.py` Line 332.
+",line code backward self default true code missing default value resulting error line,issue,negative,positive,neutral,neutral,positive,positive
+609559496,"Not at the moment, but these would be something I'd *love* to include at some point!",moment would something love include point,issue,positive,positive,positive,positive,positive,positive
+592566487,"thanks for your complement,Yes i try it and create a model to test.",thanks complement yes try create model test,issue,positive,positive,positive,positive,positive,positive
+592203187,Absolutely - that would be great! You should be able to test it against the [sklearn](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Lasso.html) implementation (see example plots [here](https://github.com/ddbourgin/numpy-ml/blob/master/numpy_ml/linear_models/plots.py)). Let me know if you hit any snags :) ,absolutely would great able test implementation see example let know hit,issue,positive,positive,positive,positive,positive,positive
+570017255,"Hi @505555998 -- apologies for the delay! You're absolutely right, this is a bug. Thanks a ton for catching it! I think the proper thing to do would be to pass a `depth` argument to the `_grow` method rather than rely on the `self.depth` attribute. I'll push a fix momentarily!",hi delay absolutely right bug thanks ton catching think proper thing would pas depth argument method rather rely attribute push fix momentarily,issue,negative,positive,positive,positive,positive,positive
+567759051,"@chaaland - that's a bug, alright! Yet another reminder never to copy-paste code :) Thanks for pointing this out! ",bug alright yet another reminder never code thanks pointing,issue,negative,positive,positive,positive,positive,positive
+530502107,"Hey @jcl2018 - thanks a lot for this report, and sorry for the slow response! You are, of course, absolutely right :). I'd be happy to accept a PR to fix this if you feel like writing one -- otherwise, I will try to fix this shortly. Thank you!",hey thanks lot report sorry slow response course absolutely right happy accept fix feel like writing one otherwise try fix shortly thank,issue,positive,positive,neutral,neutral,positive,positive
+517826075,"Closing this, as the code you are talking about is not your own work.
+
+See https://github.com/ddbourgin/numpy-ml/pull/37",code talking work see,issue,negative,neutral,neutral,neutral,neutral,neutral
+517824964,"Hi @daidai21 - I just took a look this PR. I see that the code is copied directly from https://github.com/LasseRegin/SVM-w-SMO/blob/master/SVM.py . 
+
+This is unacceptable. 
+
+PRs you submit should reflect earnest attempts at implementing a model *yourself*. To be absolutely clear: **it is fine to reference others' code. It is *not* fine to blindly copy it without attribution -- that is plagiarism.**
+
+I appreciate that you are eager to contribute to the repo. Trust me, I _want_ you to contribute. The key word here is *you* -- a pull request with a wrapper around someone else's code is not a  contribution from you.
+
+If you still want to work on this, I suggest first trying to understand the mathematics behind the model, then work towards your own implementation. ",hi took look see code copied directly unacceptable submit reflect earnest model absolutely clear fine reference code fine blindly copy without attribution plagiarism appreciate eager contribute trust contribute key word pull request wrapper around someone else code contribution still want work suggest first trying understand mathematics behind model work towards implementation,issue,positive,positive,neutral,neutral,positive,positive
+517463467,"Hi @daidai21 - thank you for working on this! It's not clear to me why random data generation would result in failed tests, since both models receive the same input data and targets. Perhaps I'm missing something?
+
+Anyway, feel free to submit a PR and we can try to work through the code together to identify what's going on. It's difficult to know right now why certain tests aren't passing, since I don't know what the model code looks like.
+
+Finally, to help track down the cause of the failed tests, I'd recommend directly comparing `pred1` and `pred2`  to ensure that individual data points are being categorized in the same way between the two models. This will help you to better identify why some of the tests are failing :)
+
+Thanks again!",hi thank working clear random data generation would result since receive input data perhaps missing something anyway feel free submit try work code together identify going difficult know right certain passing since know model code like finally help track cause recommend directly ensure individual data way two help better identify failing thanks,issue,positive,positive,neutral,neutral,positive,positive
+517346063,"Hi, David
+
+I took time to finish it, but the test didn't pass all. There is a 78% probability that my model and Sklearn's model predict the accuracy of the results. I don't know what to do now?
+
+Sometimes my models are good, sometimes sklearns are good.
+
+I think this result is related to the distribution of randomly generated data. I  think my code is OK. What do you think?
+
+
+
+This is test code.
+
+```python
+import warnings
+warnings.filterwarnings('ignore')
+import numpy as np
+import random
+
+# load myself model
+# from SVM import SVM
+
+from sklearn.svm import SVC
+from sklearn.metrics import accuracy_score
+from sklearn.datasets.samples_generator import make_blobs
+from sklearn.model_selection import train_test_split
+
+
+def test_SVM():
+    i = 1
+    np.random.seed(12345)
+    while True:
+        X, Y = make_blobs(  # generate dataset
+            n_samples=np.random.randint(2, 100), 
+            n_features=np.random.randint(2, 100),
+            centers=2, random_state=i, 
+        )
+        X, X_test, Y, Y_test = train_test_split(X, Y, test_size=0.3, random_state=i)
+        if 0 not in Y or 1 not in Y:  # ignore split error(train/test data only 1 class)
+            continue
+        # generate param
+        C = random.uniform(0.1, 0.9)
+        max_iter = random.uniform(50, 500)
+        kernel = np.random.choice([""linear"", ""rbf""])
+        tol = random.uniform(0.000001, 0.1)
+        # fit and predict
+        clf1 = SVC(C=C, max_iter=max_iter, kernel=kernel, tol=tol)
+        clf1.fit(X, Y)
+        pred1 = clf1.predict(X_test)
+        clf2 = SVM(C=C, max_iter=max_iter, kernel=kernel, tol=tol)
+        clf2.fit(X, Y)
+        pred2 = clf2.predict(X_test)
+        # judge
+        # err_msg = ""ERROR {0} {1}"".format(accuracy_score(Y_test, pred1), accuracy_score(Y_test, pred2))
+        # assert accuracy_score(Y_test, pred1) == accuracy_score(Y_test, pred2), err_msg
+        # print(""PASSED"")
+        if accuracy_score(Y_test, pred1) == accuracy_score(Y_test, pred2):
+            print(""PASSED"")
+        else:
+            print(""ERROR"", accuracy_score(Y_test, pred1), accuracy_score(Y_test, pred2))
+
+
+if __name__ == ""__main__"":
+    test_SVM()
+```
+
+This test code run result.
+
+```shell
+PASSED
+PASSED
+PASSED
+PASSED
+ERROR 0.3333333333333333 1.0
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+ERROR 1.0 0.0
+PASSED
+ERROR 0.3125 1.0
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+ERROR 1.0 0.7692307692307693
+PASSED
+PASSED
+ERROR 1.0 0.5
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+ERROR 0.9655172413793104 1.0
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+ERROR 0.5 1.0
+PASSED
+ERROR 1.0 0.5384615384615384
+PASSED
+ERROR 1.0 0.9090909090909091
+PASSED
+PASSED
+PASSED
+PASSED
+ERROR 1.0 0.3333333333333333
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+ERROR 1.0 0.75
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+ERROR 1.0 0.9
+ERROR 1.0 0.6666666666666666
+PASSED
+ERROR 0.3333333333333333 1.0
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+ERROR 0.4444444444444444 1.0
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+ERROR 0.14285714285714285 1.0
+ERROR 1.0 0.8
+PASSED
+PASSED
+ERROR 1.0 0.9583333333333334
+PASSED
+ERROR 1.0 0.3333333333333333
+PASSED
+ERROR 1.0 0.9047619047619048
+ERROR 0.0 1.0
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+ERROR 0.2 1.0
+PASSED
+PASSED
+ERROR 1.0 0.6
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+ERROR 1.0 0.9090909090909091
+ERROR 0.0 1.0
+ERROR 0.3333333333333333 1.0
+ERROR 1.0 0.6
+PASSED
+PASSED
+PASSED
+PASSED
+ERROR 0.5 1.0
+ERROR 1.0 0.8
+ERROR 1.0 0.9523809523809523
+PASSED
+ERROR 0.32 1.0
+PASSED
+PASSED
+ERROR 1.0 0.8333333333333334
+ERROR 1.0 0.9259259259259259
+ERROR 1.0 0.96
+PASSED
+PASSED
+PASSED
+ERROR 1.0 0.9259259259259259
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+ERROR 1.0 0.5
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+ERROR 1.0 0.4
+PASSED
+ERROR 0.4 1.0
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+PASSED
+ERROR 1.0 0.6666666666666666
+PASSED
+PASSED
+ERROR 0.4166666666666667 1.0
+ERROR 1.0 0.9166666666666666
+PASSED
+ERROR 1.0 0.6666666666666666
+PASSED
+PASSED
+ERROR 1.0 0.6
+PASSED
+PASSED
+ERROR 0.3333333333333333 1.0
+PASSED
+ERROR 0.4 1.0
+ERROR 0.8235294117647058 1.0
+PASSED
+PASSED
+PASSED
+PASSED
+ERROR 0.5555555555555556 1.0
+PASSED
+PASSED
+ERROR 0.0 1.0
+PASSED
+PASSED
+PASSED
+PASSED
+ERROR 1.0 0.5
+PASSED
+PASSED
+```",hi took time finish test pas probability model model predict accuracy know sometimes good sometimes good think result related distribution randomly data think code think test code python import import import random load model import import import import import true generate ignore split error data class continue generate param kernel linear tol fit predict judge error assert print print else print error test code run result shell error error error error error error error error error error error error error error error error error error error error error error error error error error error error error error error error error error error error error error error error error error error error error error error error error,issue,negative,positive,positive,positive,positive,positive
+516267472,"Heya @Santosh-Gupta - I've just pushed a preliminary version of an `NCELoss` and word2vec model [here](https://github.com/ddbourgin/numpy-ml/blob/master/numpy_ml/neural_nets/models/w2v.py) and [here](https://github.com/ddbourgin/numpy-ml/blob/3bf1893083d3133f0fcd5fd4ce7624eeb4be03b3/numpy_ml/neural_nets/losses/losses.py#L464). 
+
+Unfortunately, I suspect that if you're going to use the models for any sizeable dataset you'll have to do some performance modifications first. Let me know if you decide to try it out / have any questions in the meantime!",preliminary version model unfortunately suspect going use sizeable performance first let know decide try,issue,negative,negative,negative,negative,negative,negative
+516181478,"Hi @Z-zhe - finally had a look at this, and you're right! Will update the code momentarily :) ",hi finally look right update code momentarily,issue,negative,positive,positive,positive,positive,positive
+515809315,"Sorry, this is a misoperation. Please check your code to fix this bug, thanks!",sorry please check code fix bug thanks,issue,positive,negative,negative,negative,negative,negative
+515791045,Hi @Z-zhe - just checking in to see why this was closed. Did you decide it's not a bug after all? Happy to take a look if you still think there's an error!,hi see closed decide bug happy take look still think error,issue,negative,positive,positive,positive,positive,positive
+515790854,These look great and I think are pretty much ready to go. See https://github.com/ddbourgin/numpy-ml/issues/33#issuecomment-515790687 RE: the sigmoid optimization.,look great think pretty much ready go see sigmoid optimization,issue,positive,positive,positive,positive,positive,positive
+515790687,"Good analysis! To me, method 2 strikes the best balance between conceptual clarity and memory usage.. I think it's possible to further mitigate conceptual confusion by adding a docstring for the `grad2` function (oops...) which clearly states that the second derivative of the logistic sigmoid is `f'(x) * ( 1 - 2f(x) )`. That way, everything is _crystal_ clear :)",good analysis method best balance conceptual clarity memory usage think possible mitigate conceptual confusion grad function clearly second derivative logistic sigmoid way everything clear,issue,positive,positive,positive,positive,positive,positive
+515284302,"But looking at the code gives me a strong idea of how I could implement it in this library, by using SQLite database as the vector store, and just copying the values back and forth between that and the numpy embedding array. ",looking code strong idea could implement library vector store back forth array,issue,positive,positive,positive,positive,positive,positive
+515278720,"Looks like you can't use it for training, oh well 
+
+https://github.com/plasticityai/magnitude/issues/32
+
+",like ca use training oh well,issue,positive,neutral,neutral,neutral,neutral,neutral
+515266307,"It looks like this is exactly what I was looking for. I'm not familiar with a lot of computer science terms, but it uses sqlite as the datastore, so I'm guessing it does what I am looking for. 
+
+Edit: reading the paper
+
+""Magnitude queries return almost instantly and
+are memory efficient. It uses lazy loading directly from disk, instead of having to load the entire model into memory""
+
+Wow! Thanks for this recommendation!!! ",like exactly looking familiar lot computer science guessing looking edit reading paper magnitude return almost instantly memory efficient lazy loading directly disk instead load entire model memory wow thanks recommendation,issue,positive,positive,neutral,neutral,positive,positive
+515239467,"I want to be able to keep the explicit nature of the code as it seems like one of the attributes that sets this library apart from others. I guess it's hard to strike a balance between efficiency and clarity. For example in the sigmoid activation:
+```python
+def grad2(self, x):
+    return self.grad(x) * (1 - 2 * self.fn(x))
+```
+The above code has lot's of clarity and is easy to digest versus:
+
+### Method 1
+```python
+def grad2(self, x):
+    fn_x = self.fn(x)
+    return fn_x * (1 - fn_x) * (1 - 2 * fn_x)
+```
+Here, it's no longer clear that grad_x is hidden inside the equation. I could do something like this:
+
+### Method 2
+```python
+def grad2(self, x):
+    fn_x = self.fn(x)
+    grad_x = fn_x * (1 - fn_x)
+    return grad_x * (1 - 2 * fn_x)
+```
+This is clearer to read, but repeats already existing code.
+
+What would you suggest?",want able keep explicit nature code like one library apart guess hard strike balance efficiency clarity example sigmoid activation python grad self return code lot clarity easy digest versus method python grad self return longer clear hidden inside equation could something like method python grad self return clearer read already code would suggest,issue,positive,positive,positive,positive,positive,positive
+515194510,"> So I was thinking of using your library and altering it so that it saves the unused weights to disk, and only loads them when they are trained or about to be trained.
+
+That sounds like a good idea! If you end up implementing this, definitely consider submitting a PR :) I think this could be quite useful for a number of different model components, including the sparse evolutionary training layer (which currently uses dense matrices 😬). 
+
+In the meantime, you might look into the [magnitude](https://github.com/plasticityai/magnitude) package (I haven't used it myself, but it seems potentially relevant). ",thinking library unused disk trained trained like good idea end definitely consider think could quite useful number different model sparse evolutionary training layer currently dense matrix might look magnitude package used potentially relevant,issue,positive,positive,positive,positive,positive,positive
+515191810,"Thanks, looking forward to it!
+
+The reason why I am interested in doing it in Numpy is that Keras/Tensorflow isn't very great for sparse training. My use case is training 9 figures of embeddings. It eats up a lot of memory to have all those embeddings loaded into memory at the same time, and it's not necessary since only a small fraction is trained during each update step. 
+
+So I was thinking of using your library and altering it so that it saves the unused weights to disk, and only loads them when they are trained or about to be trained. ",thanks looking forward reason interested great sparse training use case training eats lot memory loaded memory time necessary since small fraction trained update step thinking library unused disk trained trained,issue,positive,positive,positive,positive,positive,positive
+515189023,Thanks for this @Z-zhe! Sorry I haven't had a chance to take a look at this -- I will shortly :),thanks sorry chance take look shortly,issue,positive,negative,neutral,neutral,negative,negative
+515188586,"Finally, one last caveat - if you're interested in training a non-toy word embedding model, I'd highly recommend using a library like keras, since it will make use of performance-optimized implementations for each model component. The code in this repo is meant to be clear and straightforward, but this often comes at the expense of efficiency!",finally one last caveat interested training word model highly recommend library like since make use model component code meant clear straightforward often come expense efficiency,issue,positive,positive,positive,positive,positive,positive
+515187534,"Don't be sorry - this question is _very_ justified -- there is almost no usage documentation right now!
+
+First, the bad news: at the moment, implementing word2vec will require a little bit of extra leg-work on your end. In particular, you'll need to implement either a negative sampler/noise contrastive estimation loss or a hierarchical softmax loss. For the latter, you could use the [`numpy_ml.preprocessing.nlp.HuffmanEncoder`](https://github.com/ddbourgin/numpy-ml/blob/fce2acfd7c370f55373bdc6dff1761a8258bfe27/numpy_ml/preprocessing/nlp.py#L409) module. 
+
+Now, the good news: I'm actively working on writing an NCE loss object, and hope to push it ASAP. I'll also probably include a convenience `Embedding` layer to make embedding lookups a bit faster. I will update this thread when it has been pushed.
+
+Ultimately, once these two components are in place, you should be able to write a relatively straightforward model. To see what a model object might look like, you can look at some examples in either the [`numpy_ml.neural_nets.modules`](https://github.com/ddbourgin/numpy-ml/blob/master/numpy_ml/neural_nets/modules/modules.py) or [`numpy_ml.neural_nets.models`](https://github.com/ddbourgin/numpy-ml/tree/master/numpy_ml/neural_nets/models) directories.",sorry question almost usage documentation right first bad news moment require little bit extra end particular need implement either negative contrastive estimation loss hierarchical loss latter could use module good news actively working writing loss object hope push also probably include convenience layer make bit faster update thread ultimately two place able write relatively straightforward model see model object might look like look either,issue,negative,positive,neutral,neutral,positive,positive
+515183089,"Thanks @JayMody ! You're definitely right - there are a _ton_ of inefficient / memory intensive methods in the neural network module. My general feeling is that optimizations are fine so long as they don't obscure the actual math behind the calculation. Clearly I have erred very heavily on the side of inefficient and explicit (as opposed to fast and obscure), though I think in many cases this is probably a false dichotomy ;) 
+
+For the example you included, I think the optimization is totally justified. If you'd like to work on this, I'd say use your discretion + do atomic commits so we can review on a case-by-case basis.",thanks definitely right inefficient memory intensive neural network module general feeling fine long obscure actual math behind calculation clearly heavily side inefficient explicit opposed fast obscure though think many probably false dichotomy example included think optimization totally like work say use discretion atomic review basis,issue,positive,positive,neutral,neutral,positive,positive
+514092393,"Sure, take your time, and let me know if you have any questions!",sure take time let know,issue,negative,positive,positive,positive,positive,positive
+513675373,"OK，I decide try to coding this algorithm. But I think I need some time, because I have other job. I will finish it as soon as possible.
+
+Nice to meet you. @ddbourgin 
+",decide try algorithm think need time job finish soon possible nice meet,issue,negative,positive,positive,positive,positive,positive
+513622340,"@daidai21 - No need to apologize! An SVM implementation would be _awesome_ -- it's been on my TODO list for ages :) 
+
+The crux will be implementing the SMO algorithm properly I suspect. If you decide to do it, I wouldn't worry too much about being  efficient - for this repo, the focus is more on making everything as clean/clear as possible rather than on being clever.
+
+Also, if you end up referencing other implementations when writing your code, please make sure to cite them in the docstrings and PR. It's important that any code you submit is your own work.
+
+Finally - thanks! Let me know if you have any questions as you go along :)",need apologize implementation would list crux algorithm properly suspect decide would worry much efficient focus making everything possible rather clever also end writing code please make sure cite important code submit work finally thanks let know go along,issue,positive,positive,positive,positive,positive,positive
+513523983,"@ddbourgin
+Thanks for ur review and comments!  I will rewrite this method with the individual code immediately that represents my individual efforts. This repo which represents a sincere effort at the original work you have declared did inspire me with determination.
+THANK YOU!
+ps: uh... I give you a sincere apology for my previous bad work. for this time, I will try my best to finish it correctly and as original as possible.
+oh~ also as soon as possible.",thanks ur review rewrite method individual code immediately individual sincere effort original work declared inspire determination thank give sincere apology previous bad work time try best finish correctly original possible also soon possible,issue,positive,positive,positive,positive,positive,positive
+513401378,"Hi @BoltzmannZhaung - sorry for the delay. I just did a review pass and left some specific in-line comments. In addition to these, there are two general points I want to emphasize:
+
+1. Please double check to make sure your code runs when you submit. I noticed at least one bug in your code that would easily have been caught if you tried running it on an example.
+
+2. It's important that the code in this repo represent a sincere effort at original work. In particular, this means that:
+
+    - It is not directly copied from other sources
+    - If it is based off of an existing implementation, those implementations are cited in both the function  documentation and the PR itself.
+ 
+I recognize that for simple functions it can be difficult to implement them cleanly in a way that doesn't  resemble existing implementations. This is okay, and I don't expect you to be able to write 100% unique code. What I want, however, is that your code represent *your* efforts, rather than someone else's :) ",hi sorry delay review pas left specific addition two general want emphasize please double check make sure code submit least one bug code would easily caught tried running example important code represent sincere effort original work particular directly copied based implementation function documentation recognize simple difficult implement cleanly way resemble expect able write unique code want however code represent rather someone else,issue,positive,positive,positive,positive,positive,positive
+513396176,"> General comment: It looks like right now the documentation is copied directly from `scipy.spatial.distance`. This needs to be rewritten before we merge.
+
+I will update documentation at next commits. Thanks",general comment like right documentation copied directly need merge update documentation next thanks,issue,positive,positive,positive,positive,positive,positive
+512115567,"Hi @BoltzmannZhaung - thanks for doing this, on first glance it looks great :) Will take a closer look soon. ",hi thanks first glance great take closer look soon,issue,positive,positive,positive,positive,positive,positive
+512101116,General comment: It looks like right now the documentation is copied directly from `scipy.spatial.distance`. This needs to be rewritten before we merge.,general comment like right documentation copied directly need merge,issue,negative,positive,positive,positive,positive,positive
+511983367,"> @WuZhuoran - Just ping me when this is finished and I'll take a look.
+
+@ddbourgin Thank you. I think I need some help with the grad of cos loss and how to test grad function? ",ping finished take look thank think need help grad co loss test grad function,issue,negative,neutral,neutral,neutral,neutral,neutral
+511965463,@WuZhuoran - Just ping me when this is finished and I'll take a look.,ping finished take look,issue,negative,neutral,neutral,neutral,neutral,neutral
+511964747,"Hi @daidai21 - thanks for your interest! 
+
+There actually _is_ a k-means model as part of the [KNN module](https://github.com/ddbourgin/numpy-ml/blob/86213d690cc169b6020b2aa50095f4dc1b0747d4/nonparametric/knn.py#L10), though I haven't explicitly called it that in the READMEs. Specifically, the `KNN` object takes an argument `classifier`, which converts between k-nearest neighbors regression (`classifier=False`) and k-means classification/clustering (`classifier=True`).
+
+Feel free to propose other models you'd be interested in working on, though!",hi thanks interest actually model part module though explicitly specifically object argument classifier regression feel free propose interested working though,issue,positive,positive,positive,positive,positive,positive
+511563757,"In order to avoid `Keras` or other package way of implementing this, we need to first discuss how to implement Regularizer in general. Then I will re commit everything.",order avoid package way need first discus implement regularizer general commit everything,issue,negative,positive,positive,positive,positive,positive
+511563311,"That's cool. Except for some simple functions. If i want to update a new major feature, we need to discuss before coding. If you have any suggestions or instructions, please let me know.",cool except simple want update new major feature need discus please let know,issue,positive,positive,positive,positive,positive,positive
+511547934,"Sorry to let this sit - I need to think about the best way to include regularization on a per-layer basis. We'll need the loss objects to be able to access the regularization penalties at each layer and then add it to their formulation. We'll also need to adjust the appropriate layer gradients during each stage of backprop. This isn't particularly bad, we just need to make sure that the proper book-keeping is in place. I'm hoping I'll have some time later in the week to work on this.
+
+Also, a general comment: I'd prefer that we avoid directly copying Keras / Torch / tf code or documentation when possible (I realize that for very simple functions like these, there's really only a single way to write them, so obviously use your discretion). While it's fine (and in fact, encouraged) that we compare our implementations against these gold-standards, I think we should focus on trying to do our own work when it comes to implementing / documenting the behavior of the algorithms. A big goal of the project is to supplement packages like Keras by providing more explicit / transparent discussion and documentations of the algorithms.",sorry let sit need think best way include regularization basis need loss able access regularization layer add formulation also need adjust appropriate layer stage particularly bad need make sure proper place time later week work also general comment prefer avoid directly torch code documentation possible realize simple like really single way write obviously use discretion fine fact compare think focus trying work come behavior big goal project supplement like providing explicit transparent discussion,issue,positive,positive,positive,positive,positive,positive
+511277891,"That sounds great! Perhaps a cosine or KL-divergence loss? Depending on your enthusiasm, more sophisticated things like triplet loss or connectionist temporal classification loss would be awesome, though there's a reason why I've put them off ;-)",great perhaps cosine loss depending enthusiasm sophisticated like triplet loss temporal classification loss would awesome though reason put,issue,positive,positive,positive,positive,positive,positive
+511264336,"@jjjjohnson - I don't think this is correct. The line you highlighted and which @JayMody modified in #28 is the *gradient* of the regularization penalty, not the penalty itself (the penalty is calculated [here](https://github.com/ddbourgin/numpy-ml/blob/165ad88ea0e75c76958a3c4ddfac97c2b1c14561/linear_models/lm.py#L162)). Note that if we have a regularization penalty of `(gamma/2) * l2norm(beta) ** 2`, the gradient (ie., vector of partial derivatives of the regularization penalty wrt. each dimension of `beta`) is exactly `gamma * beta`.
+
+Having said that, your comment did make me realize that I was sloppy lining up my gradient calc with the expression I had for the NLL -- according to the line you highlighted I assumed an un-squared regularization penalty for the 1-norm, and a squared norm penalty for the 2-norm. Oops! Will modify this momentarily.",think correct line gradient regularization penalty penalty penalty calculated note regularization penalty beta gradient vector partial regularization penalty dimension beta exactly gamma beta said comment make realize sloppy lining gradient expression according line assumed regularization penalty squared norm penalty modify momentarily,issue,negative,negative,neutral,neutral,negative,negative
+511263520,"That seems correct, so I implemented that change and tested it and got the following results: 
+
+<img width=""1440"" alt=""Screen Shot 2019-07-14 at 10 53 43 PM"" src=""https://user-images.githubusercontent.com/26451316/61193628-a6769e00-a68a-11e9-877a-2b02e7a42d66.png"">
+
+The adjusted regularization doesn't seem to break anything, however the loss went up slightly on some of the examples. However, this may mean nothing since I also tested the code with no regularization at all and the results were similar to with the current regularization implementation.
+
+I put in a PR (#28 ) to implement the change.
+
+
+",correct change tested got following screen shot regularization seem break anything however loss went slightly however may mean nothing since also tested code regularization similar current regularization implementation put implement change,issue,negative,negative,neutral,neutral,negative,negative
+511187489,@ddbourgin i didn't see you closed #7 :) . I was thinking of doing a loss function  do you have any suggestions ?,see closed thinking loss function,issue,negative,negative,neutral,neutral,negative,negative
+511177799,"Thanks, @jeffin07! I'm less inclined to keep adding activation functions, since I think we've already covered the majority of nonlinearities used in modern deep learning. If there's a compelling reason to add soft-sign (e.g., a paper / architecture that reports good results using soft-sign), let me know, but otherwise I think we're probably best keeping things as they are.",thanks le keep activation since think already covered majority used modern deep learning compelling reason add paper architecture good let know otherwise think probably best keeping,issue,positive,positive,positive,positive,positive,positive
+511152938,"Maybe you can refer keras's `Alpha Dropout` [here](https://github.com/keras-team/keras/blob/master/tests/keras/layers/noise_test.py) to create unit test.
+
+And [PyTorch Version](https://github.com/pytorch/pytorch/blob/master/test/test_nn.py#L918) here.",maybe refer alpha dropout create unit test version,issue,negative,neutral,neutral,neutral,neutral,neutral
+511141229,"Yup, as of python 3.5 - it's shorthand for matrix multiplication. See [here](https://www.python.org/dev/peps/pep-0465/).",python shorthand matrix multiplication see,issue,negative,neutral,neutral,neutral,neutral,neutral
+511096043,"Hi @Christakou - thanks for the submission! A few general comments:
+
+1. I notice your code relies on the pandas library. In order to be consistent with the rest of the codebase, you should modify the model to expect numpy arrays instead - no pandas allowed :)
+2. In order to demonstrate your code is sound, please include unit tests against an existing implementation of the model. sklearn's [DiscriminantAnalysis](https://scikit-learn.org/stable/modules/classes.html#module-sklearn.discriminant_analysis) module looks like it might be relevant here.
+3. Please include brief documentation in the [NumPy style](https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_numpy.html) for the public methods in your model. 
+4. Style: as much as possible, try to follow [pep8](https://www.python.org/dev/peps/pep-0008/#id47) style conventions (e.g., camel_case for method, function, and variable names) to ensure readability. You can autoformat your code with the [online Black formatter](https://black.now.sh/)
+
+You can see the general contribution guidelines [here](https://github.com/ddbourgin/numpy-ml/blob/master/CONTRIBUTING.md). Let me know if you have questions !",hi thanks submission general notice code library order consistent rest modify model expect instead order demonstrate code sound please include unit implementation model module like might relevant please include brief documentation style public model style much possible try follow pep style method function variable ensure readability code black see general contribution let know,issue,positive,positive,positive,positive,positive,positive
+511094361,"@jjjjohnson - your suggestion in #16 is correct; I must have forgot to change the `np.zeros(2, 2)` after testing the model for the 2D case!
+
+Anyway, it's pretty unreasonable for me to consider plots as any sort of test at all. I renamed the `test.py` file in the above commits to `plot.py`. 
+
+RE: the instability @WuZhuoran observes - this was occurring because we never seeded the rng for in the GMM, so different runs had different inits, and thus different results. I've fixed this in the above commits by adding a `seed` parameter to the GMM class and using it within `plot.py` to ensure reproducibility across runs.
+
+I think the assertion errors you saw earlier were due to instances in which a mixture component collapsed and wasn't caught properly. I've added a few small checks in the code to guard against this - I think that should address it, though please check and let me know.
+
+Finally, as I went over the code, I noticed that `X` was being passed during init rather than as a parameter to the `fit` method. I've updated the code to address this.",suggestion correct must forgot change testing model case anyway pretty unreasonable consider sort test file instability never seeded different different thus different fixed seed parameter class within ensure reproducibility across think assertion saw due mixture component caught properly added small code guard think address though please check let know finally went code rather parameter fit method code address,issue,positive,positive,neutral,neutral,positive,positive
+510990778,"I update the test results in #22 again, it shows that the test is not stable. We can ask @ddbourgin for further discussion.",update test test stable ask discussion,issue,negative,neutral,neutral,neutral,neutral,neutral
+510959291,"And then I ran again, it passed all test.
+
+It seems that the test is not stable.",ran test test stable,issue,negative,neutral,neutral,neutral,neutral,neutral
+510958435,"Now I get another error:
+
+```
+Traceback (most recent call last):
+  File ""/Users/zhuoran/Documents/git/numpy-ml/gmm/tests.py"", line 110, in <module>
+    plot()
+  File ""/Users/zhuoran/Documents/git/numpy-ml/gmm/tests.py"", line 89, in plot
+    ret = _G.fit(max_iter=75, verbose=False)
+  File ""/Users/zhuoran/Documents/git/numpy-ml/gmm/gmm.py"", line 59, in fit
+    self._E_step()
+  File ""/Users/zhuoran/Documents/git/numpy-ml/gmm/gmm.py"", line 102, in _E_step
+    assert_allclose(np.sum(q_i), 1, err_msg=""{}"".format(np.sum(q_i)))
+  File ""/usr/local/lib/python3.7/site-packages/numpy/testing/nose_tools/utils.py"", line 1398, in assert_allclose
+    verbose=verbose, header=header, equal_nan=equal_nan)
+  File ""/usr/local/lib/python3.7/site-packages/numpy/testing/nose_tools/utils.py"", line 781, in assert_array_compare
+    raise AssertionError(msg)
+AssertionError: 
+Not equal to tolerance rtol=1e-07, atol=0
+2.0
+(mismatch 100.0%)
+ x: array(2.)
+ y: array(1)
+
+```",get another error recent call last file line module plot file line plot ret file line fit file line file line file line raise equal tolerance mismatch array array,issue,negative,positive,neutral,neutral,positive,positive
+510759754,"Could you run it another time? I didnot encounter the error after the change 
+
+Could be den =0 in `self.mu[ix, :] = num / den`",could run another time encounter error change could den den,issue,negative,neutral,neutral,neutral,neutral,neutral
+510585852,I start a PR #22 on this. But after I change this line. The gmm model cannot pass the test. Could you please take a look? I copy the details in PR 22.,start change line model pas test could please take look copy,issue,negative,neutral,neutral,neutral,neutral,neutral
+510580174,"Could you please create unit test for this?
+
+Maybe you can refer [sklearn-test](https://github.com/scikit-learn/scikit-learn/blob/master/sklearn/tests/test_discriminant_analysis.py) for details.",could please create unit test maybe refer,issue,positive,neutral,neutral,neutral,neutral,neutral
+510441302,"@ddbourgin Please check my latest update on Upsampling where I demonstrated that Keras employed a weak version bilinear upsampling (just like unpooling), and dilated convolution and bilinear convolution achieves the best performance by not only approximate overall features but also reserves details in upsampled feature maps.
+
+Original:
+
+![ori_img](https://user-images.githubusercontent.com/8510840/61044684-bcc2f680-a40b-11e9-974c-73377434035d.png)
+
+Upsampled by Keras equivalent unpooling and coarse bilinear interpolation method by repeating downsampled feature maps.
+
+![Bilinear_Upsampling_resize](https://user-images.githubusercontent.com/8510840/61044757-ebd96800-a40b-11e9-86ca-e01efb36954b.png)
+
+Dilated Convolution and Bilinear Interpolation with Maximum Sampling Rate (see Shanno theorem for details)
+
+![zero_padding_Conv2dTranspose_Upsampling](https://user-images.githubusercontent.com/8510840/61044784-fac01a80-a40b-11e9-9b85-519fff901f82.png)
+
+I will show you simple use tranposed convolution does not work:
+
+![zero_padding_Rot90Conv_upsampling](https://user-images.githubusercontent.com/8510840/61046206-24c70c00-a40f-11e9-861c-89d7a4eaf043.png)
+
+",please check latest update employed weak version bilinear like dilated convolution bilinear convolution best performance approximate overall also feature original equivalent coarse bilinear interpolation method feature dilated convolution bilinear interpolation maximum sampling rate see theorem show simple use convolution work,issue,positive,positive,positive,positive,positive,positive
+510354665,"Hi @yiakwy - nice work on your repo! At this stage I don't have plans to implement things like an autograd system / computational graph functionality. If you're looking for something like that, see the amazing [autograd](https://github.com/HIPS/autograd) repo. 
+
+I'd love to support syntax similar to the Keras [functional API](https://keras.io/getting-started/functional-api-guide/) in the future, but it's not there yet. One more item on the TODO list :)",hi nice work stage implement like system computational graph functionality looking something like see amazing love support syntax similar functional future yet one item list,issue,positive,positive,positive,positive,positive,positive
+510350015,"Okay, great! I've made a few updates to the documentation (e.g., remove Keras-specific references, expanded descriptions, etc.) and... Merged :-) Thanks @WuZhuoran !",great made documentation remove expanded thanks,issue,positive,positive,positive,positive,positive,positive
+510333441,"> Fix #7 , part of them.
+> 
+> * [x]  Linear
+> * [x]  Softmax
+> * [x]  Hard Sigmoid
+> * [x]  Exponential
+> * [x]  SELU
+> * [x]  SELU Test
+> * [x]  LeakyRelu Test
+> 
+> Plot test as follow:
+> 
+> ![plot](https://user-images.githubusercontent.com/8717187/60925136-b3912880-a257-11e9-8ecc-8f7477a0ea21.png)
+
+@WuZhuoran Could you look at this issue https://github.com/ddbourgin/numpy-ml/issues/17",fix part linear hard sigmoid exponential test test plot test follow plot could look issue,issue,negative,negative,negative,negative,negative,negative
+510326256,Beautiful. Fixed small bugs in the unit tests and now we're ready to go. Merging!,beautiful fixed small unit ready go,issue,positive,positive,positive,positive,positive,positive
+510265189,"I agree with you on the ELU problem - I suspect it's a numerical precision issue. I'm not at my personal computer so I can't check right now, but I'll try to go through your tests in more detail tonight. 
+
+Thanks for wrangling the `import` problems - I'm sure I accidentally introduced a ton of weirdness / circular imports when I was writing individual unit tests 😕. Will take a look at the  PR in more detail tonight!",agree problem suspect numerical precision issue personal computer ca check right try go detail tonight thanks import sure accidentally ton weirdness circular writing individual unit take look detail tonight,issue,negative,positive,positive,positive,positive,positive
+510263121," @jeffin07 - This is great! I've taken a quick glance, and this looks basically perfect. I'll go over in a bit more detail tonight, but should be able to merge shortly. ",great taken quick glance basically perfect go bit detail tonight able merge shortly,issue,positive,positive,positive,positive,positive,positive
+509939279,"You can create unit test base on @ddbourgin example:
+> Thanks for these! I haven't finished going through them, but if you could include unit tests against the existing PyTorch implementations (see my hacky examples [here](https://github.com/ddbourgin/numpy-ml/blob/983e0cb226b45f586dfaaeade5a3c40d60fb7187/neural_nets/tests/tests.py#L454) for reference), that would help a ton.
+
+You can also refer #8 pull request for further example of unit test.
+",create unit test base example thanks finished going could include unit see hacky reference would help ton also refer pull request example unit test,issue,positive,negative,negative,negative,negative,negative
+509825157,"And I leave out the `Linear`, `Exponential` and `Hard Sigmoid` in test because
+
+1. `Linear` and `Exponential` do not need further evidence.
+2. pytorch does not contain `Hard Sigmoid`",leave linear exponential hard sigmoid test linear exponential need evidence contain hard sigmoid,issue,negative,negative,negative,negative,negative,negative
+509819766,"Hi @ddbourgin , I update with `test`!
+
+About the test part,
+
+1. `refact` the activation test part to a new file in test subdir.
+2. `add` selu and leakyrelu test against with pytorch version.
+3. I found some bugs when running the test
+
+First, when running the test, the problem occurs in `__init__.py` file.
+```
+E
+======================================================================
+ERROR: Failure: ImportError (cannot import name 'calc_pad_dims_2D' from 'utils' (/Users/zhuoran/Documents/git/pose-tracking-engine/utils.py))
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File ""/usr/local/Cellar/numpy/1.16.0/libexec/nose/lib/python3.7/site-packages/nose/failure.py"", line 39, in runTest
+    raise self.exc_val.with_traceback(self.tb)
+  File ""/usr/local/Cellar/numpy/1.16.0/libexec/nose/lib/python3.7/site-packages/nose/loader.py"", line 417, in loadTestsFromName
+    addr.filename, addr.module)
+  File ""/usr/local/Cellar/numpy/1.16.0/libexec/nose/lib/python3.7/site-packages/nose/importer.py"", line 47, in importFromPath
+    return self.importFromDir(dir_path, fqname)
+  File ""/usr/local/Cellar/numpy/1.16.0/libexec/nose/lib/python3.7/site-packages/nose/importer.py"", line 94, in importFromDir
+    mod = load_module(part_fqname, fh, filename, desc)
+  File ""/usr/local/Cellar/python/3.7.2_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/imp.py"", line 244, in load_module
+    return load_package(name, filename)
+  File ""/usr/local/Cellar/python/3.7.2_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/imp.py"", line 216, in load_package
+    return _load(spec)
+  File ""<frozen importlib._bootstrap>"", line 696, in _load
+  File ""<frozen importlib._bootstrap>"", line 677, in _load_unlocked
+  File ""<frozen importlib._bootstrap_external>"", line 728, in exec_module
+  File ""<frozen importlib._bootstrap>"", line 219, in _call_with_frames_removed
+  File ""/Users/zhuoran/Documents/git/numpy-ml/neural_nets/tests/__init__.py"", line 1, in <module>
+    from .tests import *
+  File ""/Users/zhuoran/Documents/git/numpy-ml/neural_nets/tests/tests.py"", line 16, in <module>
+    from utils import calc_pad_dims_2D, conv2D_naive, conv2D, pad2D, pad1D
+ImportError: cannot import name 'calc_pad_dims_2D' from 'utils' (/Users/zhuoran/Documents/git/pose-tracking-engine/utils.py)
+```
+
+Then I remove this line in `__init__.py`, this problem solved.
+But when i run the `softmax` function, the problem is:
+
+```
+E
+======================================================================
+ERROR: tests.test_activations.test_everything
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File ""/usr/local/Cellar/numpy/1.16.0/libexec/nose/lib/python3.7/site-packages/nose/case.py"", line 197, in runTest
+    self.test(*self.arg)
+  File ""/Users/zhuoran/Documents/git/numpy-ml/neural_nets/tests/test_activations.py"", line 69, in test_everything
+    test_activations(N=N)
+  File ""/Users/zhuoran/Documents/git/numpy-ml/neural_nets/tests/test_activations.py"", line 80, in test_activations
+    test_softmax_activation(N)
+  File ""/Users/zhuoran/Documents/git/numpy-ml/neural_nets/tests/test_activations.py"", line 151, in test_softmax_activation
+    from layers import Softmax
+  File ""/Users/zhuoran/Documents/git/numpy-ml/neural_nets/layers/__init__.py"", line 1, in <module>
+    from .layers import *
+  File ""/Users/zhuoran/Documents/git/numpy-ml/neural_nets/layers/layers.py"", line 5, in <module>
+    from initializers import WeightInitializer, OptimizerInitializer, ActivationInitializer
+  File ""/Users/zhuoran/Documents/git/numpy-ml/neural_nets/initializers/__init__.py"", line 1, in <module>
+    from .initializers import *
+  File ""/Users/zhuoran/Documents/git/numpy-ml/neural_nets/initializers/initializers.py"", line 17, in <module>
+    from utils import he_normal, he_uniform, glorot_normal, glorot_uniform, truncated_normal
+ImportError: cannot import name 'he_normal' from 'utils' (/Users/zhuoran/Documents/git/pose-tracking-engine/utils.py)
+```
+
+I think both problem can be solved by using right `import` method.
+
+Then I comment `softmax` part, then the tests passed.
+
+```
+Testing started at 14:36 ...
+/usr/local/bin/python3.7 /Applications/PyCharm.app/Contents/helpers/pycharm/_jb_nosetest_runner.py --target tests/test_activations.py::test_everything
+Launching Nosetest with arguments /Applications/PyCharm.app/Contents/helpers/pycharm/_jb_nosetest_runner.py tests/test_activations.py:test_everything in /Users/zhuoran/Documents/git/numpy-ml/neural_nets
+Testing Sigmoid activation
+PASSED
+...
+PASSED
+Testing Softmax activation
+Testing Tanh activation
+PASSED
+...
+PASSED
+Testing ReLU activation
+PASSED
+...
+PASSED
+Testing LeakyRelu activation
+PASSED
+...
+PASSED
+.
+----------------------------------------------------------------------
+Ran 1 test in 6.248s
+
+OK
+```
+
+BTW, i found that our `elu` test only pass when we set `decimal` to 6 in function `assert_almost_equal`, the default setting is `7`, i think elu still works.",hi update test test part activation test part new file test add test version found running test first running test problem file error failure import name recent call last file line raise file line file line return file line file line return name file line return spec file frozen line file frozen line file frozen line file frozen line file line module import file line module import import name remove line problem run function problem error recent call last file line file line file line file line import file line module import file line module import file line module import file line module import import name think problem right import method comment part testing target testing sigmoid activation testing activation testing tanh activation testing activation testing activation ran test found test pas set decimal function default setting think still work,issue,negative,positive,neutral,neutral,positive,positive
+509787942,"Awesome, I think this is all set! The last thing to do is to ensure that each function passes an appropriate unit test for the forward pass + gradient step, then we can merge!",awesome think set last thing ensure function appropriate unit test forward pas gradient step merge,issue,positive,positive,positive,positive,positive,positive
+509785878,"Yeah, more or less. The major difference is that this code won't have a built-in `backward` method - you have to implement it yourself for each model",yeah le major difference code wo backward method implement model,issue,negative,positive,neutral,neutral,positive,positive
+509780839,"So basically numpy-ml follows some kind of `PyTorch` way of building a model, right? ",basically kind way building model right,issue,positive,positive,positive,positive,positive,positive
+509780153,Hard Sigmoid Numpy way of function fixed.,hard sigmoid way function fixed,issue,negative,negative,neutral,neutral,negative,negative
+509775940,"In general, if you want to implement a model, you'll probably want the following methods as a bare-minimum:
+
+```python
+_build_network(self, ...):
+    # initialize the network layers and store them within an 
+    # OrderedDict so you can reliably iterate over them during the 
+    # forward / backward passes
+
+forward(self, X):
+    # perform a forward pass. this is where the specific model architecture comes
+    # into play, since you'll need to define how outputs from early layers flow to 
+    # inputs of subsequent layers
+
+backward(self, dLdy):
+    # perform a backward pass. again, the route the gradients take through the network
+    # will be specific to the particular model architecture
+```",general want implement model probably want following python self initialize network store within reliably iterate forward backward forward self perform forward pas specific model architecture come play since need define early flow subsequent backward self perform backward pas route take network specific particular model architecture,issue,negative,positive,neutral,neutral,positive,positive
+509771221,"Unfortunately there really is no good high-level documentation at this point. This is on my TODO list, but is likely to take some time as there's a lot to document ;) 
+
+For your particular case, there are two examples of how you might go about building a full network in the [models](https://github.com/ddbourgin/numpy-ml/tree/master/neural_nets/models) section. 
+
+In general, models using this code are going to be *quite* slow in comparison to any keras/tf/torch/theano implementations - the code here is optimized for readability over speed / efficiency. That said, I think it's a great idea to have some simple examples to show how the NN code corresponds to other packages.",unfortunately really good documentation point list likely take time lot document particular case two might go building full network section general code going quite slow comparison code readability speed efficiency said think great idea simple show code,issue,positive,positive,positive,positive,positive,positive
+509735539,"I already fix the `hard sigmoid` function but i think there is a better (beautiful) way to write the `grad` function.
+
+And about `PRelu`, i decided to create a new pull request to talk about it. In this pull request, i removed that one.",already fix hard sigmoid function think better beautiful way write grad function decided create new pull request talk pull request removed one,issue,positive,positive,positive,positive,positive,positive
+509482541,"> BTW, we include all the tests in one file?
+
+We... shouldn't 😬. The fact that we do is an artifact from when the neural network module was much smaller. It would be better to migrate the relevant tests to a `tests.py` file in the appropriate subdir and delete the `tests` dir entirely, though I haven't had time to do this yet. 
+
+In anticipation, I went ahead and renamed the `tests.py` file in the `activations` subdir to `plots.py`, since it doesn't contain any real ""tests"" (not really sure how it even ended up with that name in the first place, tbh!). ",include one file fact artifact neural network module much smaller would better migrate relevant file appropriate delete entirely though time yet anticipation went ahead file since contain real really sure even ended name first place,issue,positive,positive,positive,positive,positive,positive
+509427394,"> Thanks for these! I haven't finished going through them, but if you could include unit tests against the existing PyTorch implementations (see my hacky examples [here](https://github.com/ddbourgin/numpy-ml/blob/983e0cb226b45f586dfaaeade5a3c40d60fb7187/neural_nets/tests/tests.py#L454) for reference), that would help a ton.
+
+I will start new pull request for unit test.
+
+BTW, we include all the tests in one file? ",thanks finished going could include unit see hacky reference would help ton start new pull request unit test include one file,issue,positive,positive,positive,positive,positive,positive
+509390736,"> > Linear units are just `Affine` with slope=1, intercept=0. Perhaps just make the Linear activation an instance of Affine with fixed slope and intercept?
+> 
+> You mean we still create `Linear` Class but we use `Affine` API to do so?
+> 
+> That is cool.
+
+
+
+> > Linear units are just `Affine` with slope=1, intercept=0. Perhaps just make the Linear activation an instance of Affine with fixed slope and intercept?
+> 
+> You mean we still create `Linear` Class but we use `Affine` API to do so?
+> 
+> That is cool.
+
+Yup, you could do something like:
+```python
+class Linear(Affine):
+    def __init__(self):
+        super().__init__(slope=1, intercept=0)
+
+    def __str__(self):
+        return ""Linear""
+```",linear affine perhaps make linear activation instance affine fixed slope intercept mean still create linear class use affine cool linear affine perhaps make linear activation instance affine fixed slope intercept mean still create linear class use affine cool could something like python class linear affine self super self return linear,issue,positive,positive,neutral,neutral,positive,positive
+509389389,"Thanks for these! I haven't finished going through them, but if you could include unit tests against the existing PyTorch implementations (see my hacky examples [here](https://github.com/ddbourgin/numpy-ml/blob/983e0cb226b45f586dfaaeade5a3c40d60fb7187/neural_nets/tests/tests.py#L454) for reference), that would help a ton.",thanks finished going could include unit see hacky reference would help ton,issue,positive,positive,positive,positive,positive,positive
+509388386,"> Linear units are just `Affine` with slope=1, intercept=0. Perhaps just make the Linear activation an instance of Affine with fixed slope and intercept?
+
+You mean we still create `Linear` Class but we use `Affine` API to do so?
+
+That is cool.",linear affine perhaps make linear activation instance affine fixed slope intercept mean still create linear class use affine cool,issue,positive,positive,neutral,neutral,positive,positive
+509387902,"@ddbourgin Cool.
+Fixed. 
+
+I will commit after you review the code. About the `NumPy Style Python Docstrings`, I will update ASAP.",cool fixed commit review code style python update,issue,positive,positive,positive,positive,positive,positive
+509347824,"Awesome! Two quick notes:
+- `Linear` is just a special case of `Affine` (with slope=1, intercept=0), so no need to implement a separate function
+- `Softmax` actually already exists, but as a Layer rather than an activation function. I decided to do this because it is much more efficient to calculate the gradient through the activation and projection weights together rather than in sequence. 
+
+Otherwise, looks good! I'll have a look at your PR when I have a spare moment :)",awesome two quick linear special case affine need implement separate function actually already layer rather activation function decided much efficient calculate gradient activation projection together rather sequence otherwise good look spare moment,issue,positive,positive,positive,positive,positive,positive
+509339511,Add documentation for each activations based on `Keras` documentation.,add documentation based documentation,issue,negative,neutral,neutral,neutral,neutral,neutral
+509303926,@WuZhuoran Great! I think it's also worth looking into [Activation_function#Comparison_of_activation_functions](https://en.wikipedia.org/wiki/Activation_function#Comparison_of_activation_functions) ,great think also worth looking,issue,positive,positive,positive,positive,positive,positive
+508957978,"> This looks great - thanks a lot! I've added some unit tests in a separate PR (#4). If you agree with the edits, feel free to commit and I'll merge to master :)
+
+Thank you! I will commit ASAP.",great thanks lot added unit separate agree feel free commit merge master thank commit,issue,positive,positive,positive,positive,positive,positive
+508951052,"This looks great - thanks a lot! I've added some unit tests in a separate PR (#4). If you agree with the edits, feel free to commit and I'll merge to master :) ",great thanks lot added unit separate agree feel free commit merge master,issue,positive,positive,positive,positive,positive,positive
+508950895,Whoops - good catch! Thanks :) ,whoop good catch thanks,issue,positive,positive,positive,positive,positive,positive

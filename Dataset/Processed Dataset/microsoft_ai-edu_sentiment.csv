@@ -1,0 +1,1394 @@
+id,original_comment,processed_comment,source,sentiment_VADER,sentiment_textblob,sentiment_pattern,sentiment_bert,sentiment_spacy,max_voted_sentiment
+1464824798,"您好,通过运行图中的那个python文件即可生成ch09_2.train.npz和ch09_2.test.npz两个文件
+
+
+
+
+
+------------------&nbsp;原始邮件&nbsp;------------------
+发件人:                                                                                                                        ""microsoft/ai-edu""                                                                                    ***@***.***&gt;;
+发送时间:&nbsp;2023年3月11日(星期六) 上午9:35
+***@***.***&gt;;
+***@***.******@***.***&gt;;
+主题:&nbsp;Re: [microsoft/ai-edu] 数据包下载路径访问异常,无法正常下载 (Issue #755)
+
+
+
+
+
+ raise Exception(""Cannot find train file."")  
+Exception: Cannot find train file.
+ ch09_2.train.npz和ch09_2.test.npz文件好像没有？运行不了data.py
+ 
+—
+Reply to this email directly, view it on GitHub, or unsubscribe.
+You are receiving this because you authored the thread.Message ID: ***@***.***&gt;",issue raise exception find train file exception find train file reply directly view id,issue,negative,positive,neutral,neutral,positive,positive
+1464752146,"    raise Exception(""Cannot find train file."")
+Exception: Cannot find train file.
+ch09_2.train.npz和ch09_2.test.npz文件好像没有？运行不了data.py",raise exception find train file exception find train file,issue,negative,neutral,neutral,neutral,neutral,neutral
+1363702327,"&#64;microsoft/msra-ai-edu-admin 
+ This is a reminder that this repo is missing a mandatory file, please add file ASAP.",reminder missing mandatory file please add file,issue,negative,negative,negative,negative,negative,negative
+1283491696,"老师您好，我有以下问题需要请教一下：
+1.使用的梯度下降（参数使用的是源代码）发计算的结果和最小二乘法的结果相差比较大，结果如下：
+![image](https://user-images.githubusercontent.com/102909786/196611402-0588b120-5de5-4d04-9528-defb72f91508.png)
+2.我用pycharm调用原代码（未修改），其中ch04, Level3报错结果如下：
+IndexError: too many indices for array: array is 1-dimensional, but 2 were indexed
+同时，原代码运行时（未修改），ch04, Level7也遇到矩阵大小不一的问题，其中ch04, Level7报错结果如下：
+RuntimeError: mat1 and mat2 shapes cannot be multiplied (1x32 and 1x1)
+谢谢！
+
+",image many index array array indexed mat mat,issue,negative,positive,positive,positive,positive,positive
+1278015782,"<!-- Policy app identification https://img.shields.io/static/v1?label=ContributorLicenseAgreement. -->
+@TrellixVulnTeam please read the following Contributor License Agreement(CLA). If you agree with the CLA, please reply with the following information.
+
+```
+@microsoft-github-policy-service agree [company=""{your company}""]
+```
+
+> Options:
+> - (default - no company specified) I have sole ownership of intellectual property rights to my Submissions and I am not making Submissions in the course of work for my employer.
+> - (when company given) I am making Submissions in the course of work for my employer (or my employer has intellectual property rights in my Submissions by contract or applicable law). I have permission from my employer to make Submissions and enter into this Agreement on behalf of my employer. By signing below, the defined term “You” includes me and my employer.
+
+<details>
+    <summary>Contributor License Agreement</summary>
+    
+### Contribution License Agreement
+This Contribution License Agreement (**“Agreement”**) is agreed to by the party signing below (**“You”**),
+and conveys certain license rights to Microsoft Corporation and its affiliates (“Microsoft”) for Your
+contributions to Microsoft open source projects. This Agreement is effective as of the latest signature
+date below.
+1. **Definitions**.
+**“Code”** means the computer software code, whether in human-readable or machine-executable form,
+that is delivered by You to Microsoft under this Agreement.
+**“Project”** means any of the projects owned or managed by Microsoft and offered under a license
+approved by the Open Source Initiative (www.opensource.org).
+**“Submit”** is the act of uploading, submitting, transmitting, or distributing code or other content to any
+Project, including but not limited to communication on electronic mailing lists, source code control
+systems, and issue tracking systems that are managed by, or on behalf of, the Project for the purpose of
+discussing and improving that Project, but excluding communication that is conspicuously marked or
+otherwise designated in writing by You as “Not a Submission.”
+**“Submission”** means the Code and any other copyrightable material Submitted by You, including any
+associated comments and documentation.
+2. **Your Submission**. You must agree to the terms of this Agreement before making a Submission to any
+Project. This Agreement covers any and all Submissions that You, now or in the future (except as
+described in Section 4 below), Submit to any Project.
+3. **Originality of Work**. You represent that each of Your Submissions is entirely Your original work.
+Should You wish to Submit materials that are not Your original work, You may Submit them separately
+to the Project if You (a) retain all copyright and license information that was in the materials as You
+received them, (b) in the description accompanying Your Submission, include the phrase “Submission
+containing materials of a third party:” followed by the names of the third party and any licenses or other
+restrictions of which You are aware, and (c) follow any other instructions in the Project’s written
+guidelines concerning Submissions.
+4. **Your Employer**. References to “employer” in this Agreement include Your employer or anyone else
+for whom You are acting in making Your Submission, e.g. as a contractor, vendor, or agent. If Your
+Submission is made in the course of Your work for an employer or Your employer has intellectual
+property rights in Your Submission by contract or applicable law, You must secure permission from Your
+employer to make the Submission before signing this Agreement. In that case, the term “You” in this
+Agreement will refer to You and the employer collectively. If You change employers in the future and
+desire to Submit additional Submissions for the new employer, then You agree to sign a new Agreement
+and secure permission from the new employer before Submitting those Submissions.
+5. **Licenses**.
+  * **Copyright License**. You grant Microsoft, and those who receive the Submission directly or
+indirectly from Microsoft, a perpetual, worldwide, non-exclusive, royalty-free, irrevocable license in the
+Submission to reproduce, prepare derivative works of, publicly display, publicly perform, and distribute
+the Submission and such derivative works, and to sublicense any or all of the foregoing rights to third
+parties.
+  * **Patent License**. You grant Microsoft, and those who receive the Submission directly or
+indirectly from Microsoft, a perpetual, worldwide, non-exclusive, royalty-free, irrevocable license under
+Your patent claims that are necessarily infringed by the Submission or the combination of the
+Submission with the Project to which it was Submitted to make, have made, use, offer to sell, sell and
+import or otherwise dispose of the Submission alone or with the Project.
+  * **Other Rights Reserved**. Each party reserves all rights not expressly granted in this Agreement.
+No additional licenses or rights whatsoever (including, without limitation, any implied licenses) are
+granted by implication, exhaustion, estoppel or otherwise.
+6. **Representations and Warranties**. You represent that You are legally entitled to grant the above
+licenses. You represent that each of Your Submissions is entirely Your original work (except as You may
+have disclosed under Section 3). You represent that You have secured permission from Your employer to
+make the Submission in cases where Your Submission is made in the course of Your work for Your
+employer or Your employer has intellectual property rights in Your Submission by contract or applicable
+law. If You are signing this Agreement on behalf of Your employer, You represent and warrant that You
+have the necessary authority to bind the listed employer to the obligations contained in this Agreement.
+You are not expected to provide support for Your Submission, unless You choose to do so. UNLESS
+REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING, AND EXCEPT FOR THE WARRANTIES
+EXPRESSLY STATED IN SECTIONS 3, 4, AND 6, THE SUBMISSION PROVIDED UNDER THIS AGREEMENT IS
+PROVIDED WITHOUT WARRANTY OF ANY KIND, INCLUDING, BUT NOT LIMITED TO, ANY WARRANTY OF
+NONINFRINGEMENT, MERCHANTABILITY, OR FITNESS FOR A PARTICULAR PURPOSE.
+7. **Notice to Microsoft**. You agree to notify Microsoft in writing of any facts or circumstances of which
+You later become aware that would make Your representations in this Agreement inaccurate in any
+respect.
+8. **Information about Submissions**. You agree that contributions to Projects and information about
+contributions may be maintained indefinitely and disclosed publicly, including Your name and other
+information that You submit with Your Submission.
+9. **Governing Law/Jurisdiction**. This Agreement is governed by the laws of the State of Washington, and
+the parties consent to exclusive jurisdiction and venue in the federal courts sitting in King County,
+Washington, unless no federal subject matter jurisdiction exists, in which case the parties consent to
+exclusive jurisdiction and venue in the Superior Court of King County, Washington. The parties waive all
+defenses of lack of personal jurisdiction and forum non-conveniens.
+10. **Entire Agreement/Assignment**. This Agreement is the entire agreement between the parties, and
+supersedes any and all prior agreements, understandings or communications, written or oral, between
+the parties relating to the subject matter hereof. This Agreement may be assigned by Microsoft.
+
+</details>",policy identification please read following contributor license agreement agree please reply following information agree company default company sole ownership intellectual property making course work employer company given making course work employer employer intellectual property contract applicable law permission employer make enter agreement behalf employer defined term employer summary contributor license agreement contribution license agreement contribution license agreement agreement agreed party certain license corporation open source agreement effective latest signature date code computer code whether form agreement project license open source initiative submit act code content project limited communication electronic source code control issue behalf project purpose improving project excluding communication conspicuously marked otherwise writing submission code copyrightable material associated documentation submission must agree agreement making submission project agreement future except section submit project originality work represent entirely original work wish submit original work may submit separately project retain copyright license information received description submission include phrase submission third party third party aware follow project written concerning employer employer agreement include employer anyone else acting making submission contractor vendor agent submission made course work employer employer intellectual property submission contract applicable law must secure permission employer make submission agreement case term agreement refer employer collectively change future desire submit additional new employer agree sign new agreement secure permission new employer copyright license grant receive submission directly indirectly perpetual irrevocable license submission reproduce prepare derivative work publicly display publicly perform distribute submission derivative work sublicense foregoing third patent license grant receive submission directly indirectly perpetual irrevocable license patent necessarily submission combination submission project make made use offer sell sell import otherwise dispose submission alone project reserved party expressly agreement additional whatsoever without limitation implication exhaustion estoppel otherwise represent legally grant represent entirely original work except may disclosed section represent permission employer make submission submission made course work employer employer intellectual property submission contract applicable law agreement behalf employer represent warrant necessary authority bind listed employer agreement provide support submission unless choose unless applicable law agreed writing except expressly stated submission provided agreement provided without warranty kind limited warranty fitness particular purpose notice agree notify writing later become aware would make agreement inaccurate respect information agree information may indefinitely disclosed publicly name information submit submission governing agreement state consent exclusive jurisdiction venue federal sitting king county unless federal subject matter jurisdiction case consent exclusive jurisdiction venue superior court king county waive lack personal jurisdiction forum entire agreement entire agreement prior written oral subject matter hereof agreement may assigned,issue,positive,positive,positive,positive,positive,positive
+1274366601,"再网站上有关于数据的说明。是要运行程序，会自动生成数据。
+
+从 Windows 版邮件<https://go.microsoft.com/fwlink/?LinkId=550986>发送
+
+发件人: ***@***.***>
+发送时间: 2022年8月24日 21:25
+收件人: ***@***.***>
+抄送: ***@***.***>; ***@***.***>
+主题: [microsoft/ai-edu] 无法下载数据> 请问，数据在哪里down (Issue #747)
+
+
+请问，数据在哪里down
+
+https://github.com/microsoft/ai-edu/tree/master/%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/A2-%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/src
+
+Originally posted by @xiaowuhu<https://github.com/xiaowuhu> in #415 (comment)<https://github.com/microsoft/ai-edu/issues/415#issuecomment-915735604>
+
+―
+Reply to this email directly, view it on GitHub<https://github.com/microsoft/ai-edu/issues/747>, or unsubscribe<https://github.com/notifications/unsubscribe-auth/AEST6DDQLRK2YJ6CMNL7UKLV2YPFXANCNFSM57PKSCRQ>.
+You are receiving this because you were mentioned.Message ID: ***@***.***>
+
+",issue originally posted comment reply directly view id,issue,negative,positive,positive,positive,positive,positive
+1234614359,"&#64;microsoft/msra-ai-edu-admin 
+ This is a reminder that there is an open pr for you to merge. This is a mandatory file. Please do so ASAP.",reminder open merge mandatory file please,issue,negative,neutral,neutral,neutral,neutral,neutral
+1226782006,"看一下 A2-神经网络基本原理/src/Data/*.py, 是各章的数据生成工具。注意把生成好的文件copy到目标章节运行即可。
+
+从 Windows 版邮件<https://go.microsoft.com/fwlink/?LinkId=550986>发送
+
+发件人: ***@***.***>
+发送时间: 2022年8月25日 10:47
+收件人: ***@***.***>
+抄送: ***@***.***>; ***@***.***>
+主题: Re: [microsoft/ai-edu] 无法下载数据> 请问，数据在哪里down (Issue #747)
+
+
+运行DataDownload.py，收到异常 <urlopen error [Errno 8] nodename nor servname provided, or not known>
+
+―
+Reply to this email directly, view it on GitHub<https://github.com/microsoft/ai-edu/issues/747#issuecomment-1226706669>, or unsubscribe<https://github.com/notifications/unsubscribe-auth/AEST6DDY5RXL4M3VCGNYZG3V23NEBANCNFSM57PKSCRQ>.
+You are receiving this because you were mentioned.Message ID: ***@***.***>
+
+",issue error provided known reply directly view id,issue,negative,positive,neutral,neutral,positive,positive
+1201994547,"&#64;YanjieGao &#64;msftgits &#64;xiaowuhu &#64;msftdata &#64;mslichao &#64;peterchenhao &#64;msxuc 
+This is a reminder that there is an open [PR](https://github.com/microsoft/ai-edu/pull/733) for you to merge a SECURITY.MD file on your repo. This is a mandatory file. Please do so ASAP.",reminder open merge file mandatory file please,issue,negative,neutral,neutral,neutral,neutral,neutral
+1153158935,"Welcome to visit my project's repo:
+
+https://github.com/UEFI-code/MSRA_thePracticeSpaceProject_AIMusic
+
+I apologize for not good at Music & NLP, but I'm trying hard to complete it!
+Continuous updating...
+
+Name: Shizhuo Zhang
+School: Beijing Information and Science Technology University",welcome visit project apologize good music trying hard complete continuous name school information science technology university,issue,positive,positive,positive,positive,positive,positive
+1145818026,"Welcome to visit my project's repo!
+Continues updating😎
+https://github.com/UEFI-code/MSRA_thePracticeSpaceProject_PyTorchCUDA
+
+The Research & Experiment's detail is in the repo's wiki:
+https://github.com/UEFI-code/MSRA_thePracticeSpaceProject_PyTorchCUDA/wiki
+
+Please feel free to reply me here or open an issue in my repo if you have any questions!
+
+Thanks you for testing my code and reading my wiki!
+
+Name: Shizhuo Zhang, Yue Fang
+School: Beijing Information Science and Technology University",welcome visit project research experiment detail please feel free reply open issue thanks testing code reading name fang school information science technology university,issue,positive,positive,positive,positive,positive,positive
+1144611209,Please solve conflict before merge,please solve conflict merge,issue,negative,neutral,neutral,neutral,neutral,neutral
+992057487,"[![CLA assistant check](https://cla.opensource.microsoft.com/pull/badge/not_signed)](https://cla.opensource.microsoft.com/microsoft/ai-edu?pullRequest=703) <br/>Thank you for your submission, we really appreciate it. Like many open source projects, we ask that you sign our [Contributor License Agreement](https://cla.opensource.microsoft.com/microsoft/ai-edu?pullRequest=703) before we can accept your contribution.<br/><br/>:x: MintGreen-hub [sign now](https://cla.opensource.microsoft.com/microsoft/ai-edu?pullRequest=703)<br/><sub>You have signed the CLA already but the status is still pending? Let us [recheck](https://cla.opensource.microsoft.com/check/microsoft/ai-edu?pullRequest=703) it.</sub>",assistant check thank submission really appreciate like many open source ask sign contributor license agreement accept sign already status still pending let u recheck,issue,positive,positive,positive,positive,positive,positive
+990932940,"If we could update in this way, we could make a significant improvement of the contents for later video format content",could update way could make significant improvement content later video format content,issue,positive,positive,positive,positive,positive,positive
+981328267,"老师您好，能帮我看看为什么为下面的想法是错误的呢？
+以求一元线性拟合的单层神经元为例子，神经元的forward表达式为z=w*x+b，损失函数用均方差函数loss=pow(z-y,2)/2
+我的思路是：
+1. 先根据梯度下降公式对损失函数与z的关系进行推导，这样就能算出为了梯度下降损失值，z要怎么去变化，也就是delta_z=-eta*(loss对z的偏导)；
+2. 知道z要怎么变化也就是上一个神经元的输出要怎么变化，然后反向传播给神经元delta_z，让其根据delta_z来调整自己的权重值，也就是调整w和b。具体就是神经元根据自己的表达式对w和b的偏导（delta_z/delta_w=z对w的偏导、delta_z/delta_b=z对b的偏导）来算出delta|_w和delta_b的值，然后在更新w和b的值（w+=delta_w、b+=delta_b）
+之后我根据这个思路来写代码并用ch04.npz的数据来验证时结果却偏差很大，代码如下：
+```python
+import matplotlib.pyplot as plt
+class NeuralNet(object):
+    def __init__(self):
+        self.w = 0
+        self.b = 0
+        self.x=0
+    def forward(self,x):
+        self.x=x
+        return self.x*self.w+self.b
+    # def backward(self,z,y,eta):
+    #     delta_w=-eta*(z-y)*self.x
+    #     delta_b=-eta*(z-y)
+    #     self.w+=delta_w
+    #     self.b+=delta_b
+    #     return delta_w,self.w,delta_b,self.b
+    def backward(self,delta_z):
+        delta_w=delta_z/self.x
+        delta_b=delta_z
+        self.w+=delta_w
+        self.b+=delta_b
+        return delta_w,self.w,delta_b,self.b
+eta=0.1
+def loss(z,y):
+    return pow(z-y,2)/2
+def get_delta_z(z,y):
+    return -eta*(z-y)
+file_name = ""D://学习//人工智能//ai-edu-master//Data//ch04.npz""
+from HelperClass.DataReader_1_0 import *
+if __name__ == '__main__':
+    reader = DataReader_1_0(file_name)
+    reader.ReadData()
+    X,Y = reader.GetWholeTrainSamples()
+    net=NeuralNet()
+    for i in range(reader.num_train):
+         # get x and y value for one sample
+        xi = X[i]
+        yi = Y[i]
+        zi=net.forward(xi)
+        delta_z=get_delta_z(zi,yi)
+        delta_w,w,delta_b,b=net.backward(delta_z)
+        # delta_w,w,delta_b,b=net.backward(zi,yi,eta)
+        print(""x="",xi,""y="",yi,""z="",zi,""loss="",loss(zi,yi),""delta_z="",delta_z,""delta_w="",delta_w,""w="",w,""delta_b="",delta_b,""b="",b)
+    # draw sample data
+    plt.plot(X, Y, ""b."")
+    plt.title(""Air Conditioner Power"")
+    plt.xlabel(""Number of Servers(K)"")
+    plt.ylabel(""Power of Air Conditioner(KW)"")
+    PX = np.linspace(0,1,10)
+    PZ = net.forward(PX)
+    plt.plot(PX, PZ, ""r"")
+    plt.show()
+
+
+```
+训练之后的w（3096.04578468）和b（-1168.9221563）值都非常大
+请问我是哪里出错了呢？",python import class object self forward self return backward self eta return backward self return loss return pow return import reader range get value one sample xi xi eta print xi loss draw sample data air conditioner power number power air conditioner,issue,negative,neutral,neutral,neutral,neutral,neutral
+966793741,"I cloned the code, but did not find the  dataset file. Could anybody help me? Please~",code find file could anybody help,issue,negative,neutral,neutral,neutral,neutral,neutral
+944050021,"unsubscribe
+
+
+
+
+------------------&nbsp;原始邮件&nbsp;------------------
+发件人:                                                                                                                        ""microsoft/ai-edu""                                                                                    ***@***.***&gt;;
+发送时间:&nbsp;2021年10月15日(星期五) 下午3:00
+***@***.***&gt;;
+***@***.***&gt;;
+主题:&nbsp;[microsoft/ai-edu] Delete 实践项目/2020_订制一个新的张量运算 directory (#682)
+
+
+
+ 
+ 
+You can view, comment on, or merge this pull request online at:
+ 
+&nbsp; https://github.com/microsoft/ai-edu/pull/682
+ 
+Commit Summary
+    
+Delete 实践项目/2020_订制一个新的张量运算 directory
+  
+File Changes
+    
+     D     实践项目/2020_订制一个新的张量运算/zhangliang.png     (0)   
+  
+Patch Links:
+    
+https://github.com/microsoft/ai-edu/pull/682.patch
+   
+https://github.com/microsoft/ai-edu/pull/682.diff
+  
+—
+You are receiving this because you are subscribed to this thread.
+Reply to this email directly, view it on GitHub, or unsubscribe.
+Triage notifications on the go with GitHub Mobile for iOS or Android.",delete directory view comment merge pull request commit summary delete directory file patch link thread reply directly view triage go mobile android,issue,negative,positive,neutral,neutral,positive,positive
+919117168,Please change file name readme.MD to README.md,please change file name,issue,negative,neutral,neutral,neutral,neutral,neutral
+894713264,"> Please let someone know that **Latex** does not show up correctly in the Chinese and English versions.
+> This might be an issue for every file.
+> ![image](https://user-images.githubusercontent.com/37851975/126840214-deeda4ef-8b3e-4d9f-917c-ec07333917bf.png)
+
+you need to install a plug-in in your browser if you are using chrome to display latex in your browser.",please let someone know latex show correctly might issue every file image need install browser chrome display latex browser,issue,negative,neutral,neutral,neutral,neutral,neutral
+894713166,"> @xiaowuhu Do you know what the CI error is?
+
+ignore this. a intern setup a CI pipeline to build .md files to readthedoc files.",know error ignore intern setup pipeline build,issue,negative,neutral,neutral,neutral,neutral,neutral
+877563998,"Hi Mark,
+
+Tingting just modify the folder structure, add en-us folder at root, but we don’t need to add anything into that new folder, we just follow our old rule to add the en-us content into
+ai-edu/基础教程/A2-神经网络基本原理/en-us at master ・ microsoft/ai-edu (github.com)<https://github.com/microsoft/ai-edu/tree/master/%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/A2-%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/en-us>
+
+then add link into the ai-edu/en-us at master ・ microsoft/ai-edu (github.com)<https://github.com/microsoft/ai-edu/tree/master/en-us> folder.
+
+
+Sent from Mail<https://go.microsoft.com/fwlink/?LinkId=550986> for Windows 10
+
+From: Mark ***@***.***>
+Sent: Saturday, July 10, 2021 8:43 AM
+To: ***@***.***>
+Cc: ***@***.***>; Review ***@***.***>
+Subject: Re: [microsoft/ai-edu] Ting/merge-en-us (#657)
+
+
+I also want to point out that the overall English organization is not very good.
+ai-edu/基础教程/A2-神经网络基本原理/en-us/Step7 - DNN/
+In order to navigate to any English content, I have to go through 2 folders that do not have any English.
+
+―
+You are receiving this because your review was requested.
+Reply to this email directly, view it on GitHub<https://github.com/microsoft/ai-edu/pull/657#issuecomment-877524512>, or unsubscribe<https://github.com/notifications/unsubscribe-auth/AEST6DCIX5P42FBM45COVODTW6JTPANCNFSM4773DB2A>.
+
+",hi mark modify folder structure add folder root need add anything new folder follow old rule add content master add link master folder sent mail mark sent review subject also want point overall organization good order navigate content go review reply directly view,issue,negative,positive,positive,positive,positive,positive
+877524512,"I also want to point out that the overall English organization is not very good.
+``ai-edu/基础教程/A2-神经网络基本原理/en-us/Step7 - DNN/``
+In order to navigate to any English content, I have to go through 2 folders that do not have any English.",also want point overall organization good order navigate content go,issue,negative,positive,positive,positive,positive,positive
+877524114,"I have a question. In the root of the repository, why is everything under ``en-us`` in Chinese?
+https://github.com/microsoft/ai-edu/tree/master/en-us ",question root repository everything,issue,negative,neutral,neutral,neutral,neutral,neutral
+847219445,Is forward propagation the same as forward calculation?,forward propagation forward calculation,issue,negative,neutral,neutral,neutral,neutral,neutral
+847063751,"是的，可以这么理解。
+准确地说，误差在层之间通过反向传播传递。
+
+Thanks,
+Xiaowu
+
+________________________________
+From: daiezhu ***@***.***>
+Sent: Monday, May 24, 2021 10:41:03 AM
+To: microsoft/ai-edu ***@***.***>
+Cc: xiaowuhu ***@***.***>; Author ***@***.***>
+Subject: Re: [microsoft/ai-edu] 第二章《反向传播与梯度下降》讨论区 (#413)
+
+
+你好老师，我把反向传播与梯度下降搞混了，我是不是可以这么理解：神经网络某一层的误差可以用梯度下降计算、而层与层的误差是反向传播的？
+
+―
+You are receiving this because you authored the thread.
+Reply to this email directly, view it on GitHub<https://github.com/microsoft/ai-edu/issues/413#issuecomment-846692033>, or unsubscribe<https://github.com/notifications/unsubscribe-auth/AEST6DBZSTL2VXDZ3H4ZEULTPG4D7ANCNFSM4JPMVQGQ>.
+",thanks sent may author subject thread reply directly view,issue,negative,positive,neutral,neutral,positive,positive
+846595552,"I chose to finish this first, as I finished half of it already.",chose finish first finished half already,issue,negative,positive,neutral,neutral,positive,positive
+844704021,"> @xiaowuhu Who is 'we'?
+> ![image](https://user-images.githubusercontent.com/37851975/118571384-e6f24780-b74b-11eb-99be-4dfd5e2e0d53.png)
+
+'we' have 2 students who are working on the translation work, but the progress is not fast. if you want to join us, please let me know. We will pay for the job.",image working translation work progress fast want join u please let know pay job,issue,positive,positive,positive,positive,positive,positive
+842722438,"This is easy to fix.  @xja
+Copy the single line that you changed. Delete this pull request (or update this one). On your forked repo, fetch the latest updates.
+Then paste the line back where you want it and resubmit a pull request. 
+
+github makes it easy to fix conflicts as well, but xja:patch-3 is out dated",easy fix copy single line delete pull request update one forked fetch latest paste line back want resubmit pull request easy fix well,issue,positive,positive,positive,positive,positive,positive
+817248447,"> 为什么`ConvLayer`的`output_shape=(self.OutC, self.OutH, self.OutH)`而不是`output_shape=(self.OutC, self.OutH, self.OutW)`?
+> <img alt=""截屏2021-01-24 下午8 11 30"" width=""523"" src=""https://user-images.githubusercontent.com/12928690/105629937-dfe3b880-5e80-11eb-84a0-49bfb91de2d7.png"">
+
+this should be typo(bug), so could you please submit a PullRequest to fix it?",typo bug could please submit fix,issue,negative,neutral,neutral,neutral,neutral,neutral
+774421693,"1. 团队名：NNI-singleDog
+2. 团队人员：陈涵
+3. 团队学校：华南理工大学
+4. 任务完成情况：
+     - [x] Task 1
+- [ ] Task 2
+  - [x] Task 2.1
+  - [ ] Task 2.2
+- [ ] Task 3
+  - [x] Task 3.1
+  - [ ] Task 3.2
+    - [ ] Task 3.2.1
+    - [ ] Task 3.2.2
+- [ ] Task 4
+  - [x] Task 4 项目启动报告
+5. Github Repo地址：https://github.com/Concyclics/NNI-singleDog",task task task task task task task task task task task,issue,negative,neutral,neutral,neutral,neutral,neutral
+774370178,"1. 团队名：NNI Take me fly
+2. 团队人员：周楷彬、庄泽杨、李俊杰
+3. 团队学校：同济大学
+4. 任务完成情况：
+    - [x]  Task 1
+    - [x]  Task 2.1
+    - [x]  Task 3.1
+    - [x]  Task 4 项目启动文档
+5. Github Repo地址：https://github.com/kb824999404/NNI-Take-me-fly",take fly task task task task,issue,negative,positive,positive,positive,positive,positive
+770589793,"OK, I won't notify you again about this release, but will get in touch when a new version is available. If you'd rather skip all updates until the next major or minor version, let me know by commenting `@dependabot ignore this major version` or `@dependabot ignore this minor version`.
+
+If you change your mind, just re-open this PR and I'll resolve any conflicts on it.",wo notify release get touch new version available rather skip next major minor version let know ignore major version ignore minor version change mind resolve,issue,negative,positive,neutral,neutral,positive,positive
+770535109,"i'm not quite familiar with git, don't know how to resolve this kind of merge conflicts",quite familiar git know resolve kind merge,issue,positive,positive,positive,positive,positive,positive
+754050636,"1. 团队名：爱情都是卑微的
+2. 团队人员：王樾
+3. 团队学校：华南理工大学
+4. 任务完成情况：
+- [x] Task 1
+- [x] Task 2.1
+- [x] Task 2.2
+- [x] Task 3.1
+- [x] Task 3.2.1
+- [ ] Task 3.2.2
+- [x] Task 4 项目启动报告
+5. Github Repo地址：https://github.com/Garen-Wang/NNI-Student-Program-2020",task task task task task task task,issue,negative,neutral,neutral,neutral,neutral,neutral
+753583855,"1.团队名：很有精神
+2.团队人员：范森然、赵钰杨、石基宽
+3.团队学校：北京邮电大学
+4.任务完成情况:    
+   - Task1                √【全部完成】
+   - Task2                √【全部完成】
+   - Task3                √【全部完成】
+   - Task4                √【全部完成】
+5.Github Repo地址:  https://github.com/RuaYiii/MSC-NNI-project",task task task task,issue,negative,neutral,neutral,neutral,neutral,neutral
+751721998,"1. 团队名：电脑一带五
+2. 团队人员：徐满心、李乐天、孟繁青、尚丙奇、陈垲昕
+3. 团队学校：同济大学
+4. 任务完成情况：
+    - [x] Task 1
+    - [x] Task 2
+      - [x] Task 2.1
+      - [x] Task 2.2
+    - [x] Task 3
+	    - [x] Task 3.1
+	    - [x] Task 3.2
+		    - [x] Task 3.2.1
+		    - [x] Task 3.2.2
+    - [x] Task 4
+	    - [x] 项目启动报告
+	    - [ ] 项目中期报告
+	    - [x] 项目结题报告 
+5. Github Repo地址：https://github.com/xmx-521/NNI-Student-Program-2020
+6. 补充信息：修复了NNI doc的一个bug：https://github.com/microsoft/nni/pull/3448",task task task task task task task task task task,issue,negative,neutral,neutral,neutral,neutral,neutral
+695913867,"Hi @qindagang, Thank you for your bug fix and contribution. It is helpful. I have a small question. I saw you just reverse the order of a sentence and a formula. I am not sure about the reason, may I get your opinion about this?",hi thank bug fix contribution helpful small question saw reverse order sentence formula sure reason may get opinion,issue,positive,positive,positive,positive,positive,positive
+695908379,"> 老师好，这是我的作业。
+> https://github.com/qindagang/ai-edu-assignments/tree/master/%E4%BD%9C%E4%B8%9A3-%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C
+
+looks great! can you give a summary about the model selection, or the hyper parameters selection, according to your homework result?",great give summary model selection hyper selection according homework result,issue,positive,positive,positive,positive,positive,positive
+691786133,"非常期待该书出版！
+
+
+
+
+------------------&nbsp;原始邮件&nbsp;------------------
+发件人:                                                                                                                        ""microsoft/ai-edu""                                                                                    <notifications@github.com&gt;;
+发送时间:&nbsp;2020年9月14日(星期一) 中午11:09
+收件人:&nbsp;""microsoft/ai-edu""<ai-edu@noreply.github.com&gt;;
+抄送:&nbsp;""K""<526413367@qq.com&gt;;""Comment""<comment@noreply.github.com&gt;;
+主题:&nbsp;Re: [microsoft/ai-edu] 第三章 《损失函数》讨论区 (#414)
+
+
+
+
+
+ 
+u r welcome! hope to give more feedback for the following self-study. 本书《智能之门》快出版了，高等教育出版社，望关注。
+ 
+—
+You are receiving this because you commented.
+Reply to this email directly, view it on GitHub, or unsubscribe.",comment comment welcome hope give feedback following reply directly view,issue,positive,positive,positive,positive,positive,positive
+691785389,u r welcome! hope to give more feedback for the following self-study. 本书《智能之门》快出版了，高等教育出版社，望关注。,welcome hope give feedback following,issue,positive,positive,positive,positive,positive,positive
+691784225,"非常感谢你们出的这个教程，让我对神经网络有了更深的理解。
+
+
+
+
+------------------&nbsp;原始邮件&nbsp;------------------
+发件人:                                                                                                                        ""microsoft/ai-edu""                                                                                    <notifications@github.com&gt;;
+发送时间:&nbsp;2020年9月14日(星期一) 中午11:00
+收件人:&nbsp;""microsoft/ai-edu""<ai-edu@noreply.github.com&gt;;
+抄送:&nbsp;""K""<526413367@qq.com&gt;;""Comment""<comment@noreply.github.com&gt;;
+主题:&nbsp;Re: [microsoft/ai-edu] 第三章 《损失函数》讨论区 (#414)
+
+
+
+
+
+ 
+是一回事儿。后来我用show_3d_surface代替CalculateCostWB了，在主函数里注释掉对后者的调用，但是没有删掉该函数。
+ 
+—
+You are receiving this because you commented.
+Reply to this email directly, view it on GitHub, or unsubscribe.",comment comment reply directly view,issue,negative,positive,neutral,neutral,positive,positive
+690985162,"0.3-1 均方差损失函数的部分code存在问题。
+CalculateCostWB中3D绘图时W,B 应该为网格点坐标矩阵，Loss矩阵格式应该为B行W列。
+具体修改如下：
+def CalculateCostWB(x,y,n,w,b):
+    W = np.linspace(w-2,w+2, 50)
+    B = np.linspace(b-2,b+2, 50)
+    Loss=np.zeros((len(B),len(W)))
+    for i in range(len(B)):
+        for j in range(len(W)):
+            w = W[j]
+            b = B[i]
+            a = w*x+b
+            loss = CostFunction(x,y,a,n)
+            Loss[i,j] = loss
+    W, B = np.meshgrid(W, B)
+    fig = plt.figure()
+    ax = Axes3D(fig)
+    ax.plot_surface(W,B,Loss, cmap='rainbow', norm=LogNorm())
+    ax.contour(W, B, Loss, zdir = 'z', offset = 0)
+    plt.show()
+
+",range range loss loss loss fig ax fig loss loss offset,issue,negative,neutral,neutral,neutral,neutral,neutral
+690128131,"【双向循环神经网络】
+在**19.7.3 反向传播**中推导**正向循环的反向传播**时，公式10对中间步的计算如下：
+
+> 对于中间的所有时间步，除了本时间步的losst回传误差外，后一个时间步的h1t+1也会回传误差：
+$$
+\begin{aligned}
+\frac{\partial Loss}{\partial h1_t} &= \frac{\partial loss_t}{\partial z_t}\frac{\partial z_t}{\partial s_t}\frac{\partial s_t}{\partial s1_t}\frac{\partial s1_t}{\partial h1_t} + \frac{\partial Loss}{\partial h1_{t+1}}\frac{\partial h1_{t+1}}{\partial s1_{t}}\frac{\partial s1_t}{\partial h1_t}
+\\
+&=dz_t \cdot V^T \odot \sigma'(s1_t) + \frac{\partial Loss}{\partial h1_{t+1}} \cdot W1^T \odot \sigma'(s1_t)
+\\
+&=(dz_t \cdot V^T + dh1_{t+1} \cdot W1^T) \odot \sigma'(s1_t) \rightarrow dh1_t
+\end{aligned} \tag{10}
+$$
+
+我有一点疑问，就是本章中的双向循环神经网络的中间步并没有输出，反向计算中本时间步也并没有loss回传误差，即${\partial loss_t}$为${0}$，${dz_t}$为$0$。故公式10按下面的形式写是不是更合理一点？
+$$
+\begin{aligned}
+\frac{\partial Loss}{\partial h1_t} &= \frac{\partial Loss}{\partial h1_{t+1}}\frac{\partial h1_{t+1}}{\partial s1_{t}}\frac{\partial s1_t}{\partial h1_t}
+\\
+&= \frac{\partial Loss}{\partial h1_{t+1}} \cdot W1^T \odot \sigma'(s1_t)
+\\
+&=dh1_{t+1} \cdot W1^T \odot \sigma'(s1_t) \rightarrow dh1_t
+\end{aligned} \tag{10}
+$$
+
+在Level7_BiRnn_MNIST.py的timestep类中backward_3方法也有`self.dz = np.zeros_like(y)`的操作。
+
+ :)",loss loss loss loss loss loss,issue,negative,neutral,neutral,neutral,neutral,neutral
+684162476,"It works on MathJax Plugin for Github.
+Also look at these two issues.
+https://github.com/KaTeX/KaTeX/issues/1345
+https://github.com/KaTeX/KaTeX/issues/2004",work also look two,issue,negative,neutral,neutral,neutral,neutral,neutral
+682408602,"> 2.从结果上看细线和大色块对DNN的影响较大，请尝试去掉细线样本，看看DNN的准确度是否可以提高
+
+首先将data中ch18_color.py的细线样本替换为三角形样本
+`line(drawObj, rand[i])` 改为 `triangle(drawObj, rand[i])`
+
+样本预览：
+![Figure_4](https://user-images.githubusercontent.com/12928690/91540795-e57ab800-e94d-11ea-8c59-bb02981744db.png)
+
+将彩色图转换成灰度图，dnn对新样本数据两次进行训练后得到的结果如下：
+![Figure_5](https://user-images.githubusercontent.com/12928690/91540861-ffb49600-e94d-11ea-98b8-d9f20c88224e.png)
+```
+time used: 43.04283595085144
+total weights abs sum= 11593.269184373294
+total weights = 108928
+little weights = 6775
+zero weights = 64
+testing...
+0.902
+```
+![Figure_7](https://user-images.githubusercontent.com/12928690/91540968-2ecb0780-e94e-11ea-893e-7ed213aedbdc.png)
+```
+time used: 23.654547214508057
+total weights abs sum= 11594.771010407176
+total weights = 108928
+little weights = 6662
+zero weights = 77
+testing...
+0.916
+```
+预测结果：
+![Figure_6](https://user-images.githubusercontent.com/12928690/91541150-781b5700-e94e-11ea-978d-58f487c89e04.png)
+",line rand triangle rand time used total total little zero testing time used total total little zero testing,issue,negative,negative,neutral,neutral,negative,negative
+682395316,"【18.1实现颜色分类】
+思考与练习：
+>1. 从彩色图转换成灰度图会损失一些信息，有可能会导致DNN准确度不高。请尝试用2352(=784x3)的矢量做为样本特征值，送入DNN进行训练。
+
+从两次训练结果看，彩色图不转成灰度图的情况下，DNN能达到与CNN相近的准确度
+![Figure_1](https://user-images.githubusercontent.com/12928690/91538001-bbbf9200-e949-11ea-8303-eebcbdb47ca7.png)
+
+```
+time used: 77.91002702713013
+save parameters
+total weights abs sum= 31480.69713769505
+total weights = 309632
+little weights = 19540
+zero weights = 195
+testing...
+0.964
+```
+
+![Figure_2](https://user-images.githubusercontent.com/12928690/91538028-c0844600-e949-11ea-8e0e-20e271c710f8.png)
+```
+time used: 82.7319061756134
+total weights abs sum= 31477.793191639706
+total weights = 309632
+little weights = 19601
+zero weights = 220
+testing...
+0.961
+
+```
+**预测结果**
+![Figure_3](https://user-images.githubusercontent.com/12928690/91538259-25d83700-e94a-11ea-9a06-55e563c8194e.png)
+",time used save total total little zero testing time used total total little zero testing,issue,negative,negative,neutral,neutral,negative,negative
+663496445,"cd /home/linuxidc/www.linuxidc.com/
+
+wget -c https://kernel.ubuntu.com/~kernel-ppa/mainline/daily/2020-03-30/linux-headers-5.6.0-999_5.6.0-999.202003292202_all.deb
+
+wget -c https://kernel.ubuntu.com/~kernel-ppa/mainline/daily/2020-03-30/linux-headers-5.6.0-999-generic_5.6.0-999.202003292202_amd64.deb
+
+wget -c https://kernel.ubuntu.com/~kernel-ppa/mainline/daily/2020-03-30/linux-image-unsigned-5.6.0-999-generic_5.6.0-999.202003292202_amd64.deb
+
+wget -c https://kernel.ubuntu.com/~kernel-ppa/mainline/daily/2020-03-30/linux-modules-5.6.0-999-generic_5.6.0-999.202003292202_amd64.deb
+
+linuxidc@linuxidc:~/www.linuxidc.com$&nbsp;sudo dpkg -i *.deb
+
+
+
+
+
+------------------&nbsp;原始邮件&nbsp;------------------
+发件人:                                                                                                                        ""microsoft/ai-edu""                                                                                    <notifications@github.com&gt;;
+发送时间:&nbsp;2020年7月23日(星期四) 下午4:16
+收件人:&nbsp;""microsoft/ai-edu""<ai-edu@noreply.github.com&gt;;
+抄送:&nbsp;""Subscribed""<subscribed@noreply.github.com&gt;;
+主题:&nbsp;[microsoft/ai-edu] Update NeuralNet_2_0.py (#521)
+
+
+
+
+Fixed batch_a not returned in the forward function.
+ 
+ 
+You can view, comment on, or merge this pull request online at:
+ 
+&nbsp; https://github.com/microsoft/ai-edu/pull/521
+ 
+Commit Summary
+    
+Update NeuralNet_2_0.py
+  
+File Changes
+    
+     M     A-基础教程/A2-神经网络基本原理简明教程/SourceCode/ch09-NonLinearRegression/HelperClass2/NeuralNet_2_0.py     (3)   
+  
+Patch Links:
+    
+https://github.com/microsoft/ai-edu/pull/521.patch
+   
+https://github.com/microsoft/ai-edu/pull/521.diff
+  
+—
+You are receiving this because you are subscribed to this thread.
+Reply to this email directly, view it on GitHub, or unsubscribe.",update fixed returned forward function view comment merge pull request commit summary update file patch link thread reply directly view,issue,negative,positive,neutral,neutral,positive,positive
+645735662,"> 感谢老师提供的权值初始化思路，应用于LunarLander，成功解决月球小车自由落体的问题！他现在终于正常了！
+
+glad to know that! maybe you can write a case study course (案例、教程) :)",glad know maybe write case study course,issue,negative,positive,positive,positive,positive,positive
+632452394,"对于线性二分类实现逻辑与或非门
+问：为什么达到相同的精度，逻辑OR和NOR只用2000次左右的epoch，而逻辑AND和NAND却需要4000次以上？
+答：因为逻辑OR和NOR的数据使得分类线在右上角就可以达到很好的效果，而逻辑AND和NAND在输入[0,0]时不满足要求，输入[0,1]和[1,0]时不满足要求，所以需要继续迭代，使得逻辑AND与NAND的训练次数更多。
+如果我们将输入数据修改一下，修改为
+
+`X = np.array([1, 1, 1, 0, 0, 1, 0, 0]).reshape(4, 2)`
+
+那么逻辑OR和NOR就需要更多的迭代次数
+
+`reader = LogicDataReader()
+reader.Read_Logic_AND_Data()
+train(reader, ""Logic AND operator"")
+
+reader = LogicDataReader()
+reader.Read_Logic_OR_Data()
+train(reader, ""Logic OR operator"")`
+
+输出的结果分别为：
+
+`AND
+2266 3 0.0019996388444300725
+W= [[-11.74577473]
+ [-11.7458918 ]]
+B= [[5.41370439]]
+OR
+4252 3 0.0019999280800343643
+W= [[-11.76499604]
+ [-11.76497315]]
+B= [[17.81587457]]`",reader train reader logic operator reader train reader logic operator,issue,negative,neutral,neutral,neutral,neutral,neutral
+613838306,"Thank you for your feedback, help us to fix the bug. You can pull the correct file now.
+BTW, we have adjusted the resource structure several weeks ago, now it is in ""E-课程集锦"" instead of ""A-教学课程"".",thank feedback help u fix bug pull correct file resource structure several ago instead,issue,positive,neutral,neutral,neutral,neutral,neutral
+603714180,"Dependabot tried to update this pull request, but something went wrong. We're looking into it, but in the meantime you can retry the update by commenting `@dependabot rebase`.",tried update pull request something went wrong looking retry update rebase,issue,negative,negative,negative,negative,negative,negative
+588075508,"[公式推导.pdf](https://github.com/microsoft/ai-edu/files/4223620/default.pdf)
+附件内容同下：
+
+### 感谢您的回复
+
+#### 对于您的回复 我的一些朴素的思考
+
+- 为什么是$z = \gamma n + \beta$ 的形式，如果使用一个全连接层呢？ 在收到您的邮件后我产生了这样的疑惑。在学习了斯坦福的一个课程CS231n“批量归一化”之后，其中一个说法给了我很大的启发: $\gamma ,\beta $ 的极限情况是 $ \gamma = \sqrt{\sigma_B^2 + \epsilon }， \beta = \mu_B $ ，然而在 $\gamma $在 等于 1 和 等于$\sqrt{\sigma_B^2 + \epsilon} $之间学习，就赋予了网络很大的灵活性，最终训练为一个对所有batch都合适的$\gamma$。（我之前错误理解为每个维度全部移动到0处，这看起来仿佛必然丧失掉数据的信息，怎么还会加快网络的收敛呢）
+- 但这样或许这就和正态分布化，没有很大的关联。（？）因为我认为一个batch只有32或者64个样本的归一化，只有归一化到合适区间的效果，达不到高斯分布的大量样本的要求。不知道我的现在的理解是否正确。
+
+#### 第二个问题
+
+- 接上文，这就给我带来的第二个疑问，输入的数据是什么分布。我认为对于给数字的十分类，数据可以根据标签分成10份，每一份的全部数据成高斯分布，而不同份的数据之间应该没有关系。我不理解为何一开始的时候，可以对所有数据一起进行归一化处理？
+
+#### 在推导公式的时候遇到一些问题，还烦请您看一下
+
+##### BN层，假设X只有一个特征
+
+$$输入\left[ \begin{matrix} 
+x_1\\ x_2 \\x_3  \end{matrix} \right] \rightarrow 
+归一\left[ \begin{matrix} 
+n_1\\ n_2 \\n_3  \end{matrix} \right] \rightarrow
+伸缩 (\gamma ) +移动(\beta)各个特征维度\left[ \begin{matrix} 
+z_1\\ z_2 \\z_3  \end{matrix} \right]\leftarrow
+下一层的回传\left[ \begin{matrix} 
+\delta_1\\ \delta_2 \\\delta_3  \end{matrix} \right] 
+$$
+
+##### 对于前传误差公式13，**我进行了如下的推导** (符号定义沿用教程) 
+
+$$
+n_i = f_n(x_i,\mu_B,\sigma_B^2) =  {x_i-\mu_B \over \sqrt{\sigma^2_B + \epsilon}} \tag{8}
+$$
+
+$$
+\mu_B =   {1 \over m}\sum_1^m x_i \tag{6}
+$$
+
+$$
+\sigma^2_B = f_\sigma(x_1,...,x_m, \mu_B) = {1 \over m} \sum_1^m (x_i-\mu_B)^2 \tag{7}
+$$
+
+$$
+\begin{aligned}
+{\partial J \over \partial x_k} 
+&= \sum_{i=1}^m {\partial J \over \partial z_i}{\partial z_i \over \partial x_k} 
+\\
+&= \sum_{i=1}^m \delta_i \cdot {\partial z_i \over \partial x_k}
+\\
+&= \sum_{i=1}^m \delta_i \cdot {d z_i \over d n_i}{\partial n_i \over \partial x_k} 
+\\
+&= \sum_{i=1}^m \delta_i \cdot \gamma \cdot {\partial n_i \over \partial x_k} 
+\\
+&= \gamma · \sum_{i=1}^m \delta_i \cdot ({\partial f_n\over \partial x_k} + {\partial f_n \over \partial  \sigma^2_B}{\partial  \sigma^2_B \over \partial x_k} + {\partial f_n \over \partial  \mu_B}{\partial  \mu_B \over \partial x_k} )
+\\
+&= \gamma · \sum_{i=1}^m \delta_i \cdot ({\partial f_n \over \partial x_k} 
++{\partial f_n \over \partial  \sigma^2_B }{\partial \sigma^2_B \over \partial x_k} 
++{\partial f_n \over \partial  \mu_B}{\partial  \mu_B \over \partial x_k} )
+\\
+&= \gamma · \sum_{i=1}^m \delta_i \cdot \{ {\partial f_n \over \partial x_k} 
++{\partial f_n \over \partial \sigma^2_B }[{\partial f_{\sigma} \over \partial x_k}+{\partial f_{\sigma} \over \partial \mu_B}{\partial \mu_B \over \partial x_k} ]
++{\partial f_n \over \partial  \mu_B}{\partial  \mu_B \over \partial x_k} \}
+\\
+&= \gamma · \sum_{i=1}^m \delta_i \{ {\partial f_n \over \partial x_k} 
+\\
+&+( x_k-\mu_B)  (-{1 \over 2}(\sigma^2_B + \epsilon)^{-3/2})[{2(x_k - \mu_B) \over m} -{2 \over m} \sum _{i=1}^m(x_i-\mu_B)\cdot {1 \over m}]
+\\
+&+{-1 \over \sqrt{\sigma^2_B + \epsilon}}\cdot{1 \over m} \} 
+\\
+&其中 i = k 时：{\partial f_n \over \partial x_k} ={1 \over \sqrt{\sigma^2_B + \epsilon}} \qquad i!=k时：{\partial f_n \over \partial x_k} = 0
+\end{aligned} \tag{13'} 
+$$
+
+代入X = $[x_1,x_2,x_3]$,m = 3
+
+$$
+\begin{aligned}
+{dJ \over dx_1} 
+&= \gamma · \sum_{i=1}^m \delta_i \{ {\partial f_n \over \partial x_1} 
++( x_k-\mu_B)  (-{1 \over 2}(\sigma^2_B + \epsilon)^{-3/2})[{2(x_1 - \mu_B) \over m} -{2 \over m} \sum _{i=1}^m(x_i-\mu_B)\cdot {1 \over m}]
++{-1 \over \sqrt{\sigma^2_B + \epsilon}}\cdot{1 \over m} \} 
+\\
+&= \gamma ·  \sum_{i=1}^m \delta_i \{ {\partial f_n \over \partial x_1} 
++( x_1-\mu_B)  (-{1 \over 2}(\sigma^2_B + \epsilon)^{-3/2}){2(x_1 - \mu_B) \over m} 
++{-1 \over m\sqrt{\sigma^2_B + \epsilon}} \} 
+\\
+&= \gamma · \{{ \delta_1  \over \sqrt{\sigma^2_B + \epsilon} } +(\delta_1 + \delta_2 + \delta_3)[
+( x_1-\mu_B)^2  (-(\sigma^2_B + \epsilon)^{-3/2}){1\over m} 
++{-1 \over m\sqrt{\sigma^2_B + \epsilon}} ]\} 
+\\
+&= \gamma  \{ {\delta_1 \over \sqrt{\sigma^2_B + \epsilon}} -  { (x_1 - \mu_B)^2 + \sigma_B^2 +\epsilon  \over m\sqrt{\sigma^2_B + \epsilon}} (\delta_1 + \delta_2 + \delta_3)\}
+\\
+&其中 {\partial f_n \over \partial x_1} ={1 \over \sqrt{\sigma^2_B + \epsilon}} ,\quad {\partial f_n \over \partial x_2} =  {\partial f_n \over \partial x_3} = 0
+\end{aligned} 
+$$
+
+##### 教程中式(13)代入X = $[x_1,x_2,x_3]$,m = 3
+
+**（另外式子中$\delta \cdot \gamma $应该是矩阵？它是如何参与运算的?）**
+$$
+\begin{aligned}
+{dJ \over dx_1} 
+&= {\delta \cdot \gamma \over \sqrt{\sigma^2_B + \epsilon}} + {dJ \over d\sigma^2_B} \cdot {2(x_1 - \mu_B) \over m} + {dJ \over d\mu_B} \cdot {1 \over m}
+\\
+&= {\delta \cdot \gamma \over \sqrt{\sigma^2_B + \epsilon}} + {dJ \over d\sigma^2_B} \cdot {2(x_1 - \mu_B) \over m} +( {dJ \over d n_i}{d n_i \over d \mu_B} + {dJ \over  d\sigma^2_B}{d \sigma^2_B \over d \mu_B})\cdot {1 \over m}
+\\
+&= {\delta \cdot \gamma \over \sqrt{\sigma^2_B + \epsilon}} + {dJ \over d\sigma^2_B} \cdot {2(x_1 - \mu_B) \over m} +( {dJ \over d n_i}{d n_i \over d \mu_B} + {dJ \over  d\sigma^2_B}{d \sigma^2_B \over d \mu_B})\cdot {1 \over m}
+\\
+&= {\delta \cdot \gamma \over \sqrt{\sigma^2_B + \epsilon}} + {dJ \over d\sigma^2_B} \cdot {2(x_1 - \mu_B) \over m} + {dJ \over d n_i}{d n_i \over d \mu_B} \cdot {1 \over m}
+\\
+&= {\delta \cdot \gamma \over \sqrt{\sigma^2_B + \epsilon}} 
+\\
+&+ (-{1 \over 2}(\sigma^2_B + \epsilon)^{-3/2}\sum_{i=1}^m {dJ \over d n_i}  (x_i-\mu_B) )\cdot{2(x_1-\mu_B) \over m}
+\\
+&+ (-{\delta \cdot \gamma \over \sqrt{\sigma^2_B + \epsilon}}) \cdot {1 \over m}
+\\
+&= (1- {1 \over m}){\delta \cdot \gamma \over \sqrt{\sigma^2_B + \epsilon}}+ (-{1 \over 2}(\sigma^2_B + \epsilon)^{-3/2}\sum_{i=1}^m {dJ \over d n_i}  (x_i-\mu_B) )\cdot{2(x_1-\mu_B) \over m}
+\\
+&= (1- {1 \over m}){\delta \cdot \gamma \over \sqrt{\sigma^2_B + \epsilon}}-(\sigma^2_B + \epsilon)^{-3/2} {(x_1-\mu_B) \over m} \{ (\delta_1 x_1 +\delta_2 x_2 + \delta_3 x_3)-(\delta_1 + \delta_2 + \delta_3)\mu_B)\}
+\end{aligned}
+$$
+
+#### 再次感谢！！
+",matrix matrix matrix matrix matrix matrix matrix matrix,issue,negative,neutral,neutral,neutral,neutral,neutral
+587069535,"
+
+**感谢微软团队完成的这门简而明的教程！！讲解言语简单，却是都是切中肯綮的关键，对学生我的学习有莫大的帮助。**
+
+我在学习15章<批量归一化的实现>一节中遇到困扰多日的问题，虽然是小问题，还是诚恳地希望能得到您给予的一些帮助，在此不胜感激。
+- 首先，对于批量化归一，是 m个样本的第i个特征的纵向的归一化，与输入层的归一化不同。但是比如一个二分类 本来好不容易都把样本分到 0 1 两边，再次把它们集中到正态分布的中心？请问如何理解批量归一化
+- 其二，对于前传误差公式13，我进行了如下的推导：(符号定义沿用教程) （本人使用vsCode中的markdow preview enhanced插件完成下面公式的呈现）
+- BN层,假设样本只有一个特征
+$$输入\left[ \begin{matrix} 
+x_1\\ x_2 \\x_3  \end{matrix} \right] \rightarrow 
+归一\left[ \begin{matrix} 
+n_1\\ n_2 \\n_3  \end{matrix} \right] \rightarrow
+伸缩\left[ \begin{matrix} 
+z_1\\ z_2 \\z_3  \end{matrix} \right]\leftarrow
+下一层的回传\left[ \begin{matrix} 
+\delta_1\\ \delta_2 \\\delta_3  \end{matrix} \right] 
+$$
+
+$$
+n_i = f_n(x_i,\mu_B,\sigma_B^2) =  {x_i-\mu_B \over \sqrt{\sigma^2_B + \epsilon}} \tag{8}
+$$
+$$
+\mu_B =   {1 \over m}\sum_1^m x_i \tag{6}
+$$
+$$
+\sigma^2_B = f_\sigma(x_1,...,x_m, \mu_B) = {1 \over m} \sum_1^m (x_i-\mu_B)^2 \tag{7}
+$$
+$$
+\begin{aligned}
+{\partial J \over \partial x_k} 
+&= \sum_{i=1}^m {\partial J \over \partial z_i}{\partial z_i \over \partial x_k} 
+\\
+&= \sum_{i=1}^m \delta_i \cdot {\partial z_i \over \partial x_k}
+\\
+&= \sum_{i=1}^m \delta_i \cdot {d z_i \over d n_i}{\partial n_i \over \partial x_k} 
+\\
+&= \sum_{i=1}^m \delta_i \cdot \gamma \cdot {\partial n_i \over \partial x_k} 
+\\
+&= \gamma · \sum_{i=1}^m \delta_i \cdot ({\partial f_n\over \partial x_k} + {\partial f_n \over \partial  \sigma^2_B}{\partial  \sigma^2_B \over \partial x_k} + {\partial f_n \over \partial  \mu_B}{\partial  \mu_B \over \partial x_k} )
+\\
+&= \gamma · \sum_{i=1}^m \delta_i \cdot ({\partial f_n \over \partial x_k} 
++{\partial f_n \over \partial  \sigma^2_B }{\partial \sigma^2_B \over \partial x_k} 
++{\partial f_n \over \partial  \mu_B}{\partial  \mu_B \over \partial x_k} )
+\\
+&= \gamma · \sum_{i=1}^m \delta_i \cdot \{ {\partial f_n \over \partial x_k} 
++{\partial f_n \over \partial \sigma^2_B }({\partial f_{\sigma} \over \partial x_k}+{\partial f_{\sigma} \over \partial \mu_B}{\partial \mu_B \over \partial x_k} )
++{\partial f_n \over \partial  \mu_B}{\partial  \mu_B \over \partial x_k} ) \}
+\\
+&= \gamma · \sum_{i=1}^m \delta_i \{ {\partial f_n \over \partial x_k} 
+\\
+&+( x_k-\mu_B)  (-{1 \over 2}(\sigma^2_B + \epsilon)^{-3/2})({2(x_k - \mu_B) \over m} + (-{2 \over m} \sum _{i=1}^m(x_i-\mu_B))\cdot {1 \over m})
+\\
+&+{-1 \over \sqrt{\sigma^2_B + \epsilon}}\cdot{1 \over m} \} 
+\\
+&其中 i = k 时：{\partial f_n \over \partial x_k} ={1 \over \sqrt{\sigma^2_B + \epsilon}} \qquad i!=k时：{\partial f_n \over \partial x_k} = 0
+\end{aligned} \tag{13} 
+$$
+
+[^_^]:
+	手动输入数学公式实在困难，不知道大佬有什么工具推荐？
+- 对于公式化简之后，明显不一致。如图所示
+![ea22f9085ada8009223a604b8acfe62](https://user-images.githubusercontent.com/52621166/74710920-ab718080-525d-11ea-8e89-6a8ad990fb01.jpg)
+
+再次感谢！",preview matrix matrix matrix matrix matrix matrix matrix matrix,issue,negative,neutral,neutral,neutral,neutral,neutral
+575988943,"游戏最大的问题在于，平时的训练数据在赛场上，由于 bot 数不同，bot 策略不同，反而可能干扰，使程序选择错误的策略，所以其实之前训练房间的数据仅具有一定的参考价值。在策略的选取上，我们对示例程序的每一个策略进行了修改，将原本的策略进行组合，返回两个不同的数字。同时多轮测试后发现往往黄金点的数会比计算出的数偏小，所以又在该数的基础上减小 0.01，使其（比其他 bot 更贴近黄金点）。
+
+但是目前存在的问题是，对于搅局者，不知道什么时候会出现搅局，所以在游戏同时也是训练过程中，在相同的情况下，会出现之前正反馈学习到的策略因为搅局的存在打了负分，打乱了Q表。对于这种情况，可能需要引进判断是否是极端情况，不需要学习到Q表的部分，但是这个判断也是一个难点。
+
+```
+def action1(gArray):
+    number = 28
+    if len(gArray) != 0:
+        number = gArray[-1]
+    return number - 0.01, number * 0.618 - 0.01
+
+def action2(gArray):
+    number = 28
+    if len(gArray) > 1:
+        number = np.average(gArray[-2:])
+    return number - 0.01, number * 0.618 - 0.01
+
+def action3(gArray):
+    number = 28
+    if len(gArray) != 0:
+        number = np.average(gArray[-5:])
+    return number - 0.01, number * 0.618 - 0.01
+
+def action4(gArray):
+    number = 28
+    if len(gArray) != 0:
+        number = np.average(gArray[-10:])
+    return number - 0.01, number * 0.618 - 0.01
+
+def action5(gArray):
+    number = 28
+    if len(gArray) != 0:
+        number = np.average(gArray[-15:])
+    return number - 0.01, number * 0.618 - 0.01
+
+def action6(gArray):
+    number = 28
+    if len(gArray) != 0:
+        number = np.average(gArray[-20:])
+    return number - 0.01, number * 0.618 - 0.01
+
+def action7(gArray):
+    if len(gArray) == 0:
+        return 28, 28
+    if len(gArray) == 1:
+        return gArray[0], gArray[0]
+    number = gArray[-1] / gArray[-2] * gArray[-1]
+    if number <= 0:
+        number = 0.001
+    if number >= 100:
+        number = 100*0.618
+    return number - 0.01, number * 0.618 - 0.01
+
+def action8(gArray):
+    if len(gArray) == 0:
+        return 28, 28
+    number1=50
+    number2=50/30*0.618+np.average(gArray[-5:])
+    return number1 - 0.01, number2
+```",bot bot action number number return number number action number number return number number action number number return number number action number number return number number action number number return number number action number number return number number action return return number number number number number return number number action return return number number,issue,positive,positive,neutral,neutral,positive,positive
+575894123,"### 苏州大学黄金点分享。
+
+#### 全员挂机去考试
+
+写在前面：本来写了个超级简单的二层神经网络然后挂机考试去，结果
+
+条件判断一直没进得去，就停留在了这一段代码上：
+
+```python
+ pj = sum(goldenNumberList[-10:])/10
+    bzc = math.sqrt(sum([(i-pj)**2 for i in goldenNumberList[-10:]])/10)
+    res2 = pj
+    res1 = pj - bzc
+    if res1 < 0:
+        res1 = goldenNumberList[-1]*0.618
+    return res1, res2
+```
+
+也就是计算前十个黄金点的平均数以及方差，然后返回平均数以及平均数减标准差。结果阴差阳错，这个算法居然跑了第二名，23333。
+
+```python
+class Net(nn.Module):
+    def __init__(self):
+        super (Net, self).__init__()
+        self.step1 = nn.Sequential(
+            nn.Linear(10, 100),
+            nn.ReLU(),
+            nn.Linear(100, 1),
+            nn.ReLU()
+        )
+            
+    def forward(self, x):
+        x = self.step1(x)
+        return x
+```
+
+这是原本pytorch写的二层感知机，相信只要接触过一点点神经网络的同学都可以写出来（也都能看出来这玩意的效果接近于瞎猜）。在此也不细讲。
+
+我们原本考虑的是强化学习，在这给出强化学习的定义：
+
+强化学习是一种交互式的学习方法，其主要特点为“试错搜索（Trial-and-Error）”和“延迟回报（Delay Return）”。学习过程是智能体（Agent）与环境不断交互并从环境的反馈信息中学习的过程。Agent与环境交互的过程如下：(1)Agent感知当前的环境状态（States）。
+
+(2)根据当前的状态和奖赏值（Reward）（强化信号），Agent选择一个动作（Action）并执行该动作。
+
+(3)当Agent所选择的动作作用于环境时，环境转移到新状态，并给出新的奖赏；(4)Agent根据环境反馈的奖赏值，计算回报值（Return），并将回报值作为更新内部策略的依据。
+
+我们的大一新生写了一个类似强化学习的方法：
+
+```python
+#! /usr/bin/env python
+# -*- coding: utf-8 -*-
+""""""
+勇气通往天堂，怯懦通往地狱。
+当一个人用工作去迎接光明，光明很快就会来照耀着他。
+对于不屈不挠的人来说，没有失败这回事。
+""""""
+
+
+# 函数类
+class Function:  # 函数类
+    def __init__(self, content, name, n=()):
+        self.content = content
+        self.name = name
+        if not n:
+            self.result = [content()]
+        else:
+            self.result = [content(i) for i in n]
+
+
+def GeneratePredictionNumbers(goldenNumberList, numberCount):  # 返回双值
+    """"""
+    :param goldenNumberList: list[int]
+    :param numberCount: int
+    :return: float, float
+    """"""
+    import random
+    import time
+    dots = goldenNumberList
+    if not dots:
+        return 19
+    upperlimit = max(dots[-10:])
+    lowerlimit = min(dots[-10:])
+
+    # 归零法
+    def f1():  # 归零法
+        return 0
+
+    # 随机法
+    def f2():  # 随机法
+        return random.random()*(upperlimit-lowerlimit)+lowerlimit
+
+    # 时间法
+    def f3():  # 时间法
+        return (int(time.time()) % 100)*(upperlimit-lowerlimit)/100+lowerlimit
+
+    # n次拟合 (n >= 1)
+    def f4(n):  # n次拟合
+        level = [dots[-1-n:]]
+        for i in range(n+1, 1, -1):
+            level.append([level[-1][j+1]-level[-1][j] for j in range(i-1)])
+        return sum([i[-1] for i in level])
+
+    # n点平均 （n >= 2)
+    def f5(n):  # n点平均
+        return sum(dots[-n:])/n
+
+    # n点加权平均 (n >= 2)
+    def f6(n):  # n点加权平均
+        sum_n = n*(n+1)/2
+        return sum([dots[-i]*(n+1-i)/sum_n for i in range(1, n+1)])
+
+    # n点sin拟合 (n >= 3)
+    def f7(n):  # n点sin拟合
+        n_dots = dots[-n:]
+        return max(n_dots) + min(n_dots) - n_dots[0]
+
+    # 之前第n点 (n >= 1)
+    def f8(n):  # 之前某点
+        return dots[-n]
+
+    # n点加权平均二 (n >= 2)
+    def f9(n):  # n点加权平均2
+        sum_n2 = n*(n+1)*(2*n+1)/6
+        return sum([dots[-i]*((n+1-i)**2)/sum_n2 for i in range(1, n+1)])
+
+    # 以上添加函数
+
+    # 结果1
+    def result1():  # 最终产生结果
+        result = sum([functions[i]*weights[i] for i in range(fun_nums)])/sum(weights)
+        return result if 0 < result < 100 else 0 if result < 100 else 60
+
+    # 结果2
+    def result2():  # 最终产生结果
+        result = (result1()+functions[weights.index(max(weights))])/2
+        return result if 0 < result < 100 else 0 if result < 100 else 60
+
+    # 调整权重
+    def adjust():  # 根据结果调整权重
+        global precious_ans  # 前一次答案
+        try:
+            if precious_ans:
+                pass
+        except:
+            precious_ans = functions
+            return
+        flag = 0  # 判定权重是否过大
+        for i in range(fun_nums):
+            error = abs(precious_ans[i] - dots[-1])
+            if error:
+                weights[i] += min(100/error, 150)
+            else:
+                weights[i] += 150
+            if weights[i] > 10000:
+                flag = 1
+        if flag:
+            for i in range(fun_nums):
+                weights[i] /= 10
+        precious_ans = functions.copy()
+
+    # 调出结果
+    def show():  # 调出结果
+        times = 100  # 多少组数据调出一次结果
+        while not len(dots) % times:
+            '''
+            # 打印结果
+            for i in range(fun_nums):
+                print('%s\t%s' % (names[i], weights[i]))
+            '''
+            '''
+            # 将结果写入goldendot.txt
+            with open('goldendot.txt', 'a') as f:
+                f.write('\t'.join(names))
+                f.write('\t'.join(list(map(str, weights))))
+            '''
+            pass
+
+    prediction = 10  # 预测前多少个点
+    if len(dots) <= prediction+1:
+        functions = [f1(), f2(), f3()]
+        return sum(functions)/len(functions)  # 预测点数不够时返回结果
+    else:
+        functions = [f1(), f2(), f3()]+[f4(i)for i in range(1, prediction+1)] + \
+                    [f5(i)for i in range(2, prediction+1)]+[f6(i)for i in range(2, prediction+1)] + \
+                    [f7(i)for i in range(3, prediction+1)]+[f8(i)for i in range(1, prediction+1)] + \
+                    [f9(i)for i in range(2, prediction+1)]  # 各函数结果（+[]添加函数）
+    fun_nums = len(functions)  # 函数数量
+    names = ['归零法', '随机法', '时间法',
+             # f1-f3
+             '1次拟合', '2次拟合', '3次拟合', '4次拟合', '5次拟合', '6次拟合', '7次拟合', '8次拟合', '9次拟合', '10次拟合',
+             # f4 1-n
+             '2点平均', '3点平均', '4点平均', '5点平均', '6点平均', '7点平均', '8点平均', '9点平均', '10点平均',
+             # f5 2-n
+             '2点加权平均', '3点加权平均', '4点加权平均', '5点加权平均', '6点加权平均', '7点加权平均', '8点加权平均', '9点加权平均', '10点加权平均',
+             # f6 2-n
+             '3点sin拟合', '4点sin拟合', '5点sin拟合', '6点sin拟合', '7点sin拟合', '8点sin拟合', '9点sin拟合', '10点sin拟合',
+             # f7 3-n
+             '之前第1点', '之前第2点', '之前第3点', '之前第4点', '之前第5点', '之前第6点', '之前第7点', '之前第8点', '之前第9点', '之前第10点',
+             # f8 1-n
+             '2点加权平均二', '3点加权平均二', '4点加权平均二', '5点加权平均二', '6点加权平均二', '7点加权平均二', '8点加权平均二', '9点加权平均二', '10点加权平均二',
+             # f9 2-n
+             ]  # 函数名
+    '''
+    def write_names():  # 打印函数名
+        for i in range(1, 10):
+            print('\'%d次拟合\'' % i, end=', ')
+    '''
+    global weights  # 权重
+    try:
+        if weights:
+            pass
+    except:
+        weights = [100]*fun_nums
+
+    adjust()
+    show()
+    return result1(), result2()
+
+
+if __name__ == '__main__':
+    def write_names():  # 打印函数名
+        for i in range(2, 11):
+            print('\'%d点加权平均二\'' % i, end=', ')
+    write_names()
+
+```
+
+虽然有些地方可以明显的看出不合理，但还是能从中看到一些朴素的学习思想。
+
+我在课上学过的强化学习有Q-learning、Sarsa、蒙特卡罗方法等。这三种方法都通过更新一个状态表来进行学习。
+
+Sarsa和Q-Learning类似，但是区别是当Sarsa 和 Q-Learning处在状态s时，均选择可带来最大回报的动作a，这样可到达状态s’。而在下一步，如果使用Q-Learning， 则会观察在s’上哪个动作会带来最大回报（不会真正执行该动作，仅用来更新Q表），在s’上做决定时, 再基于更新后的Q表选择动作。而 Sarsa 是实践派，在s’ 这一步估算的动作也是接下来要执行的动作，所以 Q(s, a) 的现实值也会稍稍改动，去掉maxQ，取而代之的是在s’ 上实实在在选取的a’ 的Q值，最后像Q-Learning一样求出现实和估计的差距并更新Q表里的Q(s, a)。
+
+因为 Sarsa 是说到做到型，所以称它为 on-policy(在线学习)，即边做边学；而Q-Learning是说到但并不一定做到，其可以通过观察别人的经历来学习，所以它也叫作 Off-policy(离线学习)。
+
+另外，Q-Learning因为有了 maxQ，所以也是一个特别勇敢的算法，原因在于它永远都会选择最近的一条通往成功的道路，不管这条路会有多危险。而 Sarsa 则是相当保守，它会选择离危险远远的，这就是使用Sarsa方法的不同之处。
+
+而蒙特卡罗的思想则是一种以概率统计理论为指导的数值计算方法。通常蒙特卡罗方法可以粗略地分成两类：一类是所求解的问题本身具有内在的随机性，借助计算机的运算能力可以直接模拟这种随机的过程。
+
+另一种类型是所求解问题可以转化为某种随机分布的特征数，比如随机事件出现的概率，或者随机变量的期望值。通过随机抽样的方法，以随机事件出现的频率估计其概率，或者以抽样的数字特征估算随机变量的数字特征，并将其作为问题的解。这种方法多用于求解复杂的多维积分问题。
+
+假设我们要计算一个不规则图形的面积，那么图形的不规则程度和分析性计算（比如，积分）的复杂程度是成正比的。蒙特卡罗方法基于这样的思想：假想你有一袋豆子，把豆子均匀地朝这个图形上撒，然后数这个图形之中有多少颗豆子，这个豆子的数目就是图形的面积。当你的豆子越小，撒的越多的时候，结果就越精确。借助计算机程序可以生成大量均匀分布坐标点，然后统计出图形内的点数，通过它们占总点数的比例和坐标点生成范围的面积就可以求出图形面积。
+
+感兴趣的同学可以尝试一下，但是你可能依然打不过平均数。或许大道至简就是这个道理吧。
+
+",python sum sum return python class net self super net self forward self return python python class function self content name content name content else content param list param return float float import random import time return min return return return level range level range return sum level return sum return sum range return min return return sum range result result sum range return result result else result else result result result return result result else result else adjust global try pas except return flag range error error min else flag flag range show time time range print open list map pas prediction return sum else range range range range range range range print global try pas except adjust show return result result range print sarsa sarsa sarsa,issue,negative,negative,neutral,neutral,negative,negative
+574620608,"### bot005-湖南大学微软学生俱乐部哼哼队策略分享
+
+1. 首先，我们队总共设置了13个action，包括上次的黄金点，上次黄金点*0.618，上三次的黄金点平均值，上三次的黄金点平均值*0.618，上五次……等等，在我们看来，action越多越好，多多益善。留给机器选择的余地越多，分数就越有把握上去。（尽管在赛后的复盘发现，由于参赛者对黄金点的搅局，倘若只有平均值的参与，是很难得高分的，必须尝试使用标准差等等，我们组在这个点上疏忽了）
+
+2. 我们队最开始的时候，只让机器选择一个action。然后两个提交的数，都是由这同一个action生成的。测试情况不容乐观。之后我们更改了一部分的设置，将提交数据更改为一个是action计算出的数，另一个是第一个数据*0.618，游戏测试情况提升了不少。
+
+3. 我们刚开始同一次提交的两个数据采取的是同一个action，大大降低了效率及准确性，之后我们组尝试使每个提交的数都使用不同的action，效果不错。
+
+4. 在赛场上发挥失误主要是由于平时我们的测试数据都是收敛的，黄金点波动不大，但是赛场上很多人都采取了扰局的策略，导致黄金点波动较大，与我们组预想的情况偏差较多。由于没有对大波动有对应之策，所以导致了失误，成绩提升十分缓慢。
+
+5. 在微软提供的RLBotDemo，对Q-Learning的训练里，每回合的reward始终是小组每个回合得到的分数。这样就会导致一个情况：在大部分的回合里，reward始终是0，这样使得Q-learning的训练效率极为低下。所以我们更改了reward的计算机制——如果我们组的离黄金点是最近的，则reward设置为1000；如果是最远的，则设置为-1000；否则，将reward设置为500-200*abs(我们组最接近黄金点的数-黄金点)。这样会提高Q-learning的训练效果（不过赛后复盘发现这样的得分算法仍然有点问题，不应该设置±1000这样的分数，设置这样的分数反而会扰乱机器的训练）。其相关部分代码如下：
+
+```
+lastScore = 500 - 200 * min(abs(todayGoldenList.goldenNumberList[-1] - number1), abs(todayGoldenList.goldenNumberList[-1] - number2))
+tmpState = 0
+if len(lastRoundResp.data.rounds) > 0:
+    scoreArray = [user for user in lastRoundResp.data.rounds[0].userNumbers if user.userId == userid]
+    if len(scoreArray) == 1:
+        tmpState = scoreArray[0].score
+if tmpState > 0:
+    lastScore = 1000
+elif tmpState == -2:
+    lastScore = -1000
+```
+
+",min number number user user,issue,negative,neutral,neutral,neutral,neutral,neutral
+573994173,"  ### bot29-深圳大学城微软学生俱乐部策略分享
+  比赛初期，我们采取的策略是在黄金点小于3的时候提交一个99.999进行扰动。由于只在黄金点很小时进行扰动，所以扰动对其他组的影响预期将会较大。根据我们的设想，由于黄金点游戏的误差可以看做许多量的叠加，则根据中心极限定理，该游戏误差满足正态分布。我们设非扰动值为之前黄金点的加权平均值。
+  比赛后期，在发现黄金点值逐渐稳定后（即每轮变化在1左右），我们放弃扰动，当黄金点值小于4在平均值基础上减去1.3作为另一个值提交，当黄金点值大于4加上1.3提交。
+  我们后期反思存在的主要问题是推导时没有考虑名次问题，如果加入参赛队伍数目，同样假设正态分布，可能会有不同的结果。
+  部分代码如下：
+  
+    sigma = 2 if lastgoldenNumber < 5 else 0.1 #上一个黄金点小于5赋值2
+
+    avg = avg * 0.01 * normalize + lastgoldenNumber 
+    normalize = normalize * 0.01 + 1
+
+    avg /= normalize #之前黄金点数加权平均得average值，最近一次权值最大
+
+    s = 2 * sigma * TeamNumber * random.uniform(0, 1)
+
+    number1 = avg
+
+    number2 = min(avg + s, 99.999) #前半场的策略，第二个数取99.999扰动或是在第一个数基础上根据队伍数目取正态分布扰动
+
+    if lastgoldenNumber >= 4:
+
+        number2 = number1 - 1.3 #后半场的策略，加减1.3
+
+    else:
+
+        number2 = number1 + 1.3
+
+    return number1, number2, avg, normalize
+",sigma else normalize normalize normalize normalize sigma number number min number number else number number return number number normalize,issue,positive,neutral,neutral,neutral,neutral,neutral
+569177912,"> swagger 所给[接口json文档](https://goldennumber.aiedu.msra.cn/swagger/v1/swagger.json)中
+> host地址为`goldennumber.azurewebsites.net`，直接利用pyswagger解析会导致403，推测可能是没来得及修改历史版本所致？
+> 错误内容 `Error 403 - This web app is stopped.`
+> 
+> ```js
+> {
+>   ""x-generator"": ""NSwag v12.3.1.0 (NJsonSchema v9.14.1.0 (Newtonsoft.Json v12.0.0.0))"",
+>   ""swagger"": ""2.0"",
+>   ""info"": {
+>     ""title"": ""黄金点服务器接口"",
+>     ""description"": ""黄金点服务器接口"",
+>     ""version"": ""1.0.0""
+>   },
+>   ""host"": ""goldennumber.azurewebsites.net"",
+>   ""schemes"": [
+>     ""https""
+>   ],
+>   ""produces"": [
+>     ""application/json""
+>   ]
+> }
+> ```
+谢谢你指出这一问题。
+已经修正Swagger描述中的host值。现在将返回和比赛规则中一致的`goldennumber.aiedu.msra.cn`作为host。",swagger error web swagger title description version host,issue,negative,neutral,neutral,neutral,neutral,neutral
+563256751,"> 我觉得是正确的。有时间的话，你可以按照这个公式改一下代码，看看前后的训练过程/结果有无变化。推测应该是好些吧。
+
+我今天晚上跑了一下，第一个图是只有公式钱的
+![image](https://user-images.githubusercontent.com/37367416/70442373-2cc7cc80-1ad1-11ea-80ce-7b6c6e20a3a4.png)
+![image](https://user-images.githubusercontent.com/37367416/70442377-2f2a2680-1ad1-11ea-8f29-98568010a313.png)
+第二个图是修改公式后的
+![image](https://user-images.githubusercontent.com/37367416/70442402-3c471580-1ad1-11ea-9013-7bafcb3a27af.png)
+![image](https://user-images.githubusercontent.com/37367416/70442413-41a46000-1ad1-11ea-8bd0-f2b62d717891.png)
+
+",image image image image,issue,negative,neutral,neutral,neutral,neutral,neutral
+544863955,"> 第03.2节，3.2.4，为什么不能用均方差做为分类问题的损失函数，其中提到了损失函数的凸函数问题。能否以图形化的形式展示，当使用均方差做为分类问题的损失函数时，其函数图像是什么样子？
+
+对于分类问题，如果使用交叉熵，则推导dZ的公式为：
+
+![image](https://user-images.githubusercontent.com/44423567/67270391-2d89ac80-f4eb-11e9-8c84-330ae0179b9d.png)
+
+所以，计算dZ时，可用公式：
+
+![image](https://user-images.githubusercontent.com/44423567/67270627-9f61f600-f4eb-11e9-9123-10df52a9b22c.png)
+
+dZ关于a的函数图像长这个样子，为便于可视化，此例中y取2：
+
+![image](https://user-images.githubusercontent.com/44423567/67270455-4a25e480-f4eb-11e9-9d38-1b13e70b64c1.png)
+
+从图中可见，dZ关于a的变化单调，且dZ对应唯一的a
+
+但是，当使用MSEloss时，推导dZ的公式变为：
+
+![image](https://user-images.githubusercontent.com/44423567/67270500-5f9b0e80-f4eb-11e9-9b39-1d7a82d097e9.png)
+
+所以，计算dZ时，公式变为：
+
+![image](https://user-images.githubusercontent.com/44423567/67270523-6cb7fd80-f4eb-11e9-9518-923d11f203a8.png)
+
+此时，dZ关于a的函数图像为，为便于可视化，此例中y取2：
+
+![image](https://user-images.githubusercontent.com/44423567/67270549-7b061980-f4eb-11e9-887b-0766674e150f.png)
+
+可见，当在区间[0, y]中时，每个dZ对应两个或三个a的取值，所以会造成dZ在区间[0, y]上的震荡。
+
+——华南理工大学MSC",image image image image image image,issue,negative,neutral,neutral,neutral,neutral,neutral
+541528896,"So is there an equivalent available in English? I mean, non-chinese speaking developers could (and I for my part do) feel left out by a repo which is called `ai-edu` which indicates it's ""the one and only"" provided by MS. I would understand it, if it's called `ai-edu-zn` because that would leave room for an English version.
+Long story short: Global language in programming is English from historical reasons and I find it rather rude to create a non-english information source. Of course I'm not entitled to anything provided by MS / the open source community, but I think I'm entitled to speak my mind.",equivalent available mean speaking could part feel left one provided would understand would leave room version long story short global language historical find rather rude create information source course anything provided open source community think speak mind,issue,negative,negative,neutral,neutral,negative,negative
+541499188,"This repo was prepared for Chinese students who want to study artificial neural network by MSRA, so it's in Chinese language. ",prepared want study artificial neural network language,issue,negative,negative,negative,negative,negative,negative
+537403333,"由于信息量函数可将概率唯一地映射为非负数且单调下降，故可将信息量看作同一事件的不同分别间的“距离”。
+取所有样本点X中的任意样本点X_i，P_label(X_i) = 0 or 1，P_Predict(X_i) in [0, 1]，此时预测分布与实际分布在此点的“距离”为D = I(P_Predict(X_i) ) = -log(P_Predict(X_i))
+D_KL(X) = sum(P_label(X_i)log(P_label(X_i) / P_Predict(X_i) )) = sum(-log(P_Predict(X_i))) = sum(D)可见对“距离”有贡献的样本点为P(X_i) = 1的样本点，也即实际分布中存在的点。                                                                                                                                                                  
+                                                                                                                                                    --李谷斌",sum log sum sum,issue,negative,neutral,neutral,neutral,neutral,neutral
+532079352,"It's sad to see that even Microsoft jumps onto the non-english-repositories train. There was some [discussion](https://www.reddit.com/r/github/comments/cj3am6/anyone_else_frustrated_by_the_inability_to_filter/) on Reddit about non-english repos and the consensus was, that the main language should be English. Of course, Reddit is by far not an authoritative source but it shows that this opinion is spread.",sad see even onto train discussion consensus main language course far authoritative source opinion spread,issue,negative,positive,neutral,neutral,positive,positive
+514908316,"谢谢------------------ 原始邮件 ------------------
+发件人: ""xiaowuhu""<notifications@github.com>
+发送时间: 2019年7月25日(星期四) 中午12:31
+收件人: ""microsoft/ai-edu""<ai-edu@noreply.github.com>;
+抄送: ""yhx0105""<1370117133@qq.com>;""Author""<author@noreply.github.com>;
+主题: Re: [microsoft/ai-edu]  I have a problem in B6  step2  0.4.4 (#299)
+
+
+
+Oh, I got your point. Yes, you are right. I will remove this formular. Thanks!
+ 
+&mdash;
+You are receiving this because you authored the thread.
+Reply to this email directly, view it on GitHub, or mute the thread.",author author problem step oh got point yes right remove formular thanks thread reply directly view mute thread,issue,negative,positive,positive,positive,positive,positive
+514891248,"Oh, I got your point. Yes, you are right. I will remove this formular. Thanks!",oh got point yes right remove formular thanks,issue,positive,positive,positive,positive,positive,positive
+508967853,"> > [https://github.com/maoyutao/CodeSearch/blob/master/第一周学习.md](https://github.com/maoyutao/CodeSearch/blob/master/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%AD%A6%E4%B9%A0.md)
+> 
+> can not open your link, could you double check or use all English in your address? thanks.
+
+sorry, I forgot to change the default settings. now you can open it.",open link could double check use address thanks sorry forgot change default open,issue,negative,negative,neutral,neutral,negative,negative
+508932814,"> [https://github.com/maoyutao/CodeSearch/blob/master/第一周学习.md](https://github.com/maoyutao/CodeSearch/blob/master/%E7%AC%AC%E4%B8%80%E5%91%A8%E5%AD%A6%E4%B9%A0.md)
+
+can not open your link, could you double check or use all English in your address? thanks. ",open link could double check use address thanks,issue,negative,positive,neutral,neutral,positive,positive
+507156078,Close due to the wrong reply format.,close due wrong reply format,issue,negative,negative,negative,negative,negative,negative
+507155571,"#173 #179 #181 #188 #194 #195 #196 #197 #240 #243
+may belong this challenge too, close them due to the wrong reply format.",may belong challenge close due wrong reply format,issue,negative,negative,negative,negative,negative,negative
+487806477,You can add a link in the root README.md file.,add link root file,issue,negative,neutral,neutral,neutral,neutral,neutral
+484035244,"我已经帮助修改了
+
+
+
+Lillian
+
+________________________________
+From: HongyanHu <notifications@github.com>
+Sent: Wednesday, April 17, 2019 4:33:37 PM
+To: Microsoft/ai-edu
+Cc: Lillian Zheng; State change
+Subject: Re: [Microsoft/ai-edu] 增加一个基于认知服务的实践案例 VideoLabel (#198)
+
+
+该次版本的提交好像存在文件夹名称中空格无法被README.md连接的问题，能否撤销此次提交，我修改后重新PR
+
+―
+You are receiving this because you modified the open/close state.
+Reply to this email directly, view it on GitHub<https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fgithub.com%2FMicrosoft%2Fai-edu%2Fpull%2F198%23issuecomment-483990803&data=02%7C01%7Clillzhen%40microsoft.com%7C8d781e7546fb4977303408d6c30f638e%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636910868195822454&sdata=yjiabi9Cf8NGJ8anR69c%2FhHJ32k0DFUeZ52f9MAxtkU%3D&reserved=0>, or mute the thread<https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fgithub.com%2Fnotifications%2Funsubscribe-auth%2FAlAiDKZqs2rfOyPbcUObDilpaTUUKDjAks5vhtxhgaJpZM4cpFgN&data=02%7C01%7Clillzhen%40microsoft.com%7C8d781e7546fb4977303408d6c30f638e%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636910868195832462&sdata=TXLHvVULPAoKheOJfjNZ3pCXuYjhWqI5pyHFigAQ7sA%3D&reserved=0>.
+",sent state change subject state reply directly view mute thread,issue,negative,negative,neutral,neutral,negative,negative
+483948218,That's OK. It's kind of bug in github.com. This change would also increase maintain cost.,kind bug change would also increase maintain cost,issue,positive,positive,positive,positive,positive,positive
+483947787,"let's skip this change, it will only affect user on Chrome. Using vscode is working well.",let skip change affect user chrome working well,issue,negative,neutral,neutral,neutral,neutral,neutral
+482802096,"fixed, please check. Thanks!",fixed please check thanks,issue,positive,positive,positive,positive,positive,positive
+480558014,"Forget to update the readme.md file, please help me add it",forget update file please help add,issue,negative,neutral,neutral,neutral,neutral,neutral
+451659263,"Thanks for reporting, I will fix it.
+
+Lillian
+
+From: Scarlett Li <notifications@github.com>
+Sent: Saturday, January 5, 2019 12:30 PM
+To: Microsoft/ai-edu <ai-edu@noreply.github.com>
+Cc: Subscribed <subscribed@noreply.github.com>
+Subject: [Microsoft/ai-edu] broken links (#82)
+
+
+there are 2 broken links in https://github.com/Microsoft/ai-edu/blob/master/C-%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E4%B8%8E%E7%8E%AF%E5%A2%83/README.md<https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fgithub.com%2FMicrosoft%2Fai-edu%2Fblob%2Fmaster%2FC-%25E5%25BC%2580%25E5%258F%2591%25E5%25B7%25A5%25E5%2585%25B7%25E4%25B8%258E%25E7%258E%25AF%25E5%25A2%2583%2FREADME.md&data=02%7C01%7Clillzhen%40microsoft.com%7C614eb747e13d46e121fa08d672c682d1%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636822594261454759&sdata=WzHd2j9oUcb%2Fd54J4OnMXgDYAvUbXMp6U381y3Z5bbU%3D&reserved=0>
+:
+
+  *   https://github.com/Microsoft/ai-edu/blob/master/C-%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E4%B8%8E%E7%8E%AF%E5%A2%83/C-%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E4%B8%8E%E7%8E%AF%E5%A2%83/README.md<https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fgithub.com%2FMicrosoft%2Fai-edu%2Fblob%2Fmaster%2FC-%25E5%25BC%2580%25E5%258F%2591%25E5%25B7%25A5%25E5%2585%25B7%25E4%25B8%258E%25E7%258E%25AF%25E5%25A2%2583%2FC-%25E5%25BC%2580%25E5%258F%2591%25E5%25B7%25A5%25E5%2585%25B7%25E4%25B8%258E%25E7%258E%25AF%25E5%25A2%2583%2FREADME.md&data=02%7C01%7Clillzhen%40microsoft.com%7C614eb747e13d46e121fa08d672c682d1%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636822594261454759&sdata=HqGP1lvubg9rhe%2FEa4%2F1567yV6B%2FxMRoprJ8caoAW3M%3D&reserved=0>
+-https://github.com/Microsoft/ai-edu/blob/master/C-%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E4%B8%8E%E7%8E%AF%E5%A2%83/C-%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E4%B8%8E%E7%8E%AF%E5%A2%83/README.md<https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fgithub.com%2FMicrosoft%2Fai-edu%2Fblob%2Fmaster%2FC-%25E5%25BC%2580%25E5%258F%2591%25E5%25B7%25A5%25E5%2585%25B7%25E4%25B8%258E%25E7%258E%25AF%25E5%25A2%2583%2FC-%25E5%25BC%2580%25E5%258F%2591%25E5%25B7%25A5%25E5%2585%25B7%25E4%25B8%258E%25E7%258E%25AF%25E5%25A2%2583%2FREADME.md&data=02%7C01%7Clillzhen%40microsoft.com%7C614eb747e13d46e121fa08d672c682d1%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636822594261464764&sdata=R4yvqmIKLGeWpEDu5dvQgnTSrYqeb7sYuYVCD0rIujw%3D&reserved=0>
+
+—
+You are receiving this because you are subscribed to this thread.
+Reply to this email directly, view it on GitHub<https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fgithub.com%2FMicrosoft%2Fai-edu%2Fissues%2F82&data=02%7C01%7Clillzhen%40microsoft.com%7C614eb747e13d46e121fa08d672c682d1%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636822594261464764&sdata=ujmo%2FS45KdHIzsHYaI5nAxt6YKhDKHNUXV0yX7uZQZ4%3D&reserved=0>, or mute the thread<https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fgithub.com%2Fnotifications%2Funsubscribe-auth%2FAlAiDHfJLlu4y9aHHuov0fAn0Ore2mshks5vACpggaJpZM4ZvJSV&data=02%7C01%7Clillzhen%40microsoft.com%7C614eb747e13d46e121fa08d672c682d1%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636822594261474773&sdata=F9bummnw1YLPjnaXEe9gwm0vpkyvY8tSqDs8VCZCoOE%3D&reserved=0>.
+",thanks fix li sent subject broken link broken link thread reply directly view mute thread,issue,negative,negative,negative,negative,negative,negative
+443151018,"add new blogs, change blog's name, etc",add new change name,issue,negative,positive,positive,positive,positive,positive

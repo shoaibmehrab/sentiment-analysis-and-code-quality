@@ -1,0 +1,1120 @@
+id,original_comment,processed_comment,source,sentiment_VADER,sentiment_textblob,sentiment_pattern,sentiment_bert,sentiment_spacy,max_voted_sentiment
+1982880796,"```
+nnt@mycomp:~/pytorch-tutorial/tutorials/01-basics/pytorch_basics$ python3 main.py 
+tensor(2.)
+tensor(1.)
+tensor(1.)
+w:  Parameter containing:
+tensor([[-0.0246,  0.4567, -0.4118],
+        [ 0.1679, -0.5086, -0.3876]], requires_grad=True)
+b:  Parameter containing:
+tensor([0.0529, 0.2922], requires_grad=True)
+loss:  1.949414610862732
+dL/dw:  tensor([[-0.7870,  1.5242, -0.0795],
+        [ 0.8206, -0.9073, -0.7711]])
+dL/db:  tensor([-0.5564,  0.0907])
+loss after 1 step optimization:  1.896445631980896
+Files already downloaded and verified
+torch.Size([3, 32, 32])
+6
+Traceback (most recent call last):
+  File ""/home/nnt/pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py"", line 124, in <module>
+    images, labels = data_iter.next()
+AttributeError: '_SingleProcessDataLoaderIter' object has no attribute 'next'
+```
+Also this",python tensor tensor tensor parameter tensor parameter tensor loss tensor tensor loss step optimization already recent call last file line module object attribute also,issue,negative,neutral,neutral,neutral,neutral,neutral
+1906605844,"Coming back to this! It would be cool to see transformers for video data and the categories suggested above... I could work on this if this hasn't been done. The links that have been shared were great for their time, but now there are Transformer-specific modules in Pytorch that would be good to demonstrate.",coming back would cool see video data could work done link great time would good demonstrate,issue,positive,positive,positive,positive,positive,positive
+1865392094,"@languandong I think the confusion originates from the misconception that the gradient would be computed and stored during the forward pass. In fact, in the forward pass, only the DAG is constructed. The grad is computed in a lazy mode: it is not computed until explicit `loss.backward()` is invoked.",think confusion misconception gradient would forward pas fact forward pas dag grad lazy mode explicit,issue,negative,negative,negative,negative,negative,negative
+1787106290,"As pointed out by @languandong, the critical factor is the correct sequence in which optimizer.zero_grad() and loss.backward() are called. Both code snippets are valid as long as optimizer.zero_grad() is invoked before loss.backward(). This ensures that the gradients are properly zeroed out and then computed and stored in the appropriate tensors' grad field.",pointed critical factor correct sequence code valid long properly appropriate grad field,issue,negative,positive,positive,positive,positive,positive
+1514117042,"> You can load and test the model in a simple way as below.
+> 
+> ```python
+> model = torch.load('model.pkl')
+> outputs = model(images)
+> ```
+
+_pickle.UnpicklingError: A load persistent id instruction was encountered,
+but no persistent_load function was specified.
+
+I keep getting this error!!!!
+How to resolve this?",load test model simple way python model model load persistent id instruction function keep getting error resolve,issue,negative,neutral,neutral,neutral,neutral,neutral
+1325383160,"it's with capital L in Linear isn't it?
+If it's the case, I think this issue should be closed.",capital linear case think issue closed,issue,negative,negative,neutral,neutral,negative,negative
+1307250328,"I just transformed all the images to Grayscale and boom, it worked like charm.
+
+This is my code:
+transform = transforms.Compose([transforms.Grayscale(),
+                                transforms.Resize((28,28)),
+                                transforms.ToTensor(),
+                                transforms.Normalize((0.5,), (0.5,)),
+                                ])",boom worked like charm code transform,issue,positive,neutral,neutral,neutral,neutral,neutral
+1279716877,"I used pip install cython, but the issue still persists. 
+Did anyone find the solution?",used pip install issue still anyone find solution,issue,negative,neutral,neutral,neutral,neutral,neutral
+1236388877,"@languandong  
+You can use both, doesn't matter as long as `optimizer.zero_grad()` is called before `loss.backward()`.
+Note that `optimizer.zero_grad()` zeroes out the gradients in the `grad` field of the tensors, and `loss.backward()` compute s the gradients which are then stored in the `grad` field.",use matter long note grad field compute grad field,issue,negative,negative,neutral,neutral,negative,negative
+1096950705,"The main.py is not a complete example code, it's some code snippets.
+You shoud implement your own ""custom data loader"", refer to torchvision.datasets.CIFAR10.
+Your error is caused by null implementation of CustomDataset.",complete example code code implement custom data loader refer error null implementation,issue,negative,positive,neutral,neutral,positive,positive
+986495269,"I am facing the same problem, could one of you guys come with a solution? That would be really helpful for me.",facing problem could one come solution would really helpful,issue,negative,positive,positive,positive,positive,positive
+902718615,ok we will try to add notebooks for every python Scripts,try add every python,issue,negative,neutral,neutral,neutral,neutral,neutral
+886318797,"Harry-KIT could you be more explicit? conv2d() takes as arguments (c, output_feature, strides, padding). Could you print the shape of your input?",could explicit padding could print shape input,issue,negative,neutral,neutral,neutral,neutral,neutral
+686280995,"the model have three channels， only change the data loading way is useless，how to change the image to three channels?
+",model three change data loading way change image three,issue,negative,neutral,neutral,neutral,neutral,neutral
+679095921,in tensorflow 2.x tf.summary.FileWrite is gone to tf.compat.v1.summary.FileWrite so should change from tf.summary.FileWrite to tf.compat.v1.summary.FileWrite then may be work the code or should install 1.X version tensorflow,gone change may work code install version,issue,negative,neutral,neutral,neutral,neutral,neutral
+674637269,i don't think it is polite to leave your information on other's repo,think polite leave information,issue,negative,neutral,neutral,neutral,neutral,neutral
+671024015,You can change the libraries by the new one which has deprecated then it will work. @noamzilo ,change new one work,issue,negative,positive,positive,positive,positive,positive
+654696275,"can you get the pretrained files? l need it too, thanks a lot",get need thanks lot,issue,negative,positive,positive,positive,positive,positive
+654695136,"good afternoon, can you share the pretrained.zip? Thanks a lot",good afternoon share thanks lot,issue,positive,positive,positive,positive,positive,positive
+643681427,"use pip3 install cython.
+It will help",use pip install help,issue,negative,neutral,neutral,neutral,neutral,neutral
+631649608,"> If you are still having the problem please use this code instead of above in place of tranform.
+> transform = transforms.Compose([transforms.ToTensor(),
+> transforms.Normalize((0.5,), (0.5,))
+> ])
+
+Can you please explain in short? What went wrong and how did this work?",still problem please use code instead place transform please explain short went wrong work,issue,negative,negative,negative,negative,negative,negative
+627155306,"@tooHotSpot 
+
+> by default it is False
+
+Actually, it is True by default.  https://pytorch.org/docs/stable/nn.html#torch.nn.BatchNorm2d",default false actually true default,issue,negative,negative,neutral,neutral,negative,negative
+625129398,"> @fawazsammani
+> Thanks very much !
+> I used BatchNorm2d layers for normalization. Don' t they do what you talked about ?
+
+Check BatchNorm parameter track_running_stats, it has to be True, by default it is False",thanks much used normalization check parameter true default false,issue,positive,positive,neutral,neutral,positive,positive
+622272313,"> > > > 这样改就好了
+> > > > transform = transforms.Compose([
+> > > > transforms.ToTensor(), transforms.Normalize([0.5], [0.5])])
+> > > 
+> > > 
+> > > 改成这样之后，又报错了
+> > > IndexError: invalid index of a 0-dim tensor. Use tensor.item() to convert a 0-dim tensor to a Python number
+> > > 定位在 d_losses[epoch] = d_losses[epoch]_(i/(i+1.)) + d_loss.data[0]_(1./(i+1.))
+> > > how to fix it? thx
+> > 
+> > 
+> > If you're using pytorch>=1.0 or not? In pytorch 1.0, loss.item() replace loss.data[0]
+> > but it would just show user warning and why you got an error? Maybe a further issue.
+> > Anyway please change your code firstly
+> > d_losses[epoch] = d_losses [ epoch ] (i/(i+1.)) + d_loss.item()(1./(i+1.))
+> > if any issue happen please show more detail log to us.
+> 
+> I got following error:RuntimeError: Given groups=1, weight of size 16 3 3 3, expected input[128, 1, 28, 28] to have 3 channels, but got 1 channels instead
+
+Do you meet the problem that 
+the d_loss will near to 0 gradually,  which is not what we expect.  who know how to fix it.",transform invalid index tensor use convert tensor python number epoch epoch fix replace would show user warning got error maybe issue anyway please change code firstly epoch epoch issue happen please show detail log u got following error given weight size input got instead meet problem near gradually expect know fix,issue,negative,positive,positive,positive,positive,positive
+612660496,"its working i wrote in Normalize ((0.5) ,(0.5)) as func not as matrix
+transform=transforms.Compose([transforms.ToTensor(),
+                              transforms.Normalize([0.5], [0.5])])
+and 
+transform = transforms.Compose([transforms.ToTensor(),
+transforms.Normalize((0.5,), (0.5,))
+])
+it works also",working wrote normalize matrix transform work also,issue,negative,neutral,neutral,neutral,neutral,neutral
+610105876,"Hey guys,
+The reason behind concatenating the feature vector with the input ([here](https://github.com/yunjey/pytorch-tutorial/blob/57afe85b2c7e6bb92918a73b9a9b6a3394c92951/tutorials/03-advanced/image_captioning/model.py#L38)) is not clear for me. Would you please help me figure out the difference between this implementation and when we pass the feature vector as the hidden value of the first LSTM cell, as depicted below:
+1) LSTM(cat(image_feature, input)) [link](
+
+![](https://miro.medium.com/max/1400/1*cW47gMv3Tq5Ex5itMalRmw.png)
+)
+2) LSTM(input, hidden=image_feature) [link](
+
+![](https://miro.medium.com/max/1024/1*vzFwXFJOrg6WRGNsYYT6qg.png)
+) 
+",hey reason behind feature vector input clear would please help figure difference implementation pas feature vector hidden value first cell cat input link input link,issue,positive,negative,neutral,neutral,negative,negative
+605487713,"transform = transforms.Compose([transforms.ToTensor(),
+transforms.Normalize((0.5,), (0.5,))
+])
+Try this I was also facing the same problem but now its done.
+",transform try also facing problem done,issue,negative,neutral,neutral,neutral,neutral,neutral
+602164857,"> I just ran into the same error message in a completely unrelated context, and changing the version of torchvision to 0.2.1 fixed it for me. Maybe this helps :)
+
+it is useful!",ran error message completely unrelated context version fixed maybe useful,issue,negative,positive,positive,positive,positive,positive
+599158017,"> Maybe it's the python version wrong. When we run **make** which the python2 is called default.But what we need is python3. So, run **python3 setup.py build_ext --inplace** instead of make.
+
+error: unknown file type '.pyx' (from 'pycocotools/_mask.pyx')",maybe python version wrong run make python need python run python instead make error unknown file type,issue,negative,negative,negative,negative,negative,negative
+599157963,"Maybe it's the python version wrong. When we run **make** which the python2 is called default.But what we need is python3. So, run  **python3 setup.py build_ext --inplace** instead of make.",maybe python version wrong run make python need python run python instead make,issue,negative,negative,negative,negative,negative,negative
+598764895,"Dear @yunjey 
+I want to train the model on my dataset, but it seems that my json file works wrong, could you tell me how to preprocess a json file?
+Thanks very much",dear want train model file work wrong could tell file thanks much,issue,negative,negative,neutral,neutral,negative,negative
+583526118,"Did you get error? I remember I didn't get any error here. 
+In theory, **'Epoch [{}/{}], Step [{}/{}], Loss: {:.4f}'** has **5 {}** correspond to **5 parameters**. ",get error remember get error theory step loss correspond,issue,negative,neutral,neutral,neutral,neutral,neutral
+580984820,Having this issue as well. Tried everything short of nuking the computer and starting from scratch.,issue well tried everything short computer starting scratch,issue,negative,neutral,neutral,neutral,neutral,neutral
+569220419,"> @anjalinagel12 rename the encoder and decoder file name.
+> encoder-5 3000.pkl file name to encoder-2-1000.ckpt worked for me.Hope it helps!
+
+Not helped. Is there any other solution?",rename file name file name worked solution,issue,negative,neutral,neutral,neutral,neutral,neutral
+566783842,The code works for me. You may need to check your code again.,code work may need check code,issue,negative,neutral,neutral,neutral,neutral,neutral
+565814541,I am having the same problem and I have also installed cython but the problem still persists,problem also problem still,issue,negative,neutral,neutral,neutral,neutral,neutral
+564181264,"@jindongwang It does not repeat. These two lines generate different random tensors. 
+One is for training discriminator, the other is for training generator.",repeat two generate different random one training discriminator training generator,issue,negative,negative,negative,negative,negative,negative
+563470430,"I got it.  
+
+
+Thank you very much！
+
+
+| |
+Jason
+|
+|
+邮箱：18742521286@163.com
+|
+
+Signature is customized by Netease Mail Master
+
+On 12/10/2019 06:29, OrangeC93 wrote:
+
+Just save interim output for people to see and compare?
+I don't think there're any influence on the model performance.
+
+—
+You are receiving this because you authored the thread.
+Reply to this email directly, view it on GitHub, or unsubscribe.",got thank signature mail master wrote save interim output people see compare think influence model performance thread reply directly view,issue,positive,positive,neutral,neutral,positive,positive
+563469791,"Just save interim output for people to see and compare? 
+I don't think there're any influence on the model performance.",save interim output people see compare think influence model performance,issue,negative,neutral,neutral,neutral,neutral,neutral
+558424052,"> @SStarLib I think pytorch official tutorial is helpful and they recently release a book (free to download online): deep learning with pytorch.
+> If you still have problem, you can ask question in pytorch forum or add a pytorch study group(wx or qq)...
+
+Is there a recommended study group(wx or qq)?",think official tutorial helpful recently release book free deep learning still problem ask question forum add study group study group,issue,positive,positive,positive,positive,positive,positive
+558382313,"@SStarLib  I think pytorch official tutorial is helpful and they recently release a book (free to download online): deep learning with pytorch. 
+If you still have problem, you can ask question in pytorch forum or add a pytorch study group(wx or qq)...",think official tutorial helpful recently release book free deep learning still problem ask question forum add study group,issue,positive,positive,positive,positive,positive,positive
+557773678,"Is there someone who knows how to edit code  to use ""cuda"" to train the model instead of 'cpu'?
+Thanks a lot!",someone edit code use train model instead thanks lot,issue,negative,positive,positive,positive,positive,positive
+556927330,"> Hi @OrangeC93,
+> 
+> ```
+> self.lstm = nn.LSTM(input_size, hidden_size, num_layers, batch_first=True)
+> ```
+> 
+> See ""batch_first = True"". But in default ""batch_first = False"".
+> 
+> That's the reason. U can refer to the source code of RNN cell. [here](https://github.com/pytorch/pytorch/blob/master/torch/nn/modules/rnn.py)
+
+wow~ I got it! Many thanks! ",hi see true default false reason refer source code cell got many thanks,issue,positive,positive,positive,positive,positive,positive
+556925544,"Hi @OrangeC93,
+
+```
+self.lstm = nn.LSTM(input_size, hidden_size, num_layers, batch_first=True)
+```
+See ""batch_first = True"". But in default ""batch_first = False"".
+
+That's the reason. U can refer to the source code of RNN cell. [here](https://github.com/pytorch/pytorch/blob/master/torch/nn/modules/rnn.py)",hi see true default false reason refer source code cell,issue,negative,negative,neutral,neutral,negative,negative
+544214799,"I still have this problem and I am using a current version on CUDA-X:
+
+```
+for name, param in network.named_parameters():
+    print(name, '\t\t', param.shape)
+
+```
+
+```
+AttributeError  Traceback (most recent call last)
+<ipython-input-140-be0d90186358> in <module>
+      1 # Accessing the Networks Parameters
+----> 2 for name, param in network.named_parameters():
+      3     print(name, '\t\t', param.shape)
+
+AttributeError: 'Network' object has no attribute 'named_parameters
+```",still problem current version name param print name recent call last bed module name param print name object attribute,issue,negative,neutral,neutral,neutral,neutral,neutral
+533862776,"Use the F.conv2d() function. i.e. F.conv2d(input, put the layer weights you want to share, put the layer bias you want to share, padding, dilation). Hope this helps.",use function input put layer want share put layer bias want share padding dilation hope,issue,positive,neutral,neutral,neutral,neutral,neutral
+519389966,"@BCWang93 How about change device
+```
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+```
+to just
+```
+device = torch.device('cpu')
+```",change device device else device,issue,negative,neutral,neutral,neutral,neutral,neutral
+516115670,"@dmichaels713 Can you post more information like the PyTorch version, Python version, etc being used by you? ",post information like version python version used,issue,negative,neutral,neutral,neutral,neutral,neutral
+515818706,"I am getting the exact same error regardless of if I use pickle.load or torch.load.  Any help would be appreciated.
+
+UnpicklingError: invalid load key, '\x00'.",getting exact error regardless use help would invalid load key,issue,negative,positive,positive,positive,positive,positive
+513796015,"solved the problem by ""sudo pip install cython""
+then do make command",problem pip install make command,issue,negative,neutral,neutral,neutral,neutral,neutral
+513322192,"I found this great tutorial to learn about Transformers. Link: (http://jalammar.github.io/illustrated-transformer/)
+
+If you decided to implement in PyTorch than this link is going to help you.
+(http://nlp.seas.harvard.edu/2018/04/03/attention.html)",found great tutorial learn link decided implement link going help,issue,positive,positive,positive,positive,positive,positive
+506928521,"> > 这样改就好了
+> > transform = transforms.Compose([
+> > transforms.ToTensor(), transforms.Normalize([0.5], [0.5])])
+> 
+> 改成这样之后，又报错了
+> IndexError: invalid index of a 0-dim tensor. Use tensor.item() to convert a 0-dim tensor to a Python number
+> 定位在 d_losses[epoch] = d_losses[epoch]_(i/(i+1.)) + d_loss.data[0]_(1./(i+1.))
+> how to fix it? thx
+
+just remove d._loss.data[0] and write d_loss.data it works for me.",transform invalid index tensor use convert tensor python number epoch epoch fix remove write work,issue,negative,neutral,neutral,neutral,neutral,neutral
+498006966,"probably he shell change directory to the write one  :-)
+",probably shell change directory write one,issue,negative,neutral,neutral,neutral,neutral,neutral
+498003417,"> python setup.py build_ext --inplace
+> running build_ext
+> building 'pycocotools._mask' extension
+> x86_64-linux-gnu-gcc -pthread -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fno-strict-aliasing -Wdate-time -D_FORTIFY_SOURCE=2 -g -fdebug-prefix-map=/build/python2.7-3hk45v/python2.7-2.7.15~rc1=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/prasad_raghavendra/.local/lib/python2.7/site-packages/numpy/core/include -I../common -I/usr/include/python2.7 -c ../common/maskApi.c -o build/temp.linux-x86_64-2.7/../common/maskApi.o -Wno-cpp -Wno-unused-function -std=c99 ../common/maskApi.c: In function ‘rleDecode’: ../common/maskApi.c:46:7: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation] for( k=0; k<R[i].cnts[j]; k++ ) _(M++)=v; v=!v; }} ^~~ ../common/maskApi.c:46:49: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’ for( k=0; k<R[i].cnts[j]; k++ ) _(M++)=v; v=!v; }} ^ ../common/maskApi.c: In function ‘rleFrPoly’: ../common/maskApi.c:166:3: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation] for(j=0; j<k; j++) x[j]=(int)(scale_xy[j_2+0]+.5); x[k]=x[0]; ^~~ ../common/maskApi.c:166:54: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’ for(j=0; j<k; j++) x[j]=(int)(scale_xy[j_2+0]+.5); x[k]=x[0]; ^ ../common/maskApi.c:167:3: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation] for(j=0; j<k; j++) y[j]=(int)(scale_xy[j_2+1]+.5); y[k]=y[0]; ^~~ ../common/maskApi.c:167:54: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’ for(j=0; j<k; j++) y[j]=(int)(scale_xy[j_2+1]+.5); y[k]=y[0]; ^ ../common/maskApi.c: In function ‘rleToString’: ../common/maskApi.c:212:7: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation] if(more) c |= 0x20; c+=48; s[p++]=c; ^~
+> ../common/maskApi.c:212:27: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+> if(more) c |= 0x20; c+=48; s[p++]=c;
+> ^
+> ../common/maskApi.c: In function ‘rleFrString’:
+> ../common/maskApi.c:220:3: warning: this ‘while’ clause does not guard... [-Wmisleading-indentation]
+> while( s[m] ) m++; cnts=malloc(sizeof(uint)*m); m=0;
+> ^~~~~
+> ../common/maskApi.c:220:22: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘while’
+> while( s[m] ) m++; cnts=malloc(sizeof(uint)*m); m=0;
+> ^~~~
+> ../common/maskApi.c:228:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+> if(m>2) x+=(long) cnts[m-2]; cnts[m++]=(uint) x;
+> ^~
+> ../common/maskApi.c:228:34: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+> if(m>2) x+=(long) cnts[m-2]; cnts[m++]=(uint) x;
+> ^~~~
+> ../common/maskApi.c: In function ‘rleToBbox’:
+> ../common/maskApi.c:141:31: warning: ‘xp’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+> if(j%2==0) xp=x; else if(xp<x) { ys=0; ye=h-1; }
+> ^
+> x86_64-linux-gnu-gcc -pthread -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes -fno-strict-aliasing -Wdate-time -D_FORTIFY_SOURCE=2 -g -fdebug-prefix-map=/build/python2.7-3hk45v/python2.7-2.7.15~rc1=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC -I/home/prasad_raghavendra/.local/lib/python2.7/site-packages/numpy/core/include -I../common -I/usr/include/python2.7 -c pycocotools/_mask.c -o build/temp.linux-x86_64-2.7/pycocotools/_mask.o -Wno-cpp -Wno-unused-function -std=c99
+> x86_64-linux-gnu-gcc: error: pycocotools/_mask.c: No such file or directory
+> x86_64-linux-gnu-gcc: fatal error: no input files
+> compilation terminated.
+> error: command 'x86_64-linux-gnu-gcc' failed with exit status 1
+> Makefile:3: recipe for target 'all' failed
+> 
+> **I am getting this while running `make` immediately after cloning (git clone, cd coco/PythonAPI/ followed by _make_ results in this error).**
+
+I'm facing the same issue were you able to solve it!",python running building extension function warning clause guard note statement latter misleadingly indented guarded function warning clause guard note statement latter misleadingly indented guarded warning clause guard note statement latter misleadingly indented guarded function warning clause guard note statement latter misleadingly indented guarded function warning clause guard note statement latter misleadingly indented guarded warning clause guard long note statement latter misleadingly indented guarded long function warning may used function else error file directory fatal error input compilation error command exit status recipe target getting running make immediately git clone error facing issue able solve,issue,negative,positive,positive,positive,positive,positive
+490863993,@ShuuTsubaki  I also encounter to the problem. Do you find the way to fit it?,also encounter problem find way fit,issue,negative,positive,positive,positive,positive,positive
+490323543,"> > > 这样改就好了
+> > > transform = transforms.Compose([
+> > > transforms.ToTensor(), transforms.Normalize([0.5], [0.5])])
+> > 
+> > 
+> > 改成这样之后，又报错了
+> > IndexError: invalid index of a 0-dim tensor. Use tensor.item() to convert a 0-dim tensor to a Python number
+> > 定位在 d_losses[epoch] = d_losses[epoch]_(i/(i+1.)) + d_loss.data[0]_(1./(i+1.))
+> > how to fix it? thx
+> 
+> If you're using pytorch>=1.0 or not? In pytorch 1.0, loss.item() replace loss.data[0]
+> but it would just show user warning and why you got an error? Maybe a further issue.
+> 
+> Anyway please change your code firstly
+> d_losses[epoch] = d_losses [ epoch ] (i/(i+1.)) + d_loss.item()(1./(i+1.))
+> 
+> if any issue happen please show more detail log to us.
+
+I got following error:RuntimeError: Given groups=1, weight of size 16 3 3 3, expected input[128, 1, 28, 28] to have 3 channels, but got 1 channels instead",transform invalid index tensor use convert tensor python number epoch epoch fix replace would show user warning got error maybe issue anyway please change code firstly epoch epoch issue happen please show detail log u got following error given weight size input got instead,issue,negative,positive,positive,positive,positive,positive
+490321105,"> 这样改就好了
+> transform = transforms.Compose([
+> transforms.ToTensor(), transforms.Normalize([0.5], [0.5])])
+> 
+> 改成这样之后，又报错了
+> IndexError: invalid index of a 0-dim tensor. Use tensor.item() to convert a 0-dim tensor to a Python number
+> 定位在 d_losses[epoch] = d_losses[epoch](i/(i+1.)) + d_loss.data[0](1./(i+1.))
+> how to fix it? thx
+> 
+> If you're using pytorch>=1.0 or not? In pytorch 1.0, loss.item() replace loss.data[0]
+> but it would just show user warning and why you got an error? Maybe a further issue.
+> Anyway please change your code firstly
+> d_losses[epoch] = d_losses [ epoch ] (i/(i+1.)) + d_loss.item()(1./(i+1.))
+> if any issue happen please show more detail log to us.
+
+nice! it works!
+I replace the "".data[0]"" with "".item()"" and the code begins to work.",transform invalid index tensor use convert tensor python number epoch epoch fix replace would show user warning got error maybe issue anyway please change code firstly epoch epoch issue happen please show detail log u nice work replace code work,issue,negative,positive,positive,positive,positive,positive
+490319200,"> 这样改就好了
+> transform = transforms.Compose([
+> transforms.ToTensor(), transforms.Normalize([0.5], [0.5])])
+> 
+> 改成这样之后，又报错了
+> IndexError: invalid index of a 0-dim tensor. Use tensor.item() to convert a 0-dim tensor to a Python number
+> 定位在 d_losses[epoch] = d_losses[epoch](i/(i+1.)) + d_loss.data[0](1./(i+1.))
+> how to fix it? thx
+> 
+> If you're using pytorch>=1.0 or not? In pytorch 1.0, loss.item() replace loss.data[0]
+> but it would just show user warning and why you got an error? Maybe a further issue.
+> Anyway please change your code firstly
+> d_losses[epoch] = d_losses [ epoch ] (i/(i+1.)) + d_loss.item()(1./(i+1.))
+> if any issue happen please show more detail log to us.
+
+yes. I'm using pytorch 1.0.
+you means that I should change the code 
+d_losses[epoch] = d_losses[epoch](i/(i+1.)) + d_loss.data[0](1./(i+1.))
+to be  code below
+d_losses[epoch] = d_losses[epoch](i/(i+1.)) + d_loss.item()(1./(i+1.))
+?
+thx you very much! I will try it .",transform invalid index tensor use convert tensor python number epoch epoch fix replace would show user warning got error maybe issue anyway please change code firstly epoch epoch issue happen please show detail log u yes change code epoch epoch code epoch epoch much try,issue,negative,positive,positive,positive,positive,positive
+490133852,"> > 这样改就好了
+> > transform = transforms.Compose([
+> > transforms.ToTensor(), transforms.Normalize([0.5], [0.5])])
+> 
+> 改成这样之后，又报错了
+> IndexError: invalid index of a 0-dim tensor. Use tensor.item() to convert a 0-dim tensor to a Python number
+> 定位在 d_losses[epoch] = d_losses[epoch]_(i/(i+1.)) + d_loss.data[0]_(1./(i+1.))
+> how to fix it? thx
+
+If you're using pytorch>=1.0 or not? In pytorch 1.0, loss.item() replace loss.data[0]
+but it would just show user warning and why you got an error? Maybe a further issue.
+
+Anyway please change your code firstly 
+d_losses[epoch] = d_losses [ epoch ] (i/(i+1.)) + d_loss.item()(1./(i+1.))
+
+if any issue happen please show more detail log to us.",transform invalid index tensor use convert tensor python number epoch epoch fix replace would show user warning got error maybe issue anyway please change code firstly epoch epoch issue happen please show detail log u,issue,negative,positive,positive,positive,positive,positive
+490033652,"> 这样改就好了
+> transform = transforms.Compose([
+> transforms.ToTensor(), transforms.Normalize([0.5], [0.5])])
+
+改成这样之后，又报错了
+IndexError: invalid index of a 0-dim tensor. Use tensor.item() to convert a 0-dim tensor to a Python number
+定位在    d_losses[epoch] = d_losses[epoch]*(i/(i+1.)) + d_loss.data[0]*(1./(i+1.))
+how to fix it? thx
+",transform invalid index tensor use convert tensor python number epoch epoch fix,issue,negative,neutral,neutral,neutral,neutral,neutral
+489408407,"Hey can you help me to calculate the accuracy? For this model? It only shows the loss and perplexity here. Urgent help required. Will be forever grateful!  
+Thanks",hey help calculate accuracy model loss perplexity urgent help forever grateful thanks,issue,positive,positive,positive,positive,positive,positive
+487263343,"Let me clarify, if the img has three channels, you should have three number for mean, for example, img is RGB, mean is [0.5, 0.5, 0.5], the normalize result is R * 0.5, G * 0.5, B * 0.5. If img is grey type that only one channel, so mean should be [0.5], the normalize result is R * 0.5",let clarify three three number mean example mean normalize result grey type one channel mean normalize result,issue,negative,negative,negative,negative,negative,negative
+482912625,"> I tries to change
+> 
+> ```
+> tensorboard --logdir './logs'
+> ```
+> to
+> 
+> ```
+> tensorboard --logdir './logs'
+> ```
+> and it ran successfully.
+
+what did you change?",change ran successfully change,issue,negative,positive,positive,positive,positive,positive
+480665086,"` # Save the model checkpoints
+            if (i+1) % args.save_step == 0:
+                torch.save(decoder.state_dict(), os.path.join(
+                    args.model_path, 'decoder-{}-{}.ckpt'.format(epoch+1, i+1)))
+                torch.save(encoder.state_dict(), os.path.join(
+                    args.model_path, 'encoder-{}-{}.ckpt'.format(epoch+1, i+1)))`
+...
+`total_step = len(data_loader)
+    for epoch in range(args.num_epochs):
+        for i, (images, captions, lengths) in enumerate(data_loader):
+            `
+这个地方是(i+1)% save_step ==0 才会保存，你的save_step = 100 , 但是他的i是每一个epoch里面的第几次迭代，到了下一个epoch，i 就重新从0开始算了。如果你把 save_step写成40，应该就会每个epoch保存一次了",save model epoch range enumerate,issue,negative,neutral,neutral,neutral,neutral,neutral
+477538181,"I just ran into the same error message in a completely unrelated context, and changing the version of torchvision to 0.2.1 fixed it for me. Maybe this helps :)",ran error message completely unrelated context version fixed maybe,issue,negative,positive,neutral,neutral,positive,positive
+476082774,"I've solved this problem.
+Sorry to bother you!
+Good luck!",problem sorry bother good luck,issue,negative,positive,neutral,neutral,positive,positive
+475882916,@ladycatusa The snippet provided by @VinayMatcha does indeed correctly produce the correct output shape. I would recommend referencing this issue: https://github.com/fungtion/DANN/issues/8 for as to _why_ this occurring.,snippet provided indeed correctly produce correct output shape would recommend issue,issue,negative,neutral,neutral,neutral,neutral,neutral
+475693295,"@VinayMatcha 
+transform = transforms.Compose([
+ transforms.ToTensor(), transforms.Normalize([0.5], [0.5])]) 
+
+This is not work for me ? I still get an error on this line .I think the parentheses is wrong  ",transform work still get error line think parenthesis wrong,issue,negative,negative,negative,negative,negative,negative
+473615643,"I noticed that the vocab.pkl was replaced when I compile the dataset. If I use the one from the download link, the result is correct.",compile use one link result correct,issue,negative,neutral,neutral,neutral,neutral,neutral
+471157448,"I got the same problem.. and i solved it..
+When you load image, make sure that the image has three color channel (RGB) because it might be gray scale. So you should convert it.
+An example is below:
+
+Here is my code,
+
+from PIL import Image
+
+img = Image.open(image_path).convert('RGB')
+",got problem load image make sure image three color channel might gray scale convert example code import image,issue,negative,positive,positive,positive,positive,positive
+471059517,"If you are still having the problem please use this code instead of above in place of tranform.
+transform = transforms.Compose([transforms.ToTensor(),
+                               transforms.Normalize((0.5,), (0.5,))
+                               ])",still problem please use code instead place transform,issue,negative,neutral,neutral,neutral,neutral,neutral
+470859264,"I got the data through the link you offer. Maybe something went wrong with my internet.
+Thankyou!",got data link offer maybe something went wrong,issue,negative,negative,negative,negative,negative,negative
+469701573,"I got the same error. Please help me out.
+Thanks in advance :)",got error please help thanks advance,issue,positive,positive,positive,positive,positive,positive
+469689387,"got this error after modifying also :(
+@syedimad1998 @KahHwa @shaunVB @jtoy 
+
+
+Anjalis-MacBook-Air:image_captioning ANJALI$ python sample.py --image='png/example.png'
+Traceback (most recent call last):
+  File ""sample.py"", line 81, in <module>
+    main(args)
+  File ""sample.py"", line 43, in main
+    encoder.load_state_dict(torch.load(args.encoder_path))
+  File ""/anaconda3/lib/python3.6/site-packages/torch/serialization.py"", line 356, in load
+    f = open(f, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'models/encoder-2-1000.ckpt'
+",got error also python recent call last file line module main file line main file line load open file directory,issue,negative,positive,neutral,neutral,positive,positive
+469421517,"Solution: 
+check the version of matplotlib and python. They should be compatible.
+",solution check version python compatible,issue,negative,neutral,neutral,neutral,neutral,neutral
+469315799,"SOLUTION: 
+just write this-
+
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8",solution write export export,issue,negative,neutral,neutral,neutral,neutral,neutral
+469175343,"之前改过了，transform = transforms.Compose([
+    transforms.ToTensor(), transforms.Normalize(mean=0.5, std=0.5)])
+又报错 too many indices for tensor of dimension 0
+我把后面那个
+for i, (images, _) in enumerate(data_loader):
+改成
+for i, images in enumerate(data_loader):
+也不对",many index tensor dimension enumerate enumerate,issue,negative,positive,positive,positive,positive,positive
+469172867,"> Maybe your picture is a gray image, you should use a color picture
+都是调用MNIST那个接口，从哪里可以下载到彩色的呢？
+
+",maybe picture gray image use color picture,issue,negative,neutral,neutral,neutral,neutral,neutral
+460934204,"@anjalinagel12 rename the encoder and decoder file name.
+encoder-5 3000.pkl file name to encoder-2-1000.ckpt worked for me.Hope it helps!",rename file name file name worked,issue,negative,neutral,neutral,neutral,neutral,neutral
+457894758,"FileNotFoundError: [Errno 2] No such file or directory: 'models/encoder-2-1000.ckpt'
+someone please help",file directory someone please help,issue,positive,neutral,neutral,neutral,neutral,neutral
+455735753,"u can set **batch_size =1** ,if you want test the data one by one
+``
+batch_size = 1
+test_loader = torch.utils.data.DataLoader(dataset=test_dataset,
+                                         batch_size=batch_size,                             # this line still remains
+                                         shuffle=False)
+``
+
+",set want test data one one line still remains,issue,negative,neutral,neutral,neutral,neutral,neutral
+450128992,"> Using the ""feature vector"" you have a training process that looks like:
+> 
+> * step 0: features + zeroes  -> caption_0 + state_0
+> * step 1: embed(caption_0) + state_0 -> caption_1 + state_1
+> * ...
+> * step n: embed(caption_n-1) + state_n-1 -> <end>
+> 
+> where zeroes is the default value if no state is provided.
+> @sth4k if you use the conv output as a ""starting state"" and manually provide it to the LSTM, what would you use as first input to the LSTM? A vector of constant values? I'm not an expert but I think both approaches should work in principle.
+
+Hi LapoFrati, thanks for your reply. Somehow github eats my word <s.o.s> which is the starting of sentence token (in your case caption_0). I have modified the <s.o.s> in my original question. so you can see, features + zeros will always be used to predict caption_0 which is basically a starting token (similar to eos). Does it make sense?",feature vector training process like step step embed step embed end default value state provided use output starting state manually provide would use first input vector constant expert think work principle hi thanks reply somehow eats word starting sentence token case original question see always used predict basically starting token similar make sense,issue,positive,positive,positive,positive,positive,positive
+450107620,"Using the ""feature vector"" you have a training process that looks like:
+
+- step 0: features + zeroes  -> caption_0 + state_0
+- step 1: embed(caption_0) + state_0 -> caption_1 + state_1
+- ...
+- step n: embed(caption_n-1) + state_n-1 -> \<end\>
+
+where zeroes is the default value if no state is provided.
+@sth4k if you use the conv output as a ""starting state"" and manually provide it to the LSTM, what would you use as first input to the LSTM? A vector of constant values? I'm not an expert but I think both approaches should work in principle.",feature vector training process like step step embed step embed default value state provided use output starting state manually provide would use first input vector constant expert think work principle,issue,positive,positive,neutral,neutral,positive,positive
+450014763,"@ghwatson understand the <eos> actually can be ignored. However, in this code implementation after torch.cat, the sequence will change from ""<s.o.s> token1 token2 ... tokenk<eos>"" to ""feature <s.o.s> token1 token2 ..tokenk"". The first step will be the ""feature"" vector and it's always used to predict <s.o.s> only? From my understanding, the ""feature"" vector would make more sense if it works as the starting state of LSTM. ",understand actually however code implementation sequence change token token feature token token first step feature vector always used predict understanding feature vector would make sense work starting state,issue,negative,positive,neutral,neutral,positive,positive
+446203668,"Sorry, I don't notice the parameter batch_first in 'nn.LSTM' which If true the input and output tensors are provided as (batch, seq, feature). 
+I close the issue now.",sorry notice parameter true input output provided batch feature close issue,issue,negative,negative,neutral,neutral,negative,negative
+446113363,"you are right, surely the output is the concatenated result of the last hidden state of forward LSTM and first hidden state of reverse LSTM, or BP will be wrong",right surely output result last hidden state forward first hidden state reverse wrong,issue,negative,positive,neutral,neutral,positive,positive
+445123139,"also, 
+
+```
+[jalal@goku PythonAPI]$ pwd
+/scratch2/NAACL2018/caption/coco/PythonAPI
+[jalal@goku PythonAPI]$ make
+python setup.py build_ext --inplace
+running build_ext
+skipping 'pycocotools/_mask.c' Cython extension (up-to-date)
+building 'pycocotools._mask' extension
+creating build/common
+creating build/temp.linux-x86_64-3.6
+creating build/temp.linux-x86_64-3.6/pycocotools
+gcc -pthread -B /scratch/sjn-p3/anaconda/anaconda3/compiler_compat -Wl,--sysroot=/ -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -I/scratch/sjn-p3/anaconda/anaconda3/lib/python3.6/site-packages/numpy/core/include -I../common -I/scratch/sjn-p3/anaconda/anaconda3/include/python3.6m -c ../common/maskApi.c -o build/temp.linux-x86_64-3.6/../common/maskApi.o -Wno-cpp -Wno-unused-function -std=c99
+../common/maskApi.c: In function ‘rleToBbox’:
+../common/maskApi.c:141:31: warning: ‘xp’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+       if(j%2==0) xp=x; else if(xp<x) { ys=0; ye=h-1; }
+                               ^
+gcc -pthread -B /scratch/sjn-p3/anaconda/anaconda3/compiler_compat -Wl,--sysroot=/ -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -I/scratch/sjn-p3/anaconda/anaconda3/lib/python3.6/site-packages/numpy/core/include -I../common -I/scratch/sjn-p3/anaconda/anaconda3/include/python3.6m -c pycocotools/_mask.c -o build/temp.linux-x86_64-3.6/pycocotools/_mask.o -Wno-cpp -Wno-unused-function -std=c99
+creating build/lib.linux-x86_64-3.6
+creating build/lib.linux-x86_64-3.6/pycocotools
+gcc -pthread -shared -B /scratch/sjn-p3/anaconda/anaconda3/compiler_compat -L/scratch/sjn-p3/anaconda/anaconda3/lib -Wl,-rpath=/scratch/sjn-p3/anaconda/anaconda3/lib -Wl,--no-as-needed -Wl,--sysroot=/ build/temp.linux-x86_64-3.6/../common/maskApi.o build/temp.linux-x86_64-3.6/pycocotools/_mask.o -o build/lib.linux-x86_64-3.6/pycocotools/_mask.cpython-36m-x86_64-linux-gnu.so
+copying build/lib.linux-x86_64-3.6/pycocotools/_mask.cpython-36m-x86_64-linux-gnu.so -> pycocotools
+rm -rf build
+rm: cannot remove ‘build/lib.linux-x86_64-2.7/pycocotools/__init__.py’: Permission denied
+rm: cannot remove ‘build/lib.linux-x86_64-2.7/pycocotools/coco.py’: Permission denied
+rm: cannot remove ‘build/lib.linux-x86_64-2.7/pycocotools/cocoeval.py’: Permission denied
+rm: cannot remove ‘build/lib.linux-x86_64-2.7/pycocotools/mask.py’: Permission denied
+make: *** [all] Error 1
+[jalal@goku PythonAPI]$ sudo make
+python setup.py build_ext --inplace
+running build_ext
+building 'pycocotools._mask' extension
+error: unknown file type '.pyx' (from 'pycocotools/_mask.pyx')
+make: *** [all] Error 1
+```
+",also make python running skipping extension building extension function warning may used function else build remove permission remove permission remove permission remove permission make error make python running building extension error unknown file type make error,issue,negative,negative,neutral,neutral,negative,negative
+443410070,"```python
+# Logistic regression model
+model = nn.Linear(input_size, num_classes)
+
+# Loss and optimizer
+# nn.CrossEntropyLoss() computes softmax internally
+criterion = nn.CrossEntropyLoss() 
+```
+
+notice that ` nn.CrossEntropyLoss() ` is actually the combination of `nn.LogSoftmax()` and `nn.NLLLoss()`, so you do not need an extra logistic/softmax after your linear layer.
+If you'd like to use the softmax function to make it clear, you have to use `nn.NLLLoss()` as your criterion instead.",python logistic regression model model loss internally criterion notice actually combination need extra linear layer like use function make clear use criterion instead,issue,negative,positive,neutral,neutral,positive,positive
+438107881,"@JustinNie If you have enough gpu memory, you can speed up the testing procedure by using a larger batch_size. However, for more complex examples than feedforward_neural_network, testing with a large batch_size requires huge amounts of memory. Since not all users have enough memory, and also for consistency with other examples, I keep the tutorial code as it is now.
+",enough memory speed testing procedure however complex testing large huge memory since enough memory also consistency keep tutorial code,issue,negative,positive,neutral,neutral,positive,positive
+435931445,"Instead of using this project, you can use tensorboardX to visualize the computational graph of your model.",instead project use visualize computational graph model,issue,negative,neutral,neutral,neutral,neutral,neutral
+435928954,Try to use the command following CUDA_VISIBLE_DEVICES=1 python main.py ...,try use command following python,issue,negative,neutral,neutral,neutral,neutral,neutral
+435928208,"Except the image captioning model, training takes less than few hours. It depends on the project.",except image model training le project,issue,negative,neutral,neutral,neutral,neutral,neutral
+435927471,"The provided checkpoints were saved at intermediate step, not final step. Therefore, it can have higher loss than the final checpoint.",provided saved intermediate step final step therefore higher loss final,issue,negative,positive,neutral,neutral,positive,positive
+435926695,You should run backward to get meaningful gradients. The error message says that there is no gradient in value tensor.,run backward get meaningful error message gradient value tensor,issue,negative,positive,positive,positive,positive,positive
+435565012,"The solution is right there just below look up error
+
+import nltk
+nltk.download('punkt')
+",solution right look error import,issue,negative,positive,positive,positive,positive,positive
+424686123,"Decoder should have the same number of elements in both its input and output. Input in your example contains 7 words, whereas the output contains 5 words. Every word (including feature) is used to predict the next word, so it is like the following.
+
+Input:
+`feature <start> there is a cat`
+
+Output:
+`<start> there is a cat <end>`",number input output input example whereas output every word feature used predict next word like following input feature start cat output start cat end,issue,negative,neutral,neutral,neutral,neutral,neutral
+424682282,"But shouldn't the decoder input/output scheme be the following:
+
+Input:
+`feature <start> there is a cat <end>`
+
+Output:
+`there is a cat <end>` 
+?",scheme following input feature start cat end output cat end,issue,negative,neutral,neutral,neutral,neutral,neutral
+424679193,"@RicherMans I made a mistake in the previous comment. `collate_fn` returns 6, not 5 for ""<start>` there is a cat <end>"". `""features <start> there is a cat <end>""` has length 7, so `<end>` is discarded during packing. On the other hand, `""<start> there is a cat <end>""` has length 6, so nothing is discarded.",made mistake previous comment start cat end start cat end length end hand start cat end length nothing,issue,negative,negative,negative,negative,negative,negative
+424591554,"@okanlv 
+But how about the targets then? Shouldn't they be `there is a cat <end>` instead of the current `<start> there is a cat <end>` ? 
+Problem is the following line:
+
+```python
+targets = pack_padded_sequence(captions, lengths, batch_first=True)[0]
+```",cat end instead current start cat end problem following line python,issue,negative,neutral,neutral,neutral,neutral,neutral
+414381133,"Hi there
+I am also meet that problem, and then I add the 'inputs = inputs.unsqueeze(1)',
+----------------------------
+    def sample(self, features, states=None):
+        """"""Samples captions for given image features (Greedy search).""""""
+        sampled_ids = []
+        inputs = features.unsqueeze(1)
+        for i in range(20):                                      # maximum sampling length
+            hiddens, states = self.lstm(inputs, states)          # (batch_size, 1, hidden_size), 
+            outputs = self.linear(hiddens.squeeze(1))            # (batch_size, vocab_size)
+            predicted = outputs.max(1)[1]
+            sampled_ids.append(predicted)
+            inputs = self.embed(predicted)
+            inputs = inputs.unsqueeze(1)
+        sampled_ids = torch.cat(sampled_ids, 1)                  # (batch_size, 20)
+        return sampled_ids.squeeze()
+--------------------------------------------
+ but, I got the following:
+File ""D:\Dev\image_captioning\model.py"", line 134, in sample
+#    sampled_ids = torch.cat(sampled_ids, 1)                  # (batch_size, 20)
+# RuntimeError: Dimension out of range (expected to be in range of [-1, 0], but got 1)",hi also meet problem add sample self given image greedy search range maximum sampling length return got following file line sample dimension range range got,issue,negative,neutral,neutral,neutral,neutral,neutral
+411280254,"@fawazsammani 
+Hi, I tried the following code by add Normalize function to the transform composition.
+But it is still bad in evaluation loss.
+https://github.com/shuuchen/pytorch_tutorials/blob/master/Deep%20Residual%20Network/drn.nbconvert.ipynb
+
+```python
+train_transform = transforms.Compose([transforms.Pad(4), 
+                                transforms.RandomHorizontalFlip(), 
+                                transforms.RandomCrop(32),
+                                transforms.ToTensor(),
+                                transforms.Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225))])
+
+test_transform = transforms.Compose([transforms.ToTensor(), 
+                               transforms.Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225))])
+```
+
+Can I see your code ?",hi tried following code add normalize function transform composition still bad evaluation loss python see code,issue,negative,negative,negative,negative,negative,negative
+408741993,"@fawazsammani 
+Thanks very much !
+I used BatchNorm2d layers for normalization. Don' t they do what you talked about ?
+",thanks much used normalization,issue,negative,positive,positive,positive,positive,positive
+408679791,"As I can see from your code, you haven't normalized your images in the transforms. It happened once with me, then when I normalized them, overfitting was reduced. You need to find the mean and std deviation of your images, and then provide them to the data transforms. 
+Hope that helps",see code reduced need find mean deviation provide data hope,issue,negative,negative,negative,negative,negative,negative
+406820469,"Can anyone explain to me why is it so? 
+I ran into the similar problem with size mismatch while using the same size of training and testing images, I don't understand why the model running size is different..",anyone explain ran similar problem size mismatch size training testing understand model running size different,issue,negative,neutral,neutral,neutral,neutral,neutral
+396456251,"If you want to use the pretrained model for image captioning, see [here](https://github.com/yunjey/pytorch-tutorial/tree/master/tutorials/03-advanced/image_captioning#pretrained-model).",want use model image see,issue,negative,neutral,neutral,neutral,neutral,neutral
+394922862,"@ani0075 See [here](https://github.com/yunjey/pytorch-tutorial/blob/master/tutorials/02-intermediate/recurrent_neural_network/main.py#L45). You can feed the input of shape (batch, seq_len, input_size) by setting `batch_first=True`. You can use it as you like. ",ani see feed input shape batch setting use like,issue,negative,neutral,neutral,neutral,neutral,neutral
+389023606,"On Mon, May 14, 2018 at 10:31 PM Yunjey Choi <notifications@github.com>
+wrote:
+
+> Closed #113 <https://github.com/yunjey/pytorch-tutorial/pull/113>.
+>
+> —
+> You are receiving this because you authored the thread.
+> Reply to this email directly, view it on GitHub
+> <https://github.com/yunjey/pytorch-tutorial/pull/113#event-1626189075>,
+> or mute the thread
+> <https://github.com/notifications/unsubscribe-auth/AQyrClvbb_VyKU_K_ObG2hbl54pUE9Nmks5tyj4DgaJpZM4T-Zic>
+> .
+>
+My bad.. I figured you were keeping this tutorial up to date and I was
+trying to help
+",mon may wrote closed thread reply directly view mute thread bad figured keeping tutorial date trying help,issue,negative,negative,negative,negative,negative,negative
+389023291,"Do not use torch.autograd.Variable. In PyTorch 0.4.0, tensor and variable are merged. The original code is written accordance with PyTorch 0.4.0.",use tensor variable original code written accordance,issue,negative,positive,positive,positive,positive,positive
+388940667,pytorch does not support variable.reshape anymore and there were a couple other unsupported methods in the original file.,support couple unsupported original file,issue,negative,positive,positive,positive,positive,positive
+387999756,"@HeroKillerEver Sorry for late reply. For binary data (e.g., MNIST 0~1), we can use BCE loss as reconstruction loss. However, it does not matter if you replace BCE loss with MSE.",sorry late reply binary data use loss reconstruction loss however matter replace loss,issue,negative,negative,negative,negative,negative,negative
+387998364,"@qazwsx74269 Sorry for the late reply. In a language model, the length of a sequence can be thousands or more. This is problematic because we have limited gpu memory, and there is also a speed issue. To alleviate this problem, people use ""Truncated Backprop Through Time"" instead of ""Entire Backprop"".  Truncated BPTT can be implemented easily by `detach(states)` in pytorch.  As mentioned by @rohan-varma, please see [this post](http://www.wildml.com/2015/10/recurrent-neural-networks-tutorial-part-3-backpropagation-through-time-and-vanishing-gradients/) explaining Truncated BPTT.",sorry late reply language model length sequence problematic limited memory also speed issue alleviate problem people use truncated time instead entire truncated easily detach please see post explaining truncated,issue,negative,negative,neutral,neutral,negative,negative
+387995978,Sorry for the late reply. This has been fixed in the current version.,sorry late reply fixed current version,issue,negative,negative,negative,negative,negative,negative
+385865872,@lawup The tutorial code will be updated soon. Please stay tuned.,tutorial code soon please stay tuned,issue,negative,neutral,neutral,neutral,neutral,neutral
+384971457,"Download this file and save it in your working directory: https://github.com/yunjey/pytorch-tutorial/blob/master/tutorials/02-intermediate/language_model/data_utils.py
+",file save working directory,issue,negative,neutral,neutral,neutral,neutral,neutral
+383394736,"@LapoFrati i was thinking the same thing as I went through this code...why wouldn't you want to use last word in the caption as input?
+
+edit: nvm, to throw on top my explanation for future readers: it's to ignore the end token. If you draw out an unfolded lstm for a particular example caption, you'll see that inputting the target 'end' token isn't useful because we don't care about the output stemming from that timestep in the cross entropy loss.",thinking thing went code would want use last word caption input edit throw top explanation future ignore end token draw unfolded particular example caption see target token useful care output stemming cross entropy loss,issue,positive,positive,positive,positive,positive,positive
+383298751,"Your welcome.
+Thank you very much for easy tutorial to understand!",welcome thank much easy tutorial understand,issue,positive,positive,positive,positive,positive,positive
+382384702,i also have the same error...pls let me know ..how you solve this...pls,also error let know solve,issue,negative,neutral,neutral,neutral,neutral,neutral
+381431474,"Every caption starts with `<start>` and ends with `<end>` in the data_loader. If ground truth is `""there is a cat""`, the caption will be `""<start>  there is a cat <end>"" `(actually their corresponding ids in the vocabulary, but for simplicity we can ignore that). `collate_fn` in data_loader returns lengths too, so we will have a caption with length 6. Look at the following line;
+
+https://github.com/yunjey/pytorch-tutorial/blob/6c785eb810848f259431865b12bb8795f4abcb23/tutorials/03-advanced/image_captioning/model.py#L52
+
+Each caption will be embedded with their respective length. Packing `""features <start>  there is a cat <end>"" ` with length 6 is the same as packing `""features <start>  there is a cat"" `. So,  `<end>`  is discarded.
+
+",every caption start end ground truth cat caption start cat end actually corresponding vocabulary simplicity ignore caption length look following line caption respective length start cat end length start cat end,issue,negative,neutral,neutral,neutral,neutral,neutral
+381327697,"@icfear 
+I reviewed the code in `sample.py`. If just testing a single image, then `sampled_ids = torch.cat(sampled_ids, 0)` will correctly get the captions. But looking at the comments in `model.py`,  I still think that we should use `torch.stack` instead.",code testing single image correctly get looking still think use instead,issue,negative,negative,neutral,neutral,negative,negative
+375196084,"Sorry, I try to run train.py on image captioning",sorry try run image,issue,negative,negative,negative,negative,negative,negative
+374682563,"Encoder input images are defined as Volatile in the following line.
+
+https://github.com/yunjey/pytorch-tutorial/blob/6c785eb810848f259431865b12bb8795f4abcb23/tutorials/03-advanced/image_captioning/train.py#L62
+
+Any variable with at least one volatile input will be volatile by default. Volatile variables also have requires_grad property set to False by default, which means that their gradient will not be computed. 
+`features = Variable(features.data)` sets the volatile property to default value (false) so that requires_grad property could be transfered to the upper levels of the computational graph. You can check the following example for better understanding.
+
+https://github.com/icfear/Pytorch-Example/blob/master/variable_example.py
+",input defined volatile following line variable least one volatile input volatile default volatile also property set false default gradient variable volatile property default value false property could upper computational graph check following example better understanding,issue,positive,negative,neutral,neutral,negative,negative
+370012527,"Dear @abhigoku10,
+You can use [image captioning codebase in pytorch](https://github.com/ruotianluo/ImageCaptioning.pytorch) instead of above code. Actually, as I remember, I haven't use above code for training on another data sets, but by using the mentioned code I have done that. However, as I have remembered, that was a semi-sophisticated work to create a json file like the used one for MS-COCO.
+ ",dear use image instead code actually remember use code training another data code done however work create file like used one,issue,positive,neutral,neutral,neutral,neutral,neutral
+369581992,"@ahkarami @yunjey  hi guys i am new to this topic i need to train for a custom dataset can you pls elaborate the steps for training with custom datasets . These are the things i am having currently with me
+
+1.10k img database of various objects and tags for each image 
+
+Thanks in advance ",hi new topic need train custom elaborate training custom currently various image thanks advance,issue,negative,positive,positive,positive,positive,positive
+369271594,@karanchahal Please see [here](https://github.com/yunjey/pytorch-tutorial/blob/master/tutorials/03-advanced/image_captioning/train.py#L116) (5 epochs). The most possible reason for generating same captions is incorrect input normalization. Check input normalization between training and sampling phases.,please see possible reason generating incorrect input normalization check input normalization training sampling phase,issue,negative,neutral,neutral,neutral,neutral,neutral
+369261802,"Okay , but it's very strange , I trained it from scratch and sampling gives terrible results . The same caption for all images . How many epochs did you train it for ?",strange trained scratch sampling terrible caption many train,issue,negative,negative,negative,negative,negative,negative
+369259755,"@karanchahal Do you mean that the model ""you implemented"" is heavily overfitting ? I remember that the model's BLEU4 score is about 23 on coco validation dataset. This means that the model did not overfit so badly.",mean model heavily remember model score coco validation model overfit badly,issue,negative,negative,negative,negative,negative,negative
+367636183,@mirjalil Thanks a lot! The code was fixed.,thanks lot code fixed,issue,negative,positive,positive,positive,positive,positive
+367635938,Thanks a lot. Pull request merged in #99.,thanks lot pull request,issue,negative,positive,positive,positive,positive,positive
+365931876,@Gyubin Sorry for late reply. You are right. I fixed the code. Thanks a lot!  ,sorry late reply right fixed code thanks lot,issue,negative,negative,neutral,neutral,negative,negative
+361937315,"Hello,
+i got the same problem, did you solve this for now?
+can you tell me how to solve it?
+Hoping for your reply.
+Thanks in advance.",hello got problem solve tell solve reply thanks advance,issue,negative,positive,positive,positive,positive,positive
+360646152,"After some more testing I've decided that the lengths shouldn't be changed since I don't want to use the last caption as an input to the lstm (the \<end\> token, 4033 in the example).",testing decided since want use last caption input token example,issue,negative,neutral,neutral,neutral,neutral,neutral
+356875230,"You can use coco-caption evaluation code from [this adress](https://github.com/tylin/coco-caption). You have to save the caption and image ids as a json file with the following format; 
+`[{""image_id"": correct image id, ""caption"": ""Generated caption""},...]`.
+You can find a sample json file [here](https://github.com/tylin/coco-caption/tree/master/results)",use evaluation code save caption image file following format correct image id caption caption find sample file,issue,negative,neutral,neutral,neutral,neutral,neutral
+353731906,"I found a solution with regard to your BUG. You might not make sense of how to use the function--""view"" and you just put ""-1"" on the middle place but it didn't mean that you were doing the right thing. That is,what you did just makes the inner data become meaningless. My solution is that,  change
+`# images = Variable(images.view(-1,sequence_length, input_size)).cuda()  
+        images = Variable(images.view(sequence_length,-1, input_size)).cuda()  ` to
+`images = images.view(-1,sequence_length,input_size).cuda()
+images = Variable(torch.transpose(images,0,1))` After I do this, it works as before",found solution regard bug might make sense use function view put middle place mean right thing inner data become meaningless solution change variable variable variable work,issue,negative,negative,negative,negative,negative,negative
+353702068,Also fixed the README.md per issue #77.,also fixed per issue,issue,negative,positive,neutral,neutral,positive,positive
+353053580,"The tests shouldn't fail from what I changed here, so I suppose this is related to branch-builds or something else?",fail suppose related something else,issue,negative,negative,negative,negative,negative,negative
+352186719,"If you are testing a single image, `sampled_ids = torch.cat(sampled_ids, 0) ` will do the trick. I suggest you to print `sampled_ids` before and after this operation and see the little change it brings to the table :). ",testing single image trick suggest print operation see little change table,issue,negative,negative,negative,negative,negative,negative
+349638767,"However,  I have an error when I do that:
+runtimeerror input must have 3 dimensions, got 4",however error input must got,issue,negative,neutral,neutral,neutral,neutral,neutral
+348794733,"It seems like a version problems
+Using python3 It can run , I don't why",like version python run,issue,negative,neutral,neutral,neutral,neutral,neutral
+343680902,"Hello, you can change the line 68 of model.py. 
+
+Original
+```python
+sampled_ids = torch.cat(sampled_ids, 1)  
+```
+
+Changed
+```python
+sampled_ids` = torch.cat(sampled_ids, 0)  
+```",hello change line original python python,issue,negative,positive,positive,positive,positive,positive
+342345727,"@icfear You're right. `split` is never used. The validation data also needs resizing
+@yunjey ",right split never used validation data also need,issue,negative,positive,positive,positive,positive,positive
+336609624,"@donhk1011 Please see [here](https://github.com/yunjey/pytorch-tutorial/blob/master/tutorials/02-intermediate/language_model/main.py#L32). I used `batch_first=True` in `nn.LSTM` for (batch, seq_len, input_size). There are two choices for dimension ordering of inputs. `batch_first=False` for (seq_len, batch, input_size) and `batch_first=True` for (batch, seq_len, input_size). I'm more familiar with the latter. 
+
+",please see used batch two dimension batch batch familiar latter,issue,negative,positive,positive,positive,positive,positive
+336268461,"Dear @yunjey, Thank you very much for your time and useful response. ",dear thank much time useful response,issue,positive,positive,positive,positive,positive,positive
+336064446,"@ahkarami No, it does not support. However, you can solve the problem by using the [DataParallel](http://pytorch.org/tutorials/beginner/former_torchies/parallelism_tutorial.html) module, or you can spread modules over multiple GPUs by passing an additional argument to `.cuda()`. For example, `.cuda(1)` will place the tensors and modules on 2nd GPU. For this, you should edit [here](https://github.com/yunjey/pytorch-tutorial/blob/master/tutorials/03-advanced/image_captioning/train.py#L16) and [here](https://github.com/yunjey/pytorch-tutorial/blob/master/tutorials/03-advanced/image_captioning/train.py#L47-L49).",support however solve problem module spread multiple passing additional argument example place edit,issue,negative,neutral,neutral,neutral,neutral,neutral
+336046216,"Dear @yunjey,
+Thank you very much for your response. Just as another question, would you please tell me that your nice Image Captioning code supports _Multi-GPU_ training or not?",dear thank much response another question would please tell nice image code training,issue,positive,positive,positive,positive,positive,positive
+336020874,@ahkarami  Sorry for late reply. You can prepare a JSON file in the same form as MSCOCO dataset and use the code in the tutorial. Another way is to implement your own DataSet class. See [here](https://github.com/yunjey/pytorch-tutorial/blob/master/tutorials/03-advanced/image_captioning/data_loader.py#L13-L53) for how to implement custom dataset in PyTorch.,sorry late reply prepare file form use code tutorial another way implement class see implement custom,issue,negative,negative,negative,negative,negative,negative
+335778284,"I have solved the error in the sample.py and I found that the code in model.py have some problem.
+I change the line 68 of model.py to
+sampled_ids = torch.cat(sampled_ids, 0)  
+",error found code problem change line,issue,negative,neutral,neutral,neutral,neutral,neutral
+334362771,"In this tutorial, we used default initialization. See [here](https://github.com/pytorch/pytorch/blob/master/torch/nn/modules/conv.py#L40-L47).",tutorial used default see,issue,negative,neutral,neutral,neutral,neutral,neutral
+333273858,"Thanks a lot~
+
+나의 iPhone에서 보냄
+
+2017. 9. 29. 오후 10:41 yunjey <notifications@github.com> 작성:
+
+> @bemoregt Great!
+> 
+> —
+> You are receiving this because you were mentioned.
+> Reply to this email directly, view it on GitHub, or mute the thread.
+> 
+",thanks great reply directly view mute thread,issue,positive,positive,positive,positive,positive,positive
+333098745,"Thanks. I fixed it. 
+
+나의 iPhone에서 보냄
+
+2017. 9. 29. 오후 7:47 yunjey <notifications@github.com> 작성:
+
+> @bemoregt
+> It's argparse error. You entered the keyword incorrectly.
+> You may enter the white space in the command.
+> 
+> —
+> You are receiving this because you were mentioned.
+> Reply to this email directly, view it on GitHub, or mute the thread.
+> 
+",thanks fixed error incorrectly may enter white space command reply directly view mute thread,issue,negative,positive,neutral,neutral,positive,positive
+332788664,@yunjey Thank you for your response. The code works correctly.,thank response code work correctly,issue,negative,neutral,neutral,neutral,neutral,neutral
+332760654,"@yunjey , thank you, I have figured out. it's the problem of windows version. ",thank figured problem version,issue,negative,neutral,neutral,neutral,neutral,neutral
+332744301,"@ahkarami  You should save the vocabulary file to **'./data/vocab.pkl`**. If you want to use the pretrained model, download the vocab file and unpack it as mentioned in ReadME.md.
+
+",save vocabulary file want use model file unpack,issue,positive,neutral,neutral,neutral,neutral,neutral
+332743352,"@micklexqg It works well. Did you solve the problem? 
+
+In my case, the version of the tensorflow is 1.2 and pytorch is 0.2.
+What version of the tensorflow are you using?
+
+![image](https://user-images.githubusercontent.com/15663219/30952729-f5409f02-a463-11e7-80ba-5b32272e1458.png)
+
+",work well solve problem case version version image,issue,negative,neutral,neutral,neutral,neutral,neutral
+332741750,@shendaizi I think this doesn't matter. You can use either 1x1 conv or 3x3 conv for downsampling.,think matter use either,issue,negative,neutral,neutral,neutral,neutral,neutral
+332740677,"@zhangmozhe Yes, it hurts the testing accuracy. If you use `resnet.eval()`, batch normalization layer uses running average/variance instead of mini-batch statistics. You can improve the performance when using `resnet.eval()` by changing the momentum coefficient in batch normalization layer.
+
+It is recommended to change `nn.BatchNorm2d(16) ` to `nn.BatchNorm2d(16, momentum=0.01)`. The default value of the momentum is 0.1.
+",yes testing accuracy use batch normalization layer running instead statistic improve performance momentum coefficient batch normalization layer change default value momentum,issue,positive,neutral,neutral,neutral,neutral,neutral
+329943295,"Hey,
+thanks for editing my comments.
+
+I still think you should elaborate in one or two sentences, why we maximize log(D(G(z)) by computation of
+`g_loss = criterion(outputs, real_labels)` 
+ 
+You could add: Remark, second term of the loss is always zero since real_labels == 1, thus only log(D(G(z)) is computed
+
+I don't know about others, but this has really confused me for a while because I didn't understand how the BCE loss is connected to the computation of only log D(G(z)). 
+
+Best,
+Florian",hey thanks still think elaborate one two maximize log computation criterion could add remark second term loss always zero since thus log know really confused understand loss connected computation log best,issue,negative,positive,positive,positive,positive,positive
+329179172,"Modify sample function in model.py like below
+I added 'inputs = inputs.unsqueeze(1)' in last like of for loop and changed sampled_ids = torch.cat(sampled_ids, 1) to sampled_ids = torch.cat(sampled_ids, 0)
+
+****************************************************
+`def sample(self, features, states=None):
+
+        """"""Samples captions for given image features (Greedy search).""""""
+        sampled_ids = []
+        inputs = features.unsqueeze(1)
+        for i in range(20):                                      # maximum sampling length
+            hiddens, states = self.lstm(inputs, states)          # (batch_size, 1, hidden_size), 
+            outputs = self.linear(hiddens.squeeze(1))            # (batch_size, vocab_size)
+            predicted = outputs.max(1)[1]
+            sampled_ids.append(predicted)
+            inputs = self.embed(predicted)
+            inputs = inputs.unsqueeze(1)
+        sampled_ids = torch.cat(sampled_ids, 0)                  # (batch_size, 20)
+        return sampled_ids.squeeze()`",modify sample function like added last like loop sample self given image greedy search range maximum sampling length return,issue,negative,neutral,neutral,neutral,neutral,neutral
+328631493,I got the same error. How did you resolve this problem?,got error resolve problem,issue,negative,neutral,neutral,neutral,neutral,neutral
+317944626,Hi @yunjey yeah it makes sense. Thank you for clarification.,hi yeah sense thank clarification,issue,positive,neutral,neutral,neutral,neutral,neutral
+317942859,"@dolaameng No, it doesn't matter because we only train the discriminator using [d_optimizer.step()](https://github.com/yunjey/pytorch-tutorial/blob/master/tutorials/03-advanced/deep_convolutional_gan/solver.py#L96) and reset the  [grad buffer](https://github.com/yunjey/pytorch-tutorial/blob/master/tutorials/02-intermediate/generative_adversarial_network/main.py#L97-L98) before calling `g_loss.backward()`. In the case of `fake_images =Variable(G(z).detach().cuda())`, it saves memory and speed up the training, but in my experience this is trivial.",matter train discriminator reset grad buffer calling case memory speed training experience trivial,issue,negative,neutral,neutral,neutral,neutral,neutral
+316679999,"thanks a lot - helped indeed, take care ",thanks lot indeed take care,issue,positive,positive,positive,positive,positive,positive
+316649076,"logistic sigmoid is just special case of softmax (when the number of class is 2). In multi-class classification task, we use softmax instead of sigmoid. [This](https://stats.stackexchange.com/questions/233658/softmax-vs-sigmoid-function-in-logistic-classifier) will help you.",logistic sigmoid special case number class classification task use instead sigmoid help,issue,positive,positive,positive,positive,positive,positive
+316645464,"sure, I understand softmax exists there implicitly via error function formulation - what I do not see is [logistic](https://en.wikipedia.org/wiki/Logistic_function) part of logistic regresstion ",sure understand implicitly via error function formulation see logistic part logistic,issue,negative,positive,positive,positive,positive,positive
+316255612,"@jtoy the word i saved became S'\xe7\xba\xa6 '  in python 2.7,and when i run the sample, it showed as /</start/>/</unk/>/</end/>/  whatever i tried",word saved python run sample whatever tried,issue,negative,neutral,neutral,neutral,neutral,neutral
+316255440,@jtoy but the pkl file can only save as ascii or binary,file save ascii binary,issue,negative,neutral,neutral,neutral,neutral,neutral
+315940643,"`pack_padded_sequence` is optional. In Language Mode, the input is not variable-length so you don't need to use `pack_padded_seqeuence`. For image captioning or other seq2seq task such as NMT and QA, we should deal with variable-length sequences. In these cases, we can use `pack_padded_sequence` to efficiently forward propagate the input to RNN. Again, `pack_padded_sequence` is optional not compulsory, you can just pad the input sequence, make it as a 3D tensor, forward propagate to RNN and compute loss with masking.  ",optional language mode input need use image task deal use efficiently forward propagate input optional compulsory pad input sequence make tensor forward propagate compute loss,issue,negative,neutral,neutral,neutral,neutral,neutral
+314313397,@Kongsea This branch has confilcts with master branch. Could you close and reopen the pull request?,branch master branch could close reopen pull request,issue,negative,neutral,neutral,neutral,neutral,neutral
+311063465,Update till the most recent version of PyTorch solved this issue for me. ,update till recent version issue,issue,negative,neutral,neutral,neutral,neutral,neutral
+308689812,@yenson-lau Please give me more information about your error.,please give information error,issue,negative,neutral,neutral,neutral,neutral,neutral
+307323739,"Thank you for your help @AceCoooool . In my opinion, training generator won't update discriminator's parameters at the same time, so if the image from generator is fake enough, the loss of criterion will be huge. Using this loss to update generator's parameters, they will be close to real image. Thank you again, :)",thank help opinion training generator wo update discriminator time image generator fake enough loss criterion huge loss update generator close real image thank,issue,negative,positive,neutral,neutral,positive,positive
+306775196,"Because the ""task"" of generator is to cheat the Discriminator. ~ How can you cheat the Discriminator ? ---> you can let the Generator to generate ""real image"" ! , so the output of Generator is close to real_labels as possible. (If you use fake_label, you want to creat a bad image to cheat Discriminator ? )",task generator cheat discriminator cheat discriminator let generator generate real image output generator close possible use want creat bad image cheat discriminator,issue,negative,negative,negative,negative,negative,negative
+304774029,"```python
+def forward(self, x):
+    # Set initial states 
+    h0 = Variable(torch.zeros(self.num_layers, x.size(0), self.hidden_size)) 
+    c0 = Variable(torch.zeros(self.num_layers, x.size(0), self.hidden_size))
+        
+    # Forward propagate RNN
+    out, (h_last, c_last) = self.lstm(x, (h0, c0))    # same as self.lstm(x). Default is zero initialization.
+        
+    # Decode hidden state of last time step
+    out = self.fc(out[:, -1, :])             # same as out = h_last
+    return out
+```
+
+
+@sinhasam  You should note that `images` is a 3D tensor of shape **(batch_size, seq_length, input_size)**.  In `out, (h_last, c_last) = lstm(x, (h0, c0))`, `out` is a tensor of shape **(batch_size, seq_length, hidden_size)** and `h_last `and `c_last `are tensors of shape **(batch_size, hidden_size)** which indicate the last hidden and cell state of the lstm (Full time step forward propagation, not one-step). You can alse see [here](http://pytorch.org/docs/nn.html#lstm) to understand the mechanism of nn.LSTM.
+
+
+In addition, in many-to-one case, we need only last hidden state of the lstm. For this, we can use `out[:, -1, :]` or `h_last`. In our case (MNIST), each sequence in `x` has a fixed length of 28 so `output[:, -1, :]` and `h_last` are exactly same.   For variable length many-to-one, you can use [pack_padded_sequence](http://pytorch.org/docs/nn.html?highlight=pack_padded_sequence#torch.nn.utils.rnn.pack_padded_sequence) and `h_last`. Please, see [here](https://discuss.pytorch.org/t/lstm-hidden-cell-outputs-and-packed-sequence-for-variable-length-sequence-inputs/1183) for the details.",python forward self set initial variable variable forward propagate default zero decode hidden state last time step return note tensor shape tensor shape shape indicate last hidden cell state full time step forward propagation see understand mechanism addition case need last hidden state use case sequence fixed length output exactly variable length use please see,issue,negative,positive,neutral,neutral,positive,positive
+304771539,"@EmbraceLife As far as I know, currently we can not easily visualize the graph using TensorBoard in PyTorch. See [here](https://discuss.pytorch.org/t/print-autograd-graph/692/2?u=xwgeng) to visualize the model using another way.",far know currently easily visualize graph see visualize model another way,issue,negative,positive,positive,positive,positive,positive
+304580859,"@sigmoidx  Thanks for noting the bug. I fixed the code. Check [here](https://github.com/yunjey/pytorch-tutorial/tree/master/tutorials/03-advanced/image_captioning#pretrained-model) and download the pretrained model and vocabulary file again. 
+
+Now, the code works well.
+
+![example](https://cloud.githubusercontent.com/assets/15663219/26538419/8e8b2760-4481-11e7-83d5-bc81a9f633c5.png)
+
+",thanks bug fixed code check model vocabulary file code work well example,issue,positive,positive,positive,positive,positive,positive
+304508803,@deltawing I uploaded the zip file for the pretrained model. check [here](https://github.com/yunjey/pytorch-tutorial/blob/master/tutorials/03-advanced/image_captioning/README.md#pretrained-model),zip file model check,issue,negative,neutral,neutral,neutral,neutral,neutral
+304507717,@jtoy Official MSCOCO dataset has only train/val split. Use karpathy split (110000 for train and 5000 for val/test). This is beyond the tutorial.,official split use split train beyond tutorial,issue,negative,neutral,neutral,neutral,neutral,neutral
+304507543,@FYXX I fixed the code of the DCGAN that works on CelebA dataset. Try the updated code.,fixed code work try code,issue,negative,positive,neutral,neutral,positive,positive
+304473696,"@yunjey fixed this by making the state volatile in sample:
+
+    state = (Variable(torch.zeros(args.num_layers, 1, args.hidden_size),volatile=True),
+             Variable(torch.zeros(args.num_layers, 1, args.hidden_size),volatile=True))
+
+Found that from reading this: https://discuss.pytorch.org/t/optimizing-cuda-memory-pipeline-for-rnn/3311/3",fixed making state volatile sample state variable variable found reading,issue,negative,positive,neutral,neutral,positive,positive
+304193479,"I have a model training on it now. I'll also test out your version of the code. 
+
+> On May 25, 2017, at 10:06 PM, yunjey <notifications@github.com> wrote:
+> 
+> @jtoy @karandwivedi42 I will fix the code by this weekend.
+> 
+> —
+> You are receiving this because you were mentioned.
+> Reply to this email directly, view it on GitHub, or mute the thread.
+> 
+",model training also test version code may wrote fix code weekend reply directly view mute thread,issue,negative,positive,neutral,neutral,positive,positive
+303989956,"This is the result of my training 100 epochs, and the result is not very good
+![image](https://cloud.githubusercontent.com/assets/12612743/26448847/e9b8690c-4181-11e7-914b-d76f5033f84b.png)
+",result training result good image,issue,negative,positive,positive,positive,positive,positive
+303989548,Thank you very much and look forward to your good news,thank much look forward good news,issue,positive,positive,positive,positive,positive,positive
+303962920,"@jtoy This fork is a very hacky way to do exactly what the original code does.
+https://github.com/karandwivedi42/pytorch-tutorial/tree/master/tutorials/09%20-%20Image%20Captioning
+
+@yunjey Can you please check this one? (Thanks for the amazing tutorials btw :) )",fork hacky way exactly original code please check one thanks amazing,issue,positive,positive,positive,positive,positive,positive
+303875516,"@karandwivedi42 I dont fully understand, Im just starting to play with pytorch, any way to see it as a diff ?",dont fully understand starting play way see,issue,negative,neutral,neutral,neutral,neutral,neutral
+303871933,"Put the fc and bn as a separate module between encoder and decoder so that
+they can be a part of gradient computation. Does it make sense?
+
+On May 25, 2017 4:04 AM, ""jtoy"" <notifications@github.com> wrote:
+
+> so what is the right code to use? I was able to train a model with
+> @karandwivedi42 <https://github.com/karandwivedi42> change and the model
+> completed training for me in 155 minutes. does that time seem right? I
+> trained the original show and tell model and I remember it taking at least
+> a day.
+>
+> —
+> You are receiving this because you were mentioned.
+> Reply to this email directly, view it on GitHub
+> <https://github.com/yunjey/pytorch-tutorial/issues/35#issuecomment-303870989>,
+> or mute the thread
+> <https://github.com/notifications/unsubscribe-auth/AJLb6rEdGcH57EGQQA_MduX-g65DnZ_Eks5r9LBkgaJpZM4NjHj8>
+> .
+>
+",put separate module part gradient computation make sense may wrote right code use able train model change model training time seem right trained original show tell model remember taking least day reply directly view mute thread,issue,negative,positive,positive,positive,positive,positive
+303870989,so what is the right code to use? I was able to train a model with @karandwivedi42 's  change and  the model completed training for me in 155 minutes. does that time seem right? I trained the original show and tell model and I remember it taking at least a day.,right code use able train model change model training time seem right trained original show tell model remember taking least day,issue,negative,positive,positive,positive,positive,positive
+303817217,Another (more intuitive) option is to return `F.log_softmax(self.linear(inputs))` and use `criterion=nn.NLLLoss()`.,another intuitive option return use,issue,negative,neutral,neutral,neutral,neutral,neutral
+303786487,@yunjey You are right. I don't know how important it is though because this linear layer is followed by another linear layer in the decoder with no non-linearity in between.,right know important though linear layer another linear layer,issue,negative,positive,positive,positive,positive,positive
+303774826,"@karandwivedi42 That does not work.
+ ```python 
+images = Variable(images, volatile=True)
+``` 
+The code above makes `requires_grad=False` in [resnet.fc](https://github.com/yunjey/pytorch-tutorial/blob/master/tutorials/09%20-%20Image%20Captioning/model.py#L15).  See here for the details of [volatile](http://pytorch.org/docs/notes/autograd.html#volatile). ",work python variable code see volatile,issue,negative,neutral,neutral,neutral,neutral,neutral
+303770676,"@FYXX Even i changed the code, the result is not good. I will check this soon.",even code result good check soon,issue,negative,positive,positive,positive,positive,positive
+303762374,@karandwivedi42 your changes work!  @yunjey will the code need to be updated? It seems like source doesnt seem to fix the issue.  I can do more testing if needed.,work code need like source doesnt seem fix issue testing,issue,negative,neutral,neutral,neutral,neutral,neutral
+303761450,"I tried with pytorch  python 2.7 source and  using pytorch for python 3.5, both died with the same issue.",tried python source python issue,issue,negative,neutral,neutral,neutral,neutral,neutral
+303459781,@jtoy I recommend you to [install PyTorch using source](https://github.com/pytorch/pytorch#from-source). This will give you the latest version of PyTorch.,recommend install source give latest version,issue,negative,positive,positive,positive,positive,positive
+303446388,"@yunjey  I am on python 2.7 and pytorch 0.12.  I will try your changes. 
+@karandwivedi42 I will also test your fix.
+I will let you both know.",python try also test fix let know,issue,negative,neutral,neutral,neutral,neutral,neutral
+303365712,"This might be related to https://github.com/yunjey/pytorch-tutorial/issues/26
+
+[This is a known issue which will be resolved in the next release](https://github.com/pytorch/pytorch/issues/1184#issuecomment-302681397).
+
+Till then as a workaround, just change [L56](https://github.com/yunjey/pytorch-tutorial/blob/master/tutorials/09%20-%20Image%20Captioning/train.py#L56) to
+```python
+               images = Variable(images, volatile=True)
+```
+and [L66](https://github.com/yunjey/pytorch-tutorial/blob/master/tutorials/09%20-%20Image%20Captioning/train.py#L66) to 
+
+```python
+                features = encoder(images)
+                features = Variable(features.data)
+```",might related known issue resolved next release till change python variable python variable,issue,negative,neutral,neutral,neutral,neutral,neutral
+303282893,"@FYXX  Perhaps this happened because torchvision was updated. To fix this issue, you should modify the code [here](https://github.com/yunjey/pytorch-tutorial/blob/master/tutorials/11%20-%20Deep%20Convolutional%20Generative%20Adversarial%20Network/main.py#L129) to denormalize the image **(modify it to (fake_image.data + 1) / 2)**. Then, the value range in the tensor will be between 0 and 1.
+
+I will fixed this issue soon.",perhaps fix issue modify code image modify value range tensor fixed issue soon,issue,negative,positive,neutral,neutral,positive,positive
+303282360,"I remember that the required gpu memory for `batch_size=128` is less than 5GB (it may be much smaller).
+
+What's your Python and PyTorch version? I guess you are using Python 2.7. Am i right?
+This memory issue occurred when [requires_grad=False](https://github.com/yunjey/pytorch-tutorial/blob/master/tutorials/09%20-%20Image%20Captioning/model.py#L12-L14) does not work.
+
+There are two options for solving this problem.
+1. [Upgrade PyTorch version](https://github.com/pytorch/pytorch#from-source)
+2. Use Python 3.5 instead of 2.7
+
+",remember memory le may much smaller python version guess python right memory issue work two problem upgrade version use python instead,issue,negative,positive,positive,positive,positive,positive
+303277184,"great, looking forward to testing this. I think im running into a similar issue.",great looking forward testing think running similar issue,issue,positive,positive,positive,positive,positive,positive
+303277006,do you have more info? I had a similar issue and I just used wget instead of python's libraries.,similar issue used instead python,issue,negative,neutral,neutral,neutral,neutral,neutral
+302657687,"+1 Using pytorch 0.1.12 on python 3.6, the problem still exists.
+
+Edit: Issue has been solved in master branch. Will be a part of next release.",python problem still edit issue master branch part next release,issue,negative,neutral,neutral,neutral,neutral,neutral
+300992435,Agree. Thats my bad. Thanks! ,agree thats bad thanks,issue,negative,negative,negative,negative,negative,negative
+299219551,"I am gonna answer my own question, just found out by experiments... Yes, loss.backward() computes the right grads for all parameters, no matter how modify the inputs :) ",gon na answer question found yes right matter modify,issue,negative,positive,positive,positive,positive,positive
+299008323,"Hi,
+
+Thanks for the reply. It seems that the problem is still there for pytorch
+0.1.12. In addition, for my user case, I need to fine-tune on top of resnet
+models, I think the volatiles did not work for since it will neglect all
+the grad for the whole network.
+
+Best,
+Han
+
+2017-04-27 20:38 GMT-04:00 yunjey <notifications@github.com>:
+
+> This is PyTorch version issue. You can see here
+> <https://discuss.pytorch.org/t/params-requires-grad-false-has-elevated-memory-usage-in-v0-1-11/1625>.
+> You can solve this problem if you use Python 3.5 instead of 2.7. Also, you
+> can fix this problem by replacing 'requires_grad' to 'volatiles'.
+>
+> This issue is automatically resolved when a new version of PyTorch is
+> released.
+>
+> —
+> You are receiving this because you authored the thread.
+> Reply to this email directly, view it on GitHub
+> <https://github.com/yunjey/pytorch-tutorial/issues/26#issuecomment-297876351>,
+> or mute the thread
+> <https://github.com/notifications/unsubscribe-auth/AXeZrzrWvAjcHzIPCwPQ9OWQuvthCBXhks5r0TTsgaJpZM4NKbFv>
+> .
+>
+",hi thanks reply problem still addition user case need top think work since neglect grad whole network best han version issue see solve problem use python instead also fix problem issue automatically resolved new version thread reply directly view mute thread,issue,negative,positive,positive,positive,positive,positive
+298247429,"Thanks a lot for letting me know the version. Also, I'll try switching to python 3.5 and see if that helps.",thanks lot know version also try switching python see,issue,negative,positive,positive,positive,positive,positive
+297876351,"This is PyTorch version issue. You can see [here](https://discuss.pytorch.org/t/params-requires-grad-false-has-elevated-memory-usage-in-v0-1-11/1625). You can solve this problem if you use Python 3.5 instead of 2.7. Also, you can fix this problem by replacing 'requires_grad' to 'volatiles'. 
+
+This issue is automatically resolved when a new version of PyTorch is released.",version issue see solve problem use python instead also fix problem issue automatically resolved new version,issue,negative,positive,positive,positive,positive,positive
+297876203,Uploaded pretrained model is trained using GPU. Maybe the version i used is 0.9.,model trained maybe version used,issue,negative,neutral,neutral,neutral,neutral,neutral
+297777368,"When I dig into the code, I find the major issue is due to 
+[features = self.resnet(images) ](https://github.com/yunjey/pytorch-tutorial/blob/master/tutorials/09%20-%20Image%20Captioning/model.py#L26)
+But I don't know why  pytorch 0.11 takes much more memory compared to pytorch 0.10 for the basic CNN models. ",dig code find major issue due know much memory basic,issue,negative,positive,neutral,neutral,positive,positive
+296145765,"@sujayr91 No, beam search supported. I will update the beam search code later, but not soon.
+You can see [here](https://github.com/eladhoffer/captionGen) to find out how to implement beam search.",beam search update beam search code later soon see find implement beam search,issue,negative,neutral,neutral,neutral,neutral,neutral
+294296444,It makes much sense to me. Thanks for the answer!,much sense thanks answer,issue,negative,positive,positive,positive,positive,positive
+294277205,"### Training phase
+If we don't assign hidden state, `nn.LSTM` assigns zero state as initial state in default. It is desirable to set the initial state value of `nn.LSTM` to zero.
+
+### Test phase
+In `hiddens, states = self.lstm(inputs, states)`, you should note that returned `states` are used for the next time step. If you do not assign the states such as `self.lstm(inputs)`, it assigns zero states internally and it performs wrong operation. 
+
+In test phase, the shape of `inputs` is <b>(batch_size, 1, embed_size)</b> so that only 1 time step forward propagation is performed when `self.lstm(inputs, states)` is called.",training phase assign hidden state zero state initial state default desirable set initial state value zero test phase note returned used next time step assign zero internally wrong operation test phase shape time step forward propagation,issue,negative,negative,negative,negative,negative,negative
+294170661,"I think I got it, you use the same ""lengths"" parameters. In other words, in the input tensor, the embeddings of '\<end\>'  are automatically omitted. ",think got use input tensor automatically,issue,negative,neutral,neutral,neutral,neutral,neutral
+294103765,@HiiYL sorry for that. I will upload .zip file soon instead of .egg file. ,sorry file soon instead file,issue,negative,negative,negative,negative,negative,negative
+293923104,"Oh, I think you should change the code in configuration.py. 
+
+I deleted the configuration.py file and add argparse to control the arguments. Please check the code. ",oh think change code file add control please check code,issue,negative,neutral,neutral,neutral,neutral,neutral
+293914378,"Hi yunjey,
+
+The model parameters I am talking are with respect to files which will be saved in model/ during training epochs. First I trained the model for Coco dataset.  While testing sample.py,  if i choose model parameters any where starting from second epoch (for example encoder-2-1000.pkl , and decoder-2-1000.pkl) I get output caption as <start> <start> <start> <start>....... 
+
+I will check your pretrained model also. 
+
+Thanks
+",hi model talking respect saved training first trained model coco testing choose model starting second epoch example get output caption start start start start check model also thanks,issue,positive,positive,positive,positive,positive,positive
+293861502,"@sujayr91 I don't understand what you are asking.. What do you mean by 'weights starting from the second epoch'? 
+
+",understand mean starting second epoch,issue,negative,negative,negative,negative,negative,negative
+292599800,"Hi yunjey, Could you please share the pretrained model.
+Also when i run python vocab.py i get an error stating  ImportError: ../../../coco/PythonAPI/pycocotools/_mask.so: undefined symbol: PyFPE_jbuf
+
+I am using anaconda python 2.7, with all the requirements you have listed not sure of argparse though.
+
+Please help",hi could please share model also run python get error undefined symbol anaconda python listed sure though please help,issue,positive,positive,positive,positive,positive,positive
+289975926,"Thanks, i will fix it and upload the pretrained model soon.",thanks fix model soon,issue,negative,positive,positive,positive,positive,positive
+289362798,"It is common for me to divide the loss by the sequence length. As you mentioned above, this is likely to have a small impact on the performance.",common divide loss sequence length likely small impact performance,issue,negative,negative,negative,negative,negative,negative
+288469387,"Thanks for the reply. Yes, I am using gpu I will reduce the log steps and update here.",thanks reply yes reduce log update,issue,positive,positive,positive,positive,positive,positive
+288443616,"Ok. Here's an example : 
+
+```python
+target = [[1,2,3,4], [5,6,0,0]]   #batch*time-step
+model_out = torch.Tensor(2,4,vocab_size)
+```
+
+Now for the sequence loss, consider the first sequence & targets - model_out[0] & target[0] you're supposed to take `CrossEntropyLoss` (CEL) at every time step i.e .
+
+sequence_loss[0] = `CEL(model_out[0][0],target[0][0]) + ... + CEL(model_out[0][3],target[0][3])`
+
+Similarly for the second sequence. Net mini-batch loss = `sum(sequence_loss)/2.0`. Now, what `pack_padded_sequences` does is convert everything into a minibatch. 
+
+```python
+packed = pack_padded_sequence(embed_inp,[4,2],True)    #output of Embedding(10,10,0)
+
+ 1.3866 -1.4917  0.1638  0.3532  2.9881  0.0461  0.6481 -1.2511  2.1563 -1.0258
+-1.1634 -0.1845  0.0265  1.3146 -1.2236 -1.3518  1.2663 -0.1945  0.0213 -0.1681
+-0.1127 -1.6191 -0.3237 -1.4512  1.0955 -0.8381  1.2835  0.5311  1.2359 -1.5673
+ 0.3134 -0.3416 -1.2120 -1.7240  1.3178 -0.2555  0.2030  0.8582 -0.5273 -0.0708
+ 0.6825 -0.3805 -1.1349  0.6390 -1.5805 -2.4762 -0.6307 -0.2127  0.8466 -0.2337
+ 0.4657 -1.5292  0.7106  1.4591 -0.7695 -0.5821 -2.2042  0.1225 -0.4959 -0.2382
+[torch.FloatTensor of size 6x10]
+
+
+model_out = lstm(packed)[0]     #hidden states from nn.LSTM(10,20)
+
+Columns 0 to 9 
+ 0.0251 -0.2013 -0.0108  0.0996  0.1172  0.0813  0.1368  0.0036 -0.0472 -0.0974
+-0.0651  0.0791  0.0676 -0.0195 -0.0979  0.0400  0.0426  0.0095 -0.0260 -0.0737
+-0.0977 -0.0902  0.0275  0.1105  0.1506  0.1077  0.1157  0.1418 -0.0823 -0.2376
+-0.1670 -0.0537  0.0964  0.0857 -0.0417  0.0553  0.0674  0.1317 -0.0238 -0.1653
+-0.1909 -0.0686  0.2268 -0.1196 -0.0300 -0.0605  0.1941  0.1778 -0.0816 -0.0824
+-0.0367 -0.0666  0.1007 -0.2088 -0.1325 -0.1464  0.0981  0.2038 -0.0758  0.0281
+
+Columns 10 to 19 
+ 0.2482 -0.0968 -0.0109  0.0505 -0.1285  0.0049  0.2775 -0.1530 -0.1499  0.1109
+ 0.0191 -0.0319 -0.0808 -0.1486 -0.0136  0.0800 -0.0394 -0.0267  0.0872  0.0202
+ 0.2717 -0.0678 -0.0742  0.1615 -0.0917 -0.0033  0.1297 -0.2521 -0.2597  0.1603
+-0.1123 -0.0243 -0.1594 -0.0173  0.0872  0.0040 -0.1204 -0.1173  0.1110  0.0384
+ 0.1221 -0.1210 -0.1716  0.1877 -0.1433  0.0564  0.0515 -0.1887  0.0390  0.0576
+ 0.1573 -0.1564  0.1000  0.2310 -0.1333  0.0478  0.0689 -0.0405  0.0795 -0.0070
+[torch.FloatTensor of size 6x20]
+, batch_sizes=[2, 2, 1, 1])
+
+```
+
+When you apply `CrossEntropyLoss` on this and `pack_padded_sequence(targets)`, you're just averaging the loss over **all** sequences right? Without the summation. 
+
+FWIW, I dont think there's much difference, just that the gradients will change by a constant factor, which may speedup/slowdown training
+",example python target batch sequence loss consider first sequence target supposed take every time step target target similarly second sequence net loss sum convert everything python true output size hidden size apply loss right without summation dont think much difference change constant factor may training,issue,negative,positive,positive,positive,positive,positive
+288403781,"I don't understand what's the problem. The data order in the [outputs](https://github.com/yunjey/pytorch-tutorial/blob/master/tutorials/09%20-%20Image%20Captioning/model.py#L50-L52) and [targets](https://github.com/yunjey/pytorch-tutorial/blob/master/tutorials/09%20-%20Image%20Captioning/train.py#L58) are same because both of them used `pack_padded_sequences`. There is no problem. 
+
+Did you understand what I'm saying? If you don't understand, do not hesitate to ask another question.",understand problem data order used problem understand saying understand hesitate ask another question,issue,negative,neutral,neutral,neutral,neutral,neutral
+288394566,"Did you use a GPU? Image captioning has a long training time. For Pascal Titan X, it took about 1 hour per epoch. [Here](https://github.com/yunjey/pytorch-tutorial/blob/master/tutorials/09%20-%20Image%20Captioning/configuration.py#L33) you can reduce the log_step.",use image long training time took hour per epoch reduce,issue,negative,negative,neutral,neutral,negative,negative
+288089310,"If you have calculated the loss in the same way as my code, it is normal that loss is about 2.5 (loss 2.5 equals to perplexity 11.97). This means that the model is well trained. I think that something went wrong during the evaluation phase. Below are some good things to try.
+
+1. Add <b>batch normalization</b> to the top layer of CNN.
+This makes training more stable. See [here](https://github.com/yunjey/pytorch-tutorial/blob/master/tutorials/09%20-%20Image%20Captioning/model.py#L16).
+
+2. Use <b>0.01</b> for momentum in BN 
+The default value of the momentum in BN is 0.1, which can not calculate moving average/variance well for the entire training dataset. 
+
+3. Change the cnn model to <b>eval</b> mode before sampling the caption
+Assume that the model is training mode and you give 1 image to the model to generate the caption. In training mode, BN uses mini-batch statistics which makes all activation values 0 (for one image). To properly generate the caption, give the model multiple images, or change it to eval mode.See [here](https://github.com/yunjey/pytorch-tutorial/blob/master/tutorials/09%20-%20Image%20Captioning/sample.py#L28) for how to change the model to eval mode.
+
+
+I hope this helps.
+
+
+",calculated loss way code normal loss loss perplexity model well trained think something went wrong evaluation phase good try add batch normalization top layer training stable see use momentum default value momentum calculate moving well entire training change model mode sampling caption assume model training mode give image model generate caption training mode statistic activation one image properly generate caption give model multiple change change model mode hope,issue,positive,positive,positive,positive,positive,positive
+288048838,I added requirements.txt for image captioning. It would be helpful.,added image would helpful,issue,negative,neutral,neutral,neutral,neutral,neutral
+288048069,It is not recommended to install PyTorch via PyPI. I added requirements.txt for image captioning. Thanks.,install via added image thanks,issue,negative,positive,positive,positive,positive,positive
+287615603,"Yes, you should. To compute `predicted == labels`,  both tensors corresponding to `predicted` and `labels` should be in same device (e.g. cpu or gpu). To execute `predicted.cpu()` makes the tensor in predicted move to cpu.
+",yes compute corresponding device execute tensor move,issue,negative,neutral,neutral,neutral,neutral,neutral
+287522838,"@liuzhihui2046 Thank you for letting me know the error. I modified the tutorial code to use `torch.save(model.state_dict(), save_dir)`. I don't know what caused the problem. I think it would be nice to ask this question [here](https://discuss.pytorch.org/). 
+
+ ",thank know error tutorial code use know problem think would nice ask question,issue,negative,positive,positive,positive,positive,positive
+286638568,"when I save the model like this : model=torch.save(model,savedir),I can't load the saved model correctly.however,when save model using  model=torch.save(model.state_dict(),savedir),it works
+
+",save model like model ca load saved model save model work,issue,positive,neutral,neutral,neutral,neutral,neutral
+286636554,"If you installed Python using anaconda, numpy and matplotlib are basically there.
+
+Except for image captioning and dqn examples, you don't need to install libraries other than [pytorch and  torch-vision](http://pytorch.org/). For image captioning and dqn examples, i will add README.md to help people to install the required libraries easily soon. Additionally, i will add installation guide to help people to start this tutorial. 
+
+Thanks,",python anaconda basically except image need install image add help people install easily soon additionally add installation guide help people start tutorial thanks,issue,positive,positive,positive,positive,positive,positive
+286635382,"You can load and test the model in a simple way as below.
+
+
+```python
+model = torch.load('model.pkl')
+outputs = model(images)
+```",load test model simple way python model model,issue,negative,neutral,neutral,neutral,neutral,neutral
+286066931,"Thanks, you're right. I fixed the code.",thanks right fixed code,issue,negative,positive,positive,positive,positive,positive

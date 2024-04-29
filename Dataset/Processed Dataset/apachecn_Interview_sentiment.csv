@@ -1,0 +1,113 @@
+id,original_comment,processed_comment,source,sentiment_VADER,sentiment_textblob,sentiment_pattern,sentiment_bert,sentiment_spacy,max_voted_sentiment
+1619977992,"Thank you, buddy！
+
+
+
+
+| |
+片刻
+|
+|
+***@***.***
+|
+
+
+---- Replied Message ----
+| From | ***@***.***> |
+| Date | 07/4/2023 18:19 |
+| To | ***@***.***> |
+| Cc | ***@***.***> |
+| Subject | [apachecn/Interview] Columns and DataType Not Explicitly Set on line 345 of titanic-python3.6.py (Issue #354) |
+
+Hello!
+
+I found an AI-Specific Code smell in your project.
+The smell is called: Columns and DataType Not Explicitly Set
+
+You can find more information about it in this paper: https://dl.acm.org/doi/abs/10.1145/3522664.3528620.
+
+According to the paper, the smell is described as follows:
+
+| Problem | If the columns are not selected explicitly, it is not easy for developers to know what to expect in the downstream data schema. If the datatype is not set explicitly, it may silently continue the next step even though the input is unexpected, which may cause errors later. The same applies to other data importing scenarios. |
+| Solution | It is recommended to set the columns and DataType explicitly in data processing. |
+| Impact | Readability |
+
+Example:
+
+### Pandas Column Selection
+import pandas as pd
+df = pd.read_csv('data.csv')
++ df = df[['col1', 'col2', 'col3']]### Pandas Set DataType
+import pandas as pd
+- df = pd.read_csv('data.csv')+ df = pd.read_csv('data.csv', dtype={'col1': 'str', 'col2': 'int', 'col3': 'float'})
+
+You can find the code related to this smell in this link: https://github.com/apachecn/Interview/blob/4b25be78ba10367d54f911060ff4aca6945aea62/src/py3.x/kaggle/getting-started/titanic/titanic-python3.6.py#L335-L355.
+
+I also found instances of this smell in other files, such as:
+
+File: https://github.com/apachecn/Interview/blob/master/src/py3.x/kaggle/getting-started/digit-recognizer/cnn_pytorch-python3.6.py#L24-L34 Line: 29
+File: https://github.com/apachecn/Interview/blob/master/src/py3.x/kaggle/getting-started/digit-recognizer/cnn_pytorch-python3.6.py#L34-L44 Line: 39
+File: https://github.com/apachecn/Interview/blob/master/src/py3.x/kaggle/getting-started/digit-recognizer/knn-python3.6.py#L19-L29 Line: 24
+File: https://github.com/apachecn/Interview/blob/master/src/py3.x/kaggle/getting-started/digit-recognizer/knn-python3.6.py#L20-L30 Line: 25
+File: https://github.com/apachecn/Interview/blob/master/src/py3.x/kaggle/getting-started/digit-recognizer/rf-python3.6.py#L23-L33 Line: 28
+.
+
+I hope this information is helpful!
+
+—
+Reply to this email directly, view it on GitHub, or unsubscribe.
+You are receiving this because you are subscribed to this thread.Message ID: ***@***.***>",thank message date subject explicitly set line issue hello found code smell project smell explicitly set find information paper according paper smell problem selected explicitly easy know expect downstream data schema set explicitly may silently continue next step even though input unexpected may cause later data solution set explicitly data impact readability example column selection import set import find code related smell link also found smell file line file line file line file line file line hope information helpful reply directly view id,issue,positive,positive,neutral,neutral,positive,positive
+593110030,"> 修复 GitHub page 无法构建的问题：
+ 
+Your site is having problems building: Page build failed. For more information, see https://help.github.com/en/github/working-with-github-pages/troubleshooting-jekyll-build-errors-for-github-pages-sites#troubleshooting-build-errors.
+
+> 解决方案
+
+根目录创建:  .nojekyll的文件（不需要任何内容​​）
+
+https://github.community/t5/GitHub-Pages/GitHub-Pages-Builds-Fail/td-p/29172#
+
+",page site building page build information see,issue,negative,neutral,neutral,neutral,neutral,neutral
+464952982,"for python3.x， newline='' suppresses text mode newline handling. On Windows, failing to do this will write \r\r\n file line endings instead of the correct \r\n.",text mode handling failing write file line instead correct,issue,negative,neutral,neutral,neutral,neutral,neutral
+389823314,"小哥哥。。别慌，，有几个点，你先拉取一下文件
+
+* 1.数字识别 knn 是有文档位置的：https://github.com/apachecn/kaggle/blob/dev/competitions/getting-started/digit-recognizer/knn%E7%AE%97%E6%B3%95%E6%8F%8F%E8%BF%B0.md
+* 2.数据集：不用上传、因为网友很多小哥哥吐槽下载慢，所以把数据集删除了
+* 3.隐藏文件：不用上传
+* 4.knn 代码做了更新，你是这拉取一下：https://github.com/apachecn/kaggle/blob/dev/src/python/getting-started/digit-recognizer/knn-python3.6.py
+
+你需要重新拉取最新代码：
+$ git remote add origin_online https://github.com/apachecn/kaggle.git
+$ git pull origin_online dev
+
+
+
+
+
+",git remote add git pull dev,issue,negative,negative,neutral,neutral,negative,negative
+376189064,"这边的关键一步是：
+Train = pd.read_csv('./train.csv').values
+Test = pd.read_csv('test.csv').values
+#特征集
+X = Train[:, 1:]
+#标签集
+Y = Train[:, 0]
+variance = np.var(X, axis = 0)>1000
+X = X[:, variance]
+Test = Test[:, variance]
+pca = PCA()
+pca.fit(X)
+explained_variance = pca.explained_variance_ratio_
+#计算特征比率
+cum_explained_variance = [np.sum(explained_variance[:i+1]) for i in range (0, 201, 25)]
+X_axis = [i for i in range(0,201,25)]
+
+#可视化
+fig = plt.figure(figsize = (7,8),dpi=80)
+plt.plot(X_axis,cum_explained_variance, 'ro')
+plt.grid(True, which = 'both')
+plt.yticks(cum_explained_variance)
+plt.xticks(X_axis)
+plt.ylabel(""Explained Variance Ratio"")
+plt.xlabel(""No. of Components"")
+plt.show()",train test train train variance axis variance test test variance range range fig true variance ratio,issue,negative,positive,positive,positive,positive,positive
